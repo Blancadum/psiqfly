@@ -1,9 +1,12 @@
 import { AuthorHero } from '@/components/Layout/Author/AuthorHero';
 import { AuthorBio } from '@/components/Layout/Author/AutorBio';
 import { Interests } from '@/components/Layout/Author/Interests';
+import { EducationItem } from '@/components/Layout/Author/Education';
+import { TechStack } from '@/components/Layout/Author/TechStack';
 import { CredentialsCarousel } from '@/components/ui/CredentialsCarousel';
 import { ContactForm } from '@/components/Layout/ContactForm';
 import { NewsletterSection } from '@/components/Layout/NewsletterSection';
+import { EDUCATION_DATA } from '@/Data/Cv/Education';
 
 export const metadata = {
   title: 'Autora · Blanca De Uña Martín | PsiQFly',
@@ -16,6 +19,16 @@ export default function AutoraPage() {
       <AuthorHero />
       <AuthorBio />
       <Interests />
+      <section>
+        <h2 className="psi-section-title mb-6">Formación <span className="psi-gradient-text">académica</span></h2>
+        <div className="space-y-3">
+          {EDUCATION_DATA.map((item, i) => <EducationItem key={i} item={item} />)}
+        </div>
+      </section>
+      <section>
+        <h2 className="psi-section-title mb-6">Formación <span className="psi-gradient-text">IT</span></h2>
+        <TechStack />
+      </section>
       <CredentialsCarousel />
       <section id="formulario" className="pt-4">
         <h2 className="text-2xl font-extrabold text-slate-800 mb-6">Escríbeme</h2>
