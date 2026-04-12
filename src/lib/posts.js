@@ -22,7 +22,8 @@ export function getPostBySlug(slug) {
     const fullPath = findPostFile(postsDirectory, slug);
     if (!fullPath) return null;
 
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const raw = fs.readFileSync(fullPath, 'utf8');
+    const fileContents = raw.replace(/\x00/g, '');
     const { data, content } = matter(fileContents);
 
     const faqRegex = /<!--\s*faqs\s*-->([\s\S]*?)<!--\s*\/faqs\s*-->/i;

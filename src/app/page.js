@@ -1,13 +1,16 @@
-// src/app/page.js
-import Home from '../../src/pages/public/Home.jsx';
+import { HomeLayout } from '@/components/Layout/Home/HomeLayout';
+import { HeroHome } from '@/components/Layout/Home/HeroHome';
+import { FeaturesGrid } from '@/components/Layout/FeaturesGrid';
+import { NewsletterSection } from '@/components/Layout/NewsletterSection';
 
 export default function HomePage() {
-    return (
-    <div className="flex flex-col min-h-screen bg-white dark:bg-slate-900 transition-colors">
-        <main className="flex-1">
-        {/* Aquí renderizamos tu landing page de psicología */}
-        <Home />
-        </main>
-        </div>
-        );
-    }
+  return (
+    <HomeLayout>
+      <HeroHome />
+      <FeaturesGrid />
+      <div className="max-w-4xl mx-auto px-6 pb-16">
+        <NewsletterSection />
+      </div>
+    </HomeLayout>
+  );
+}

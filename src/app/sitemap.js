@@ -30,22 +30,28 @@ export default function sitemap() {
 
   // Posts desde MD
   const files = getAllMdFiles(POSTS_DIR);
-  const postPages = files.map(filePath => {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const { data } = matter(content);
+  const postPages = files.flatMap(filePath => {
+    try {
+      const raw = fs.readFileSync(filePath, 'utf8');
+      // Eliminar null bytes que rompen el parser YAML
+      const content = raw.replace(/\x00/g, '');
+      const { data } = matter(content);
 
-    const { slug, categorySlug, updatedAt, createdAt } = data;
-    if (!slug || !categorySlug) return null;
+      const { slug, categorySlug, updatedAt, createdAt } = data;
+      if (!slug || !categorySlug) return [];
 
-    const lastModified = updatedAt || createdAt || new Date().toISOString();
+      const lastModified = updatedAt || createdAt || new Date().toISOString();
 
-    return {
-      url: `${BASE_URL}/blog/${categorySlug}/${slug}`,
-      lastModified: new Date(lastModified).toISOString(),
-      priority: 0.8,
-      changeFrequency: 'weekly',
-    };
-  }).filter(Boolean);
+      return [{
+        url: `${BASE_URL}/blog/${categorySlug}/${slug}`,
+        lastModified: new Date(lastModified).toISOString(),
+        priority: 0.8,
+        changeFrequency: 'weekly',
+      }];
+    } catch {
+      return [];
+    }
+  });
 
   return [...staticPages, ...postPages];
 }
