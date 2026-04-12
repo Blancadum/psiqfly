@@ -3,7 +3,7 @@ import axios from 'axios';
 // 1. Configuramos la instancia centralizada
 const api = axios.create({
   // En Next.js usamos process.env.NEXT_PUBLIC_ para que sea visible en el cliente
-  baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api',
+  baseURL: process.env.NEXT_PUBLIC_API_URL || '',
   headers: {
     'Content-Type': 'application/json',
   },
@@ -36,10 +36,10 @@ export const getMensajes = () => api.get('/mensajes');
 export const enviarMensaje = (datos) => api.post('/mensajes', datos);
 
 // Contacto
-export const enviarContacto = (datos) => api.post('/contacto', datos);
+export const enviarContacto = (datos) => api.post('/api/contacto', datos);
 
 // Newsletter
-export const suscribirNewsletter = (datos) => api.post('/newsletter/suscribir', datos);
+export const suscribirNewsletter = (datos) => api.post('/api/newsletter', datos);
 
 // Solo un export default al final
 export default api;
