@@ -7,6 +7,7 @@ import { CredentialsCarousel } from '@/components/ui/CredentialsCarousel';
 import { ContactForm } from '@/components/Layout/ContactForm';
 import { NewsletterSection } from '@/components/Layout/NewsletterSection';
 import { EDUCATION_DATA } from '@/Data/Cv/Education';
+import { IT_EDUCATION_DATA } from '@/Data/Cv/ItEducation';
 
 export const metadata = {
   title: 'Autora · Blanca De Uña Martín | PsiQFly',
@@ -26,7 +27,7 @@ export default function AutoraPage() {
       <section>
         <h2 className="psi-section-title mb-6">Formación <span className="psi-gradient-text">IT</span></h2>
         <div className="space-y-3">
-          {EDUCATION_DATA.filter(item => item.category === 'it').map((item, i) => <EducationItem key={i} item={item} />)}
+          {IT_EDUCATION_DATA.map((item, i) => <EducationItem key={i} item={item} />)}
         </div>
       </section>
       <section>
