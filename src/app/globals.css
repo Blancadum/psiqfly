@@ -1,26 +1,1618 @@
-@import "tailwindcss";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
+/* 1. VARIABLES DE DISEÑO (Tu paleta corporativa) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --brand-primary: #634AE6;
+  --brand-pink: #E245B6;
+  --bg-main: #F7F2FF;
+  --bg-secondary: #FFFFFF;
+  --bg-gradient: radial-gradient(1200px 600px at 20% -10%, #F7F2FF, transparent), 
+                  radial-gradient(1200px 600px at 80% 0%, #FAF7FF, #ffffff);
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --card-bg: #ffffff;
+  --card-border: rgba(99, 74, 230, 0.1);
+  --shadow: 0 4px 12px rgba(99, 74, 230, 0.08);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --bg-main: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-gradient: radial-gradient(1200px 600px at 20% -10%, rgba(99, 74, 230, 0.15), transparent), #0f172a;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --card-bg: #1e293b;
+  --card-border: rgba(255, 255, 255, 0.1);
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* 3. RESET & BASE */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply antialiased transition-colors duration-300;
+  font-family: var(--font-quicksand), ui-sans-serif, system-ui, sans-serif;
+  font-size: 20px;
+  background: var(--bg-gradient);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  background-attachment: fixed;
 }
+.psi-layout-main {
+  @apply pt-10 md:pt-20; 
+
+}
+
+/* 4. COMPONENTES (Arquitectura de Diseño) */
+@layer components {
+  /* --- Action Card ---*/
+  .psi-action-card {
+    @apply bg-white rounded-[2rem] p-8;
+      /* Una sombra más "cara" y profesional (Soft Shadow) */
+      box-shadow: 0 20px 50px -12px rgba(99, 74, 230, 0.15);
+      @apply border-2 border-indigo-50 transition-all duration-500;
+    }
+    .psi-action-card:hover {
+      @apply border-indigo-200 shadow-indigo-100;
+    }
+
+  .psi-action-card-title {
+    @apply text-2xl font-black mb-3 tracking-tight;
+    font-family: var(--font-montserrat), sans-serif;
+    background: linear-gradient(135deg, #634AE6, #E245B6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .psi-action-card-text {
+    @apply text-base leading-relaxed text-slate-600 dark:text-slate-400 mb-6;
+  }
+
+  .psi-action-card-list {
+    @apply space-y-2 mb-8;
+  }
+
+  .psi-action-card-item {
+    @apply flex items-start gap-2 text-base font-medium text-slate-600 dark:text-slate-400;
+  }
+
+  .psi-action-card-bullet {
+    @apply text-indigo-500 font-black text-base leading-none;
+  }
+
+  .psi-action-card-buttons {
+    @apply flex gap-3 w-full;
+  }
+  /* --- NAVBAR ESTRUCTURA --- */
+  .psi-nav-glass {
+    /* Estas tres líneas son las que hacen que sea "Sticky" */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999; /* Siempre por encima de todo */
+    /* Fondo con Glassmorphism */
+    background: linear-gradient(135deg, #ede9fe 0%, #f0ebff 40%, #f9f7ff 75%, rgba(255,255,255,0.98) 100%);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(99, 74, 230, 0.1);
+    height: 3.25rem; /* Altura compacta (52px) */
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+  .dark .psi-nav-glass {
+    @apply fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out;
+    background: rgba(15, 23, 42, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .psi-nav-container {
+    @apply flex items-center justify-between w-full max-w-7xl mx-auto px-8 h-[3.25rem];
+  }
+
+  .psi-nav-menu {
+    @apply flex items-center gap-8 h-full;
+  }
+
+  /* --- LINKS NAVBAR (Limpieza total de movimiento) --- */
+  .psi-nav-link {
+    @apply text-base font-bold tracking-tight transition-colors duration-200 whitespace-nowrap px-2 py-1;
+    color: #4c1d95;
+    position: relative;
+  }
+
+  .dark .psi-nav-link {
+    @apply text-slate-300;
+  }
+
+  .psi-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    right: 50%;
+    height: 1.5px;
+    background: #634AE6;
+    transition: left 0.25s ease, right 0.25s ease;
+  }
+
+  .psi-nav-link:hover {
+    @apply text-[#634AE6];
+    transform: none !important;
+  }
+
+  .psi-nav-link:hover::after {
+    left: 0;
+    right: 0;
+  }
+
+  /* Footer links */
+  .psi-footer-link {
+    @apply text-indigo-700 hover:text-[#634AE6] transition-colors font-semibold text-sm;
+    position: relative;
+  }
+
+  .psi-footer-link::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    right: 50%;
+    height: 1.5px;
+    background: #634AE6;
+    transition: left 0.25s ease, right 0.25s ease;
+  }
+
+  .psi-footer-link:hover::after {
+    left: 0;
+    right: 0;
+  }
+  .psi-nav-logo-link img {
+    @apply h-14 w-auto;
+  }
+  .psi-nav-logo-link {
+    @apply flex items-center transition-opacity duration-300 select-none;
+  }
+
+  .psi-nav-logo-link:hover {
+    @apply opacity-80;
+    transform: none !important;
+  }
+  /* --- MINIMAL NAVBAR (Login/Register) --- */
+  .psi-nav-minimal {
+    @apply fixed top-0 left-0 right-0 h-16 flex items-center bg-white/80 backdrop-blur-md z-50;
+    border-bottom: 1px solid rgba(99, 74, 230, 0.05);
+  }
+
+  .psi-nav-minimal-container {
+    @apply max-w-7xl mx-auto w-full px-8 flex justify-between items-center;
+  }
+  /* --- TEXTO Y TÍTULOS --- */
+  .psi-title-main {
+    @apply font-black text-slate-900 dark:text-white leading-tight tracking-tight;
+    font-family: var(--font-montserrat), sans-serif;
+  } 
+
+  .psi-gradient-text {
+    background: linear-gradient(135deg, #634AE6, #E245B6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .psi-excerpt { 
+    @apply text-slate-500 dark:text-slate-400 leading-relaxed italic font-medium;
+  }
+
+  /* --- BOTONES --- */
+  .psi-btn-primary {
+    @apply font-bold rounded-full transition-all duration-300 inline-block text-center px-6 py-2 text-sm;
+    background: #e0e7ff;
+    border: 1px solid #634AE6;
+    color: #634AE6;
+  }
+
+  .psi-btn-primary:hover {
+    @apply text-white shadow-lg;
+    background: linear-gradient(135deg, #634AE6, #E245B6);
+  }
+
+  .psi-btn-secondary {
+    @apply bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 font-bold rounded-full px-6 py-2 transition-all hover:bg-slate-50 dark:hover:bg-slate-700 text-sm;
+  }
+
+  .psi-btn-compact {
+    @apply px-4 py-1.5;
+  }
+
+  .psi-badge-novelty {
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 text-indigo-600 text-xs font-bold uppercase tracking-wider border border-indigo-100;
+  }
+
+  .psi-ping-dot {
+    @apply relative flex h-2 w-2;
+  }
+
+  .psi-ping-dot-outer {
+    @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75;
+  }
+
+  .psi-ping-dot-inner {
+    @apply relative inline-flex rounded-full h-2 w-2 bg-indigo-500;
+  }
+
+  .psi-lead-text {
+    @apply text-slate-600 text-lg max-w-xl leading-relaxed;
+  }
+
+  .psi-trust-badges {
+    @apply flex flex-wrap items-center gap-6 text-sm font-semibold text-slate-500;
+  }
+
+  .psi-btn-group {
+    @apply flex gap-3 pt-2;
+  }
+
+  /* --- CARDS & CONTENEDORES --- */
+  .psi-author-container {
+    @apply max-w-5xl mx-auto px-6 pt-10 pb-4 space-y-8;
+  }
+
+  .psi-author-container section,
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  .psi-author-card {
+    @apply bg-white dark:bg-slate-800 border border-indigo-100 dark:border-slate-700 rounded-3xl shadow-sm p-8 md:p-10 transition-colors duration-300;
+  }
+
+  .psi-pub-card {
+    @apply p-0 overflow-hidden transition-all duration-300;
+  }
+
+  .psi-pub-card--open {
+    @apply ring-1 ring-indigo-500;
+  }
+
+  .psi-pub-header {
+    @apply w-full flex items-start gap-5 p-6 text-left hover:bg-indigo-50/40 dark:hover:bg-slate-800/50 transition-colors;
+  }
+
+  .psi-pub-label {
+    @apply text-[10px] font-black text-indigo-600 uppercase tracking-widest mb-1;
+  }
+
+  .psi-pub-title {
+    @apply font-extrabold text-slate-900 dark:text-white text-sm leading-snug mb-1;
+  }
+
+  .psi-pub-author {
+    @apply text-xs text-slate-400;
+  }
+
+  .psi-pub-toggle {
+    @apply text-[#634AE6] text-xl font-bold mt-1;
+  }
+
+  .psi-pub-body {
+    @apply px-8 pb-8 border-t border-slate-100 dark:border-slate-700 animate-fade-in;
+  }
+
+  .psi-pub-abstract-label {
+    @apply mt-6 mb-3 text-indigo-600;
+  }
+
+  .psi-pub-abstract {
+    @apply text-slate-600 dark:text-slate-400 text-base leading-relaxed space-y-4;
+  }
+
+  .psi-pub-arch-title {
+    @apply font-semibold text-slate-700 dark:text-slate-300;
+  }
+
+  .psi-pub-feature-list {
+    @apply space-y-2 ml-1;
+  }
+
+  .psi-pub-feature-item {
+    @apply flex items-start gap-3;
+  }
+
+  .psi-pub-feature-index {
+    @apply font-black text-xs mt-1;
+    background: linear-gradient(135deg, #634AE6, #E245B6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .psi-pub-impact {
+    @apply bg-indigo-50/50 dark:bg-indigo-900/10 p-4 rounded-xl border border-indigo-100 dark:border-indigo-500/10 text-xs;
+  }
+
+  .psi-pub-cta {
+    @apply mt-8;
+  }
+
+  .psi-pub-emoji {
+    @apply text-4xl flex-shrink-0 mt-1;
+  }
+
+  .psi-pub-info {
+    @apply flex-1 min-w-0;
+  }
+
+  .psi-pub-highlight {
+    @apply font-bold text-slate-800 dark:text-slate-200;
+  }
+
+  .psi-pub-impact-label {
+    @apply font-bold text-indigo-600;
+  }
+
+  .psi-btn-primary--flex {
+    @apply inline-flex items-center gap-2;
+  }
+
+  .psi-block-info {
+    @apply space-y-4;
+  }
+
+  .psi-block-info--gradient {
+    @apply bg-gradient-to-r from-indigo-50/50 to-purple-50/50 dark:from-indigo-900/10 dark:to-purple-900/10 border border-indigo-100 dark:border-indigo-800 rounded-2xl p-6;
+  }
+
+  .psi-edu-list {
+    @apply flex flex-col gap-3 mt-2;
+  }
+
+  .psi-edu-item {
+    @apply flex flex-col gap-0.5;
+  }
+
+  .psi-edu-degree {
+    @apply text-slate-700 dark:text-slate-300 font-semibold text-sm;
+  }
+
+  .psi-edu-institution {
+    @apply text-[11px] text-slate-400 uppercase tracking-widest;
+  }
+
+  .psi-edu-docs {
+    @apply flex gap-3 mt-0.5;
+  }
+
+  .psi-edu-doc-link {
+    @apply text-[11px] text-indigo-500 hover:text-indigo-700 dark:hover:text-indigo-300 font-medium underline underline-offset-2 transition-colors;
+  }
+
+  /* --- EDUCATION ACCORDION (EducationItem) --- */
+  .psi-edu-card {
+    @apply bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl shadow-sm;
+    @apply p-0 overflow-hidden transition-all duration-500 mb-4;
+  }
+
+  .psi-edu-card--open {
+    @apply ring-2 ring-indigo-500/20 border-indigo-200;
+  }
+
+  .psi-edu-header {
+    @apply w-full flex items-center gap-2 px-3 py-2 text-left;
+    @apply hover:bg-indigo-50/30 dark:hover:bg-slate-800/50 transition-all;
+  }
+
+  .psi-edu-year {
+    @apply flex-shrink-0 w-20 text-right;
+  }
+
+  .psi-edu-year-label {
+    @apply text-xs font-black text-[#634AE6] uppercase tracking-widest;
+  }
+
+  .psi-edu-info {
+    @apply flex-1;
+  }
+
+  .psi-edu-title {
+    @apply font-bold text-slate-900 dark:text-white text-base leading-tight tracking-tight;
+  }
+
+  .psi-edu-meta {
+    @apply text-slate-400 text-sm font-medium mt-0.5;
+  }
+
+  .psi-edu-toggle {
+    @apply w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg;
+    @apply transition-all duration-300 bg-slate-50 text-indigo-500;
+  }
+
+  .psi-edu-toggle--open {
+    @apply bg-indigo-500 text-white rotate-180;
+  }
+
+  .psi-edu-panel {
+    @apply px-3 pb-3 pt-2 border-t border-slate-50 dark:border-slate-700 animate-fade-in bg-white/50;
+  }
+
+  .psi-edu-skills {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-1.5;
+  }
+
+  .psi-skill-label {
+    @apply font-bold text-slate-800 dark:text-slate-200 text-base tracking-tight;
+  }
+
+  .psi-skill-desc {
+    @apply text-slate-500 dark:text-slate-400 text-sm leading-relaxed mt-0.5;
+  }
+
+  .psi-edu-cert-actions {
+    @apply mt-4 flex justify-end gap-2;
+  }
+
+  .psi-btn-cert {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium
+           border border-emerald-400/40 text-emerald-600 dark:text-emerald-400
+           bg-emerald-50/50 hover:bg-emerald-100/60
+           transition-all duration-200 hover:border-emerald-400/70 hover:shadow-sm;
+  }
+
+  .psi-btn-cert-link {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium
+           border border-[#634AE6]/40 text-[#634AE6] dark:text-[#a78bfa]
+           bg-[#634AE6]/5 hover:bg-[#634AE6]/15
+           transition-all duration-200 hover:border-[#634AE6]/70 hover:shadow-sm hover:shadow-[#634AE6]/20
+           dark:border-[#a78bfa]/30 dark:bg-[#a78bfa]/5 dark:hover:bg-[#a78bfa]/15;
+  }
+
+  .psi-body-text {
+    @apply space-y-4 text-slate-600 dark:text-slate-400 text-base leading-relaxed;
+  }
+
+  .psi-text-emphasis {
+    @apply font-semibold text-slate-800 dark:text-slate-200;
+  }
+
+  .psi-text-strong {
+    @apply font-bold text-slate-900 dark:text-white;
+  }
+
+  .psi-btn-card {
+    @apply flex-1 py-2.5 text-xs md:text-sm;
+  }
+
+  .psi-highlight-text {
+    @apply text-slate-700 dark:text-slate-300 text-base leading-relaxed;
+  }
+
+  .psi-card-cardinal {
+    @apply bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl p-6 shadow-sm hover:border-[#634AE6] transition-all duration-300;
+  }
+
+  .psi-tag-category {
+    @apply inline-block px-3 py-1 rounded-full text-xs font-semibold;
+    @apply bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300;
+  }
+
+  /* --- PAGE BACKGROUNDS --- */
+  .psi-page-bg {
+    @apply min-h-screen bg-gradient-to-br from-indigo-50/50 via-white to-purple-50/50;
+    @apply dark:from-slate-900 dark:to-slate-900;
+  }
+
+  /* --- SECTION TITLE (psi-title-main text-2xl mb-5) --- */
+  .psi-section-title {
+    @apply psi-title-main text-2xl mb-5;
+  }
+
+  /* --- OVERLINE (etiquetas pequeñas en mayúsculas) --- */
+  .psi-overline {
+    @apply text-[10px] font-black text-indigo-400 uppercase tracking-widest;
+  }
+
+  /* --- BLOG CARD --- */
+  .psi-blog-card {
+    @apply block bg-white/80 dark:bg-slate-800/40 backdrop-blur-sm;
+    @apply border border-slate-100 dark:border-slate-700 rounded-3xl p-6;
+    @apply hover:shadow-2xl hover:shadow-indigo-100 dark:hover:shadow-none;
+    @apply hover:-translate-y-1 hover:border-indigo-500/30 transition-all duration-300;
+  }
+
+  /* --- POST ITEM (lista de artículos en landings) --- */
+  .psi-post-item {
+    @apply flex items-center gap-4 bg-white dark:bg-slate-800;
+    @apply border border-slate-100 dark:border-slate-700 rounded-xl p-4;
+    @apply hover:border-[#634AE6] transition-all duration-200;
+  }
+
+  /* --- DISORDER CARDS (TMSubcategory) --- */
+  .psi-disorder-card {
+    @apply flex items-start gap-4 bg-white dark:bg-slate-800;
+    @apply border border-[#634AE6]/30 rounded-2xl p-5 shadow-sm;
+    @apply hover:border-[#634AE6] hover:bg-indigo-50/50 transition-all duration-200;
+  }
+
+  .psi-disorder-card--disabled {
+    @apply flex items-start gap-4 bg-white dark:bg-slate-800;
+    @apply border border-slate-100 dark:border-slate-700 rounded-2xl p-5 shadow-sm opacity-60;
+  }
+
+  /* --- SKILL CARD (Education expandable) --- */
+  .psi-skill-card {
+    @apply flex gap-3 bg-white dark:bg-indigo-900/10 p-3 rounded-2xl;
+    @apply border border-indigo-50 dark:border-indigo-500/10 shadow-sm;
+    @apply hover:border-indigo-200 transition-colors;
+  }
+
+  /* --- FORM PAGE & CARD (Login, Register, Contact) --- */
+  .psi-form-page {
+    @apply flex justify-center px-4 pt-16 pb-2;
+    @apply bg-gradient-to-br from-indigo-50/50 via-white to-purple-50/50;
+    @apply dark:from-slate-900 dark:to-slate-900;
+  }
+
+  .psi-form-centered {
+    @apply flex justify-center px-4 pt-8 pb-2;
+  }
+
+  .psi-form-card {
+    @apply bg-white dark:bg-slate-800 rounded-3xl shadow-sm border border-indigo-100 dark:border-slate-700 p-8 md:p-10;
+  }
+
+  .psi-form-card--compact {
+    @apply p-6 md:p-8;
+  }
+
+  .psi-field-label {
+    @apply block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5;
+  }
+
+  .psi-form-row {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-3;
+  }
+
+  .psi-form-check {
+    @apply flex items-start gap-2 cursor-pointer;
+  }
+
+  .psi-form-check-input {
+    @apply mt-0.5 accent-[#634AE6];
+  }
+
+  .psi-form-check-text {
+    @apply text-sm text-slate-500 dark:text-slate-400 leading-relaxed;
+  }
+
+  .psi-strength-track {
+    @apply mt-1.5 h-1 w-full bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden;
+  }
+
+  .psi-form-error {
+    @apply text-xs text-red-600 bg-red-50 dark:bg-red-900/20 p-3 rounded-xl border border-red-100 dark:border-red-800;
+  }
+
+  /* --- FORMULARIO --- */
+  .psi-input {
+    @apply w-full rounded-xl px-4 py-2.5 text-sm transition-all duration-200 outline-none;
+    background-color: var(--bg-secondary);
+    color: var(--text-main);
+    border: 1px solid var(--card-border);
+  }
+
+  .psi-input:focus {
+    @apply ring-2 ring-indigo-500/50 border-indigo-400;
+  }
+
+  .psi-form-label {
+    @apply block text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase ml-1 mb-1.5 tracking-wider;
+  }
+
+  /* --- COMPONENTE FAQ (ESTILO GLOBAL) --- */
+/* --- SISTEMA ÚNICO DE FAQ PSIQFLY --- */
+
+.psi-faq-container {
+  @apply border-b border-slate-100 last:border-0 transition-all duration-300;
+}
+
+.psi-faq-trigger {
+  @apply w-full flex justify-between items-center py-4 text-left font-semibold text-slate-800 hover:text-[#634AE6] transition-colors;
+}
+
+.psi-faq-question {
+  @apply text-sm md:text-base leading-snug;
+}
+
+.psi-faq-icon {
+  @apply text-[#634AE6] text-xl ml-4 flex-shrink-0 transition-transform duration-200;
+}
+
+.psi-faq-content {
+  @apply pb-6 text-slate-600 leading-relaxed text-base animate-fade-in;
+}
+
+.psi-faq-blog-section {
+  @apply my-10;
+}
+
+.psi-faq-blog-header {
+  @apply flex items-center gap-3 mb-4;
+}
+
+.psi-faq-blog-title {
+  @apply text-lg font-black text-slate-900 dark:text-white tracking-tight;
+}
+
+.psi-faq-blog-list {
+  @apply bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl px-6 py-2;
+}
+
+.psi-faq-section {
+  @apply pt-5 pb-6 border-t border-slate-200 dark:border-slate-700 mt-10;
+}
+
+.psi-faq-section-title {
+  @apply text-2xl font-extrabold text-slate-900 dark:text-white mb-6 text-center;
+}
+
+.psi-faq-section-box {
+  @apply bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 rounded-lg px-6 py-2;
+}
+
+.psi-faq-tm-section {
+  @apply mt-16 mb-12;
+}
+
+.psi-faq-tm-header {
+  @apply mb-8;
+}
+
+.psi-faq-tm-title {
+  @apply text-xl font-black text-slate-900 dark:text-white mb-2;
+}
+
+.psi-faq-tm-subtitle {
+  @apply text-slate-500 dark:text-slate-400 text-sm italic;
+}
+
+.psi-faq-tm-list {
+  @apply max-w-4xl;
+}
+
+  /* --- POST HEADER SYSTEM --- */
+
+  .psi-post-header {
+    @apply mb-12 max-w-4xl pt-4;
+  }
+
+  .psi-post-breadcrumb {
+    @apply flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-8;
+  }
+
+  .psi-post-breadcrumb a {
+    @apply hover:text-[#634AE6] transition-colors;
+  }
+
+  .psi-post-badge {
+    @apply inline-block px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider mb-4 shadow-sm border border-black/5;
+  }
+
+  .psi-post-title {
+    @apply text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-[1.1] mb-6 tracking-tighter;
+    font-family: var(--font-montserrat), sans-serif;
+  }
+
+  .psi-post-description {
+    @apply text-xl text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl font-medium;
+  }
+}
+
+/* 5. ANIMACIONES */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out both;
+}
+
+/* --- ABOUT PAGE SYSTEM --- */
+
+.psi-about-container {
+  @apply max-w-5xl mx-auto px-8 py-12;
+}
+
+.psi-about-card {
+  @apply bg-white border border-indigo-100 rounded-[2.5rem] p-8 shadow-sm transition-all duration-300 hover:shadow-md;
+}
+
+.psi-about-title-section {
+  @apply text-3xl font-extrabold text-slate-900 mb-8 text-center;
+}
+
+/* Pasos del "Cómo funciona" */
+.psi-step-card {
+  @apply flex items-start gap-6 bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:border-[#634AE6] transition-all duration-200;
+}
+
+.psi-step-number {
+  @apply font-black text-3xl flex-shrink-0 leading-none;
+  background: linear-gradient(135deg, #634AE6, #E245B6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Tarjetas de Beneficios/Para quién */
+.psi-benefit-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-8 mt-12;
+}
+
+/* CTA Final - El cuadro de la imagen */
+.psi-cta-box {
+  @apply bg-white border border-indigo-100 rounded-[3rem] p-12 shadow-sm text-center max-w-4xl mx-auto my-16;
+}
+
+/* --- SECCIÓN ORIGEN --- */
+
+.psi-about-origen-grid {
+  @apply max-w-5xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center;
+}
+
+.psi-origen-content h2 {
+  @apply text-3xl font-extrabold text-slate-900 mb-6;
+}
+
+.psi-origen-text {
+  @apply text-base text-slate-600 leading-relaxed mb-6;
+}
+
+.psi-origen-card-list {
+  @apply bg-white rounded-[2.5rem] border border-indigo-100 shadow-sm p-8 space-y-6;
+}
+
+.psi-origen-item {
+  @apply flex items-start gap-4;
+}
+
+.psi-origen-item-icon {
+  @apply text-2xl flex-shrink-0;
+}
+
+.psi-origen-item-title {
+  @apply font-bold text-slate-800 text-sm mb-0.5;
+}
+
+.psi-origen-item-desc {
+  @apply text-slate-500 text-xs leading-normal;
+}
+
+/* --- ANIMATION DELAYS --- */
+.psi-delay-200 { animation-delay: 0.2s; }
+.psi-delay-400 { animation-delay: 0.4s; }
+
+/* --- VIDEO 16:9 RATIO --- */
+.psi-video-ratio {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+
+/* --- PDF READER --- */
+.psi-pdf-reader        { height: 680px; }
+.psi-pdf-reader--expanded { height: 90vh; }
+
+/* --- FOOTER --- */
+.psi-footer-body {
+  background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 35%, #f5f3ff 70%, #ffffff 100%);
+}
+.psi-footer-copyright {
+  background: linear-gradient(135deg, #ede9fe 0%, #f0ebff 40%, #f9f7ff 75%, rgba(255,255,255,0.98) 100%);
+}
+.psi-footer-logo { height: 2.8rem; }
+
+/* --- NAVBAR AUTH --- */
+.psi-navbar-auth-bg {
+  background: linear-gradient(to right, #e0e7ff, #ffffff);
+}
+
+/* --- HERO LOGO --- */
+.psi-hero-logo-img {
+  height: 7rem;
+  width: auto;
+  transition: transform 0.3s;
+}
+.psi-hero-logo-img:hover { transform: scale(1.05); }
+
+.psi-hero-logo {
+  @apply relative flex justify-center pt-4 pb-0 overflow-hidden select-none;
+  transition: all 0.4s ease-out;
+}
+
+.psi-hero-logo-link {
+  @apply relative z-10;
+}
+.psi-hero-logo--hidden {
+  opacity: 0;
+  transform: translateY(-20px) scale(0.9);
+  pointer-events: none;
+  height: 0 !important;
+  overflow: hidden;
+}
+
+/* --- SPARKLES CANVAS --- */
+.psi-sparkles-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Crucial para poder hacer clic en lo que hay debajo */
+  z-index: 0;
+  opacity: 0.8; /* Para que sean sutiles */
+}
+
+/* --- DARK MODE TOGGLE --- */
+.psi-toggle-track {
+  background: #e0e7ff;
+  transition: background 0.3s;
+}
+.psi-toggle-track--dark { background: #634AE6; }
+
+.psi-toggle-thumb {
+  transform: translateX(0);
+  transition: transform 0.3s;
+}
+.psi-toggle-thumb--dark { transform: translateX(16px); }
+
+/* --- SOCIAL ICONS (CSS custom property) --- */
+.psi-social-icon {
+  @apply w-8 h-8 rounded-full flex items-center justify-center
+         hover:opacity-80 transition-all hover:-translate-y-1 shadow-sm;
+  background-color: var(--icon-bg);
+}
+
+.psi-social-links {
+  @apply flex flex-wrap items-center gap-3;
+}
+
+/* --- STRENGTH BAR (CSS custom property) --- */
+.psi-strength-bar { width: var(--strength); }
+
+/* --- FEATURE CARD (Home, FeaturesGrid) --- */
+.psi-feature-card {
+  @apply bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl p-8
+         shadow-sm flex flex-col items-center text-center
+         transition-all duration-300 hover:-translate-y-2 hover:border-[#634AE6];
+}
+
+.psi-feature-card-icon {
+  @apply text-5xl mb-6 transition-transform duration-500;
+}
+
+.psi-feature-card:hover .psi-feature-card-icon {
+  @apply scale-110;
+}
+
+.psi-feature-card-title {
+  @apply text-sm font-black uppercase tracking-[0.2em] mb-4;
+  background: linear-gradient(135deg, #634AE6, #E245B6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.psi-feature-card-text {
+  @apply text-base text-slate-500 dark:text-slate-400 leading-relaxed font-medium;
+}
+
+/* --- CARD GRID item title --- */
+.psi-cardinal-card-title {
+  @apply font-extrabold text-sm mb-2;
+  background: linear-gradient(135deg, #634AE6, #E245B6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- TABLE OF CONTENTS --- */
+.psi-toc-wrapper {
+  position: fixed;
+  top: calc(3.25rem + 0.75rem);
+  left: 1.25rem;
+  z-index: 38;
+}
+
+.psi-toc-trigger-area {
+  padding-bottom: 0.5rem;
+}
+
+.psi-toc-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #634AE6;
+  background: rgba(237, 233, 254, 0.55);
+  border: 1px solid rgba(99, 74, 230, 0.15);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.psi-toc-trigger:hover {
+  background: rgba(237, 233, 254, 0.9);
+  border-color: rgba(99, 74, 230, 0.3);
+}
+
+.psi-toc-trigger-icon {
+  font-size: 0.85rem;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.psi-toc-panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 210px;
+  border-radius: 1.1rem;
+  padding: 0.75rem;
+  padding-top: 0.9rem;
+  background: linear-gradient(
+    135deg,
+    rgba(237, 233, 254, 0.6) 0%,
+    rgba(221, 214, 254, 0.52) 40%,
+    rgba(245, 243, 255, 0.6) 100%
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(99, 74, 230, 0.1);
+  box-shadow: 0 8px 32px rgba(99, 74, 230, 0.08);
+}
+
+.psi-toc-heading {
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #a78bfa;
+  padding: 0 0.4rem 0.5rem;
+  border-bottom: 1px solid rgba(99, 74, 230, 0.1);
+  margin-bottom: 0.4rem;
+}
+
+.psi-toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.psi-toc-link {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4c1d95;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.psi-toc-link:hover {
+  background: rgba(99, 74, 230, 0.08);
+  color: #634AE6;
+}
+
+/* --- CREDENTIALS CAROUSEL --- */
+.psi-credentials-section {
+  @apply max-w-3xl mx-auto px-6 py-12;
+}
+
+.psi-credentials-viewport {
+  @apply overflow-hidden rounded-3xl;
+}
+
+.psi-credentials-track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(calc(var(--offset) * -100%));
+}
+
+.psi-credentials-slide {
+  @apply w-full flex-shrink-0 px-2;
+}
+
+.psi-credentials-card {
+  @apply relative bg-white dark:bg-slate-800 border-2 border-indigo-100 dark:border-slate-700
+  rounded-3xl p-8 text-center transition-all duration-300 opacity-50 scale-95;
+}
+
+.psi-credentials-card--active {
+  @apply opacity-100 scale-100 border-indigo-300 shadow-lg;
+  box-shadow: 0 8px 32px rgba(99, 74, 230, 0.12);
+}
+
+.psi-credentials-card-header {
+  @apply flex items-center justify-center gap-3 mb-6;
+}
+
+.psi-credentials-year {
+  @apply text-xs font-black text-indigo-500 uppercase tracking-widest
+  bg-indigo-50 dark:bg-indigo-900/20 px-3 py-1 rounded-full;
+}
+
+.psi-credentials-badge {
+  @apply text-[10px] font-bold text-emerald-600 bg-emerald-50 dark:bg-emerald-900/20
+  px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800;
+}
+
+.psi-credentials-card-body {
+  @apply space-y-2 mb-6;
+}
+
+.psi-credentials-institution {
+  @apply text-sm font-black uppercase tracking-widest;
+  background: linear-gradient(135deg, #634AE6, #E245B6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.psi-credentials-title {
+  @apply text-xl font-extrabold text-slate-900 dark:text-white leading-snug;
+}
+
+.psi-credentials-seal {
+  @apply text-4xl opacity-20 select-none;
+}
+
+.psi-credentials-header-intro {
+  @apply text-center mb-10;
+}
+
+.psi-credentials-header-label {
+  @apply text-[10px] font-black text-indigo-400 uppercase tracking-widest mb-2;
+}
+
+.psi-credentials-counter {
+  @apply text-center text-xs text-slate-400 mt-4;
+}
+
+.psi-credentials-controls {
+  @apply flex items-center justify-center gap-6 mt-6;
+}
+
+.psi-credentials-btn {
+  @apply w-10 h-10 rounded-full bg-indigo-50 dark:bg-slate-700 text-indigo-600 dark:text-indigo-300
+  font-bold text-lg flex items-center justify-center
+  hover:bg-indigo-100 dark:hover:bg-slate-600 transition-colors;
+}
+
+.psi-credentials-dots {
+  @apply flex items-center gap-2;
+}
+
+.psi-credentials-dot {
+  @apply w-2 h-2 rounded-full bg-indigo-200 dark:bg-slate-600 transition-all duration-300;
+}
+
+.psi-credentials-dot--active {
+  @apply w-5 bg-indigo-500;
+}
+
+/* --- CONTENT BLOCKS (artículos de blog) --- */
+
+.psi-image-text {
+  @apply my-8;
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.psi-image-text-img {
+  @apply rounded-2xl overflow-hidden shadow-md;
+}
+
+.psi-image-text-img img {
+  @apply w-full h-full object-cover;
+}
+
+.psi-image-text-placeholder {
+  @apply w-full bg-indigo-50 dark:bg-slate-700 rounded-2xl flex items-center justify-center py-12;
+}
+
+.psi-image-text-caption {
+  @apply text-xs text-slate-400 text-center mt-2 italic;
+}
+
+.psi-image-text-heading {
+  @apply text-xl font-extrabold text-slate-900 dark:text-white mb-3;
+}
+
+.psi-image-text-text {
+  @apply text-slate-600 dark:text-slate-400 leading-relaxed text-base;
+}
+
+@media (min-width: 768px) {
+  .psi-image-text {
+    grid-template-columns: 1fr 1fr;
+  }
+  .psi-image-text--right .psi-image-text-img { order: 2; }
+  .psi-image-text--right .psi-image-text-body { order: 1; }
+}
+
+.psi-pullquote {
+  @apply my-8 px-8 py-6 border-l-4 border-[#634AE6];
+  @apply bg-indigo-50/60 dark:bg-indigo-900/10 rounded-r-2xl;
+}
+
+.psi-pullquote-text {
+  @apply text-xl md:text-2xl font-bold text-slate-800 dark:text-slate-200 leading-snug italic mb-3;
+}
+
+.psi-pullquote-author {
+  @apply text-xs text-indigo-500 font-semibold uppercase tracking-widest not-italic;
+}
+
+.psi-post-author-box {
+  @apply flex flex-wrap items-center justify-between gap-4 py-5 px-5 rounded-2xl border border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 mb-10;
+}
+
+.psi-post-author-left {
+  @apply flex items-center gap-3;
+}
+
+.psi-post-author-avatar {
+  @apply w-12 h-12 rounded-full object-cover shadow-md flex-shrink-0 ring-2 ring-white dark:ring-slate-700;
+}
+
+.psi-post-author-name {
+  @apply text-black dark:text-white font-extrabold text-xl tracking-tight;
+}
+
+.psi-post-author-role {
+  @apply text-sm text-slate-600 dark:text-slate-400 uppercase tracking-widest mt-0.5;
+}
+
+.psi-post-author-dates {
+  @apply flex flex-col gap-1 text-right;
+}
+
+.psi-post-author-date-row {
+  @apply flex items-center justify-end gap-2 text-sm text-slate-500 dark:text-slate-400;
+}
+
+.psi-post-author-date-label {
+  @apply font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider text-xs;
+}
+
+.psi-post-author-readtime {
+  @apply mt-1 text-sm text-[#634AE6] font-semibold tracking-wide;
+}
+
+.psi-mid-headline {
+  @apply my-16 flex flex-col items-center text-center gap-4;
+}
+
+.psi-mid-headline-rule {
+  width: 3rem;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #634AE6, transparent);
+}
+
+.psi-mid-headline-title {
+  @apply text-3xl md:text-4xl font-black leading-tight tracking-tight;
+}
+
+.psi-mid-headline-subtitle {
+  @apply text-slate-500 dark:text-slate-400 text-base max-w-xl leading-relaxed;
+}
+
+.psi-book-cluster {
+  @apply my-8 p-6 rounded-3xl border border-indigo-100/50 dark:border-slate-700;
+  @apply bg-gradient-to-br from-slate-50 to-indigo-50/30 dark:from-slate-800/50 dark:to-slate-800/30;
+}
+
+.psi-book-cluster-title {
+  @apply psi-overline mb-5;
+}
+
+.psi-book-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .psi-book-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .psi-book-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.psi-book-card {
+  @apply bg-white dark:bg-slate-800 rounded-2xl overflow-hidden;
+  @apply border border-slate-100 dark:border-slate-700;
+  @apply hover:border-[#634AE6] hover:-translate-y-0.5 transition-all duration-200;
+}
+
+.psi-book-cover {
+  @apply w-full bg-indigo-50 dark:bg-slate-700 overflow-hidden;
+  aspect-ratio: 3 / 4;
+}
+
+.psi-book-cover img {
+  @apply w-full h-full object-cover;
+}
+
+.psi-book-cover-placeholder {
+  @apply w-full h-full flex items-center justify-center text-4xl;
+}
+
+.psi-book-info {
+  @apply p-4;
+}
+
+.psi-book-title {
+  @apply font-bold text-slate-900 dark:text-white text-sm leading-snug mb-0.5;
+}
+
+.psi-book-author {
+  @apply text-xs text-indigo-500 font-semibold mb-2;
+}
+
+.psi-book-desc {
+  @apply text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-3;
+}
+
+.psi-book-cta {
+  @apply inline-flex items-center gap-1 text-xs font-bold text-[#634AE6] hover:underline;
+}
+
+/* --- BLOG / POST BACKGROUND --- */
+.psi-blog-bg {
+  @apply min-h-screen bg-gradient-to-br from-indigo-50/50 via-white to-purple-50/50 dark:from-slate-900 dark:to-slate-900 selection:bg-indigo-100 selection:text-indigo-900;
+}
+
+/* ============================================
+    DSM / TRASTORNOS — componentes de landing
+============================================ */
+
+/* BREADCRUMBS */
+.psi-breadcrumb {
+  @apply flex items-center gap-2 text-xs text-slate-400 flex-wrap;
+}
+.psi-breadcrumb a {
+  @apply hover:text-[#634AE6] transition-colors;
+}
+
+/* BADGES y PILLS DE ESTADO */
+.psi-badge-available {
+  @apply text-xs font-bold text-[#634AE6] bg-indigo-50 dark:bg-indigo-900/20 px-2 py-0.5 rounded-full;
+}
+.psi-badge-soon {
+  @apply text-xs font-medium text-slate-400 bg-slate-100 dark:bg-slate-700 px-2 py-0.5 rounded-full;
+}
+.psi-badge-key {
+  @apply text-xs font-bold text-[#634AE6] bg-indigo-50 dark:bg-indigo-900/30 px-2 py-0.5 rounded-full;
+}
+.psi-pill-dsm {
+  @apply text-[11px] px-2 py-0.5 rounded-full border;
+}
+.psi-pill-dsm--active {
+  @apply border-[#634AE6] text-[#634AE6] bg-indigo-50 dark:bg-indigo-900/20;
+}
+.psi-pill-dsm--disabled {
+  @apply border-slate-200 dark:border-slate-600 text-slate-400;
+}
+
+/* CARDS INTERACTIVAS */
+.psi-card-hover {
+  @apply bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl shadow-sm hover:border-[#634AE6]/50 hover:shadow-md transition-all duration-200;
+}
+.psi-card-flat {
+  @apply bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl px-6 py-2;
+}
+.psi-card-section {
+  @apply px-6 py-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-700;
+}
+.psi-card-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 gap-3;
+}
+
+/* CAJAS de NOTA/AVISO */
+.psi-note-warning {
+  @apply bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-800/40 rounded-2xl p-6;
+}
+.psi-note-info {
+  @apply bg-blue-50 dark:bg-blue-900/10 border border-blue-200 dark:border-blue-800/40 rounded-xl p-4 flex items-start gap-3;
+}
+.psi-note-clinical {
+  @apply px-6 py-4 bg-amber-50/50 dark:bg-amber-900/10 border-t border-amber-100 dark:border-amber-800/30;
+}
+
+/* LABELS / ETIQUETAS */
+.psi-label-uppercase {
+  @apply text-xs font-black text-slate-500 uppercase tracking-widest;
+}
+.psi-label-indigo {
+  @apply text-xs font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest;
+}
+
+/* CÍRCULOS NUMERADOS */
+.psi-circle-num {
+  @apply flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-black;
+}
+.psi-circle-num--gradient {
+  @apply bg-gradient-to-br from-[#634AE6] to-[#E245B6] text-white;
+}
+.psi-circle-num--default {
+  @apply bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300;
+}
+.psi-circle-num--small {
+  @apply flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-[#634AE6] to-[#E245B6] flex items-center justify-center;
+}
+
+/* SEPARADOR DE SECCIÓN */
+.psi-section-divider {
+  @apply mt-12 pt-8 border-t border-slate-100 dark:border-slate-700;
+}
+
+/* KeyPointsBox */
+.psi-keypoints-box {
+  @apply relative rounded-xl overflow-hidden mb-7 border border-slate-100 dark:border-slate-800;
+}
+.psi-keypoints-accent {
+  @apply absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#634AE6] to-[#E245B6];
+}
+.psi-keypoints-body {
+  @apply px-5 py-4 bg-slate-50/70 dark:bg-slate-900/30;
+}
+
+/* ContentBlocks — texto de artículo */
+.psi-article-container {
+  @apply max-w-none;
+}
+
+.psi-article-p {
+  @apply text-slate-600 dark:text-slate-400 leading-relaxed text-base;
+}
+.psi-article-h2 {
+  @apply text-xl font-extrabold text-slate-900 dark:text-white mb-4;
+}
+
+/* CÓDIGO/MONOSPAGE badge (DSM CARD) */
+.psi-code-badge {
+  @apply text-xs font-mono bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 px-2 py-1 rounded-lg text-slate-500;
+}
+
+/* ─── BADGES DE CATEGORÍA ──────────────────────────────────────── */
+.psi-badge-dsm {
+  @apply inline-block text-xs font-bold px-3 py-1 rounded-full mb-4 bg-rose-100 text-rose-700;
+}
+.psi-cat-badge {
+  @apply inline-block text-xs font-bold px-3 py-1 rounded-full;
+}
+
+/* ─── POST ITEM INTERNALS ──────────────────────────────────────── */
+.psi-post-item-title {
+  @apply font-bold text-slate-800 dark:text-white text-sm leading-snug;
+}
+.psi-post-item-meta {
+  @apply text-xs text-slate-400 mt-0.5;
+}
+
+/* ─── Bloque "PRÓXIMAMENTE" ────────────────────────────────────── */
+.psi-coming-soon {
+  @apply text-center py-20;
+}
+.psi-coming-soon-emoji {
+  @apply text-6xl mb-6 block;
+}
+.psi-coming-soon-title {
+  @apply text-xl font-extrabold text-slate-900 dark:text-white mb-3;
+}
+.psi-coming-soon-desc {
+  @apply text-slate-500 dark:text-slate-400 text-sm max-w-sm mx-auto mb-8;
+}
+
+/* ─── Layout de página ─────────────────────────────────────────── */
+.psi-page-header {
+  @apply flex items-start justify-between mb-8;
+}
+.psi-page-h1 {
+  @apply text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white leading-tight;
+}
+.psi-page-desc {
+  @apply text-slate-500 dark:text-slate-400 text-base leading-relaxed max-w-2xl;
+}
+.psi-section-h2 {
+  @apply text-lg font-extrabold text-slate-900 dark:text-white;
+}
+.psi-cat-header {
+  @apply flex items-center gap-4 mb-4;
+}
+.psi-btn-row {
+  @apply flex flex-wrap gap-3;
+}
+
+/* ─── Pills de trastorno (disponible / próximamente) ───────────── */
+.psi-pill-available {
+  @apply text-[11px] px-2 py-0.5 rounded-full border border-[#634AE6] text-[#634AE6] bg-indigo-50 dark:bg-indigo-900/20;
+}
+.psi-pill-soon {
+  @apply text-[11px] px-2 py-0.5 rounded-full border border-slate-200 dark:border-slate-600 text-slate-400;
+}
+
+/* ─── Grids específicos ────────────────────────────────────────── */
+.psi-dsm-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5;
+}
+
+/* ─── Tarjeta subcategoría (con hover bg) ──────────────────────── */
+.psi-subcat-card {
+  @apply bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl p-6 shadow-sm;
+  @apply hover:border-[#634AE6] hover:bg-indigo-50 dark:hover:bg-slate-700/60 transition-all duration-200;
+}
+
+/* ─── Flecha de tarjeta (aparece en hover) ─────────────────────── */
+.psi-card-arrow {
+  @apply text-[#634AE6] font-bold flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity;
+}
+
+/* ─── Enlace dentro de nota info ───────────────────────────────── */
+.psi-note-link {
+  @apply text-xs font-bold text-blue-700 dark:text-blue-400 underline underline-offset-2 hover:text-[#634AE6] transition-colors;
+}
+
+/* ─── Páginas legales ──────────────────────────────────────────── */
+.psi-legal-layout {
+  @apply min-h-screen bg-gradient-to-br from-indigo-50/50 via-white to-purple-50/50 dark:from-slate-900 dark:to-slate-900;
+}
+.psi-legal-badge {
+  @apply inline-block px-4 py-1.5 rounded-full bg-indigo-100 text-indigo-700 text-sm font-semibold mb-5;
+}
+.psi-legal-h1 {
+  @apply text-4xl font-extrabold text-slate-900 dark:text-white mb-2;
+}
+.psi-legal-updated {
+  @apply text-sm text-slate-400 mb-10;
+}
+.psi-legal-card {
+  @apply bg-white dark:bg-slate-800 rounded-3xl border border-indigo-100 dark:border-slate-700 shadow-sm p-8 md:p-10;
+}
+.psi-legal-nav {
+  @apply mt-8 flex flex-wrap items-center gap-3;
+}
+.psi-legal-link {
+  @apply text-sm text-[#634AE6] hover:underline font-medium;
+}
+.psi-legal-section {
+  @apply mb-8;
+}
+.psi-legal-section-title {
+  @apply text-lg font-extrabold text-slate-900 dark:text-white mb-3;
+}
+.psi-legal-section-body {
+  @apply text-slate-600 dark:text-slate-400 leading-relaxed space-y-3 text-sm;
+}
+.psi-legal-list {
+  @apply space-y-1 mt-2;
+}
+.psi-legal-list-item {
+  @apply flex items-start gap-2;
+}
+.psi-legal-bullet {
+  @apply text-[#634AE6] font-black mt-0.5 flex-shrink-0;
+}
+.psi-legal-a {
+  @apply text-[#634AE6] hover:underline;
+}
+.psi-legal-strong {
+  @apply text-slate-800 dark:text-slate-200;
+}
+
+/* ─── CITATION MODAL────────────────────────────────────────── */
+.psi-citation-trigger {
+  position: fixed;
+  top: 5rem;
+  right: 1.25rem;
+  z-index: 40;
+  @apply flex items-center gap-1.5 text-xs font-semibold text-slate-500 dark:text-slate-400;
+  @apply hover:text-[#634AE6] bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700;
+  @apply rounded-lg px-3 py-1.5 shadow-sm transition-colors;
+}
+.psi-citation-overlay {
+  @apply fixed inset-0 z-50 flex items-center justify-center p-4;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+}
+.psi-citation-modal {
+  @apply bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 w-full max-w-lg;
+  animation: citation-in 0.18s ease-out;
+}
+@keyframes citation-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.psi-citation-modal-header {
+  @apply flex items-center justify-between px-5 py-4 border-b border-slate-100 dark:border-slate-800;
+}
+.psi-citation-modal-title {
+  @apply font-extrabold text-slate-900 dark:text-white text-base;
+}
+.psi-citation-close {
+  @apply text-slate-400 hover:text-slate-700 dark:hover:text-white transition-colors p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800;
+}
+.psi-citation-tabs {
+  @apply flex gap-1 px-5 pt-4 overflow-x-auto pb-1;
+}
+.psi-citation-tab {
+  @apply flex items-center gap-1.5 text-sm font-semibold px-3 py-1.5 rounded-lg border transition-all whitespace-nowrap;
+  @apply border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400;
+  @apply hover:border-[#634AE6] hover:text-[#634AE6];
+}
+.psi-citation-tab--active {
+  @apply border-[#634AE6] text-[#634AE6] bg-indigo-50 dark:bg-indigo-900/20;
+}
+.psi-citation-badge {
+  @apply text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-[#634AE6] text-white;
+}
+.psi-citation-scope {
+  @apply text-xs text-slate-400 px-5 mt-2 mb-1;
+}
+.psi-citation-text-wrapper {
+  @apply relative mx-5 mt-2 mb-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4;
+}
+.psi-citation-text {
+  @apply text-sm text-slate-700 dark:text-slate-300 leading-relaxed whitespace-pre-wrap break-words pr-24;
+  font-family: 'Georgia', serif;
+}
+.psi-citation-copy-btn {
+  @apply absolute top-3 right-3 flex items-center gap-1 text-xs font-semibold;
+  @apply px-2.5 py-1.5 rounded-lg bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600;
+  @apply text-slate-600 dark:text-slate-300 hover:text-[#634AE6] hover:border-[#634AE6] transition-all;
+}
+.psi-citation-note {
+  @apply text-[11px] text-slate-400 px-5 pb-5 leading-relaxed;
+}
+
+/* --- SISTEMA DE BREADCRUMB PSIQFLY --- */
+  .psi-breadcrumb {
+    @apply flex items-center gap-2 text-sm py-2 select-none flex-wrap;
+    font-family: var(--font-quicksand), sans-serif;
+  }
+
+  .psi-breadcrumb-link {
+    @apply text-indigo-500 hover:text-[#634AE6] font-bold transition-all duration-200;
+    @apply hover:underline underline-offset-4 decoration-2 decoration-indigo-200;
+  }
+
+  .psi-breadcrumb-current {
+    @apply text-slate-400 dark:text-slate-500 font-medium truncate max-w-[200px] md:max-w-[400px];
+  }
+
+  .psi-breadcrumb-separator {
+    @apply text-slate-300 dark:text-slate-600 font-light text-lg leading-none;
+  }
+
+  /* Ajuste para que el breadcrumb no se pegue al Navbar sticky */
+  .psi-breadcrumb-wrapper {
+    @apply mb-6 mt-2;
+  }
