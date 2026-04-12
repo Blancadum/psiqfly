@@ -47,6 +47,7 @@ const MEGA_MENU = [
 export const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
+  const [mobileBlogOpen, setMobileBlogOpen] = useState(false);
   const megaRef = useRef(null);
   let closeTimer = useRef(null);
 
@@ -160,16 +161,58 @@ export const Navbar = () => {
       {/* Mobile dropdown */}
       {mobileOpen && (
         <div className="sm:hidden border-t border-indigo-100 bg-white/95 backdrop-blur px-4 py-4 flex flex-col gap-1">
-          <Link
-            href="/blog"
-            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-semibold text-slate-700 hover:bg-indigo-50 hover:text-indigo-700 transition-colors"
-            onClick={() => setMobileOpen(false)}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-            </svg>
-            Blog
-          </Link>
+
+          {/* Blog con submenú móvil */}
+          <div>
+            <button
+              className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-semibold text-slate-700 hover:bg-indigo-50 hover:text-indigo-700 transition-colors"
+              onClick={() => setMobileBlogOpen(o => !o)}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              Blog
+              <svg xmlns="http://www.w3.org/2000/svg" className={`w-3 h-3 ml-auto transition-transform duration-200 ${mobileBlogOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            {mobileBlogOpen && (
+              <div className="mt-1 ml-4 flex flex-col gap-3 pb-2">
+                {MEGA_MENU.map(col => (
+                  <div key={col.slug}>
+                    <Link
+                      href={`/blog/${col.slug}`}
+                      className="flex items-center gap-1.5 text-[11px] font-black uppercase tracking-widest text-indigo-500 mb-1"
+                      onClick={() => { setMobileOpen(false); setMobileBlogOpen(false); }}
+                    >
+                      <span>{col.emoji}</span> {col.label}
+                    </Link>
+                    <ul className="space-y-0.5 pl-1">
+                      {col.posts.map(p => (
+                        <li key={p.slug}>
+                          <Link
+                            href={`/blog/${col.slug}/${p.slug}`}
+                            className="block text-sm text-slate-600 hover:text-indigo-700 py-0.5"
+                            onClick={() => { setMobileOpen(false); setMobileBlogOpen(false); }}
+                          >
+                            › {p.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+                <Link
+                  href="/blog"
+                  className="text-xs font-bold text-indigo-600 pt-1 border-t border-slate-100"
+                  onClick={() => { setMobileOpen(false); setMobileBlogOpen(false); }}
+                >
+                  Ver todo el blog →
+                </Link>
+              </div>
+            )}
+          </div>
 
           <Link
             href="/blog"
@@ -180,7 +223,7 @@ export const Navbar = () => {
               <circle cx="11" cy="11" r="7" />
               <line x1="16.5" y1="16.5" x2="22" y2="22" />
             </svg>
-            La Lupa
+            Buscar
           </Link>
 
           <Link
