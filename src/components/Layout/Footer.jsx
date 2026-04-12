@@ -11,7 +11,7 @@ export const Footer = () => {
     <>
       {/* Cuerpo del footer */}
       <footer className="psi-footer-body border-t border-purple-200 transition-colors">
-        <div className="mx-auto max-w-7xl px-8 py-4 pb-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 py-4 pb-16">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
 
             <Link
@@ -39,8 +39,14 @@ export const Footer = () => {
               <Link href="/legal"      className="psi-footer-link">Aviso legal</Link>
               <Link href="/privacidad" className="psi-footer-link">Privacidad</Link>
               <Link href="/cookies"    className="psi-footer-link">Cookies</Link>
-              <Link href="/autora"     className="psi-footer-link">Autora</Link>
+              <Link href="/autora"     className="psi-footer-link">Sobre mí</Link>
               <Link href="/contacto"   className="psi-footer-link">Contacto</Link>
+              <Link
+                href="/blog/colaboraciones/libros/editorial-medica-panamericana-descuento"
+                className="psi-footer-link"
+              >
+                Editorial Panamericana
+              </Link>
             </nav>
 
           </div>

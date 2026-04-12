@@ -4,6 +4,18 @@ import PropTypes from 'prop-types';
 import { ImageIcon, ExternalLink, FileText } from 'lucide-react';
 import { CertificateModal } from '@/components/ui/CertificateModal';
 
+const INSTITUTION_NAMES = {
+  'ISEP':          'ISEP — Instituto Superior de Estudios Psicológicos',
+  'UOC':           'Universitat Oberta de Catalunya',
+  'UB':            'Universitat de Barcelona',
+  'IOC':           'Institut Obert de Catalunya',
+  'Ironhack':      'Ironhack Bootcamp',
+  'Bigschool':     'Bigschool Formación Online',
+  'Defoin':        'Defoin — Formación Profesional',
+  'Cum Laude':     'Cum Laude Formación',
+  'Grupo Hedima':  'Grupo Hedima Formación',
+};
+
 export const EducationItem = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [showCert, setShowCert] = useState(false);
@@ -32,7 +44,12 @@ export const EducationItem = ({ item }) => {
 
       {isOpen && (
         <div className="psi-edu-panel">
-          <p className="psi-overline mb-4">Competencias Adquiridas</p>
+          {/* Institución con nombre completo */}
+          <p className="text-sm font-semibold text-slate-900 mb-4">
+            {INSTITUTION_NAMES[item.institution] ?? item.institution}
+          </p>
+
+          <p className="text-sm font-black text-indigo-500 uppercase tracking-widest mb-4">Competencias Adquiridas</p>
           <div className="psi-edu-skills">
             {item.skills.map((skill) => (
               <div key={skill.label} className="psi-skill-card">

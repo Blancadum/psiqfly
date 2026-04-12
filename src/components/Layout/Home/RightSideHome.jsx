@@ -30,14 +30,17 @@ export const RightSideHome = () => {
           ))}
         </ul>
 
-        <div className="psi-action-card-buttons">
-          <Link href="/register" className="psi-btn-primary psi-btn-card">
+        <div className="psi-action-card-buttons" style={{ display: 'none' }}>
+          <button disabled className="psi-btn-primary psi-btn-card">
             Empezar ahora ›
-          </Link>
-          <Link href="/cases" className="psi-btn-secondary psi-btn-card">
+          </button>
+          <button disabled className="psi-btn-secondary psi-btn-card">
             Ver casos
-          </Link>
+          </button>
         </div>
+        <p className="text-xs font-semibold text-slate-400 text-center mt-3 tracking-wide">
+          Próximamente
+        </p>
       </div>
 
     </div>

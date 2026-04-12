@@ -23,7 +23,7 @@ export const PostHeader = ({ post }) => {
   return (
     <header className="max-w-4xl mx-auto px-6 pt-8 pb-5">
 
-      {/* 1. BADGE DE CATEGORÍA */}
+      {/* 1. BADGE DE CATEGORÍA + PUBLI */}
       <div className="flex items-center gap-3 mb-2">
         <Link
           href={`/blog/${post.categorySlug}`}
@@ -31,6 +31,11 @@ export const PostHeader = ({ post }) => {
         >
           {post.category}
         </Link>
+        {post.sponsored && (
+          <span className="px-2.5 py-1 rounded-full border border-amber-300 bg-amber-50 text-amber-700 text-[10px] font-black uppercase tracking-widest">
+            Publi
+          </span>
+        )}
       </div>
 
       {/* 2. BREADCRUMB DINÁMICO */}

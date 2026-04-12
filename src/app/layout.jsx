@@ -7,6 +7,7 @@ import { AuthProvider } from '@/hooks/Auth/useAuth.jsx';
 import { Navbar } from '@/components/Layout/Navbar/Navbar';
 import { Footer } from '@/components/Layout/Footer';
 import { PanamericanaFloat } from '@/components/ads/PanamericanaFloat';
+import { CookieBanner } from '@/components/Layout/CookieBanner';
 
 const GA_ID = 'G-KXD21555QS';
 
@@ -54,6 +55,7 @@ export default function RootLayout({ children }) {
             <main className="flex-1">{children}</main>
             <Footer />
             <PanamericanaFloat />
+            <CookieBanner />
           </AuthProvider>
         </SessionProvider>
       </body>

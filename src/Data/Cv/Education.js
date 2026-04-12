@@ -4,6 +4,7 @@ import gradoPrimariaImg from '@/assets/images/certificates/grado-primaria.webp';
 import ironhackImg from '@/assets/images/certificates/diploma-ironhack.webp';
 import iaEmpresaImg from '@/assets/images/certificates/ia-empresa.webp';
 import inglesImg from '@/assets/images/certificates/ingles-b2.jpg';
+import inglesUocImg from '@/assets/images/certificates/certificado-ingles2_uoc.webp';
 
 export const EDUCATION_DATA = [
   {
@@ -22,7 +23,7 @@ export const EDUCATION_DATA = [
   {
     year: '2020',
     title: 'Máster en Psicología Infantojuvenil',
-    institution: 'Centro universitario / oficial',
+    institution: 'UOC',
     image: masterImg,
     skills: [
       { icon: '👶', label: 'Psicología Infantojuvenil', desc: 'Evaluación y tratamiento psicológico en población menor de edad.' },
@@ -72,7 +73,7 @@ export const EDUCATION_DATA = [
     year: '2024',
     title: 'IA Aplicada a la Empresa',
     category: 'it',
-    institution: 'Certificación oficial',
+    institution: 'Grupo Hedima',
     image: iaEmpresaImg,
     skills: [
       { icon: '🤖', label: 'IA Generativa', desc: 'Aplicación de modelos de lenguaje en contextos profesionales.' },
@@ -82,8 +83,9 @@ export const EDUCATION_DATA = [
   {
     year: '2022',
     title: 'Certificado de Inglés B2',
-    institution: 'Cambridge / Oficial',
+    institution: 'UOC',
     image: inglesImg,
+    images: [inglesImg, inglesUocImg],
     skills: [
       { icon: '🌍', label: 'Inglés B2', desc: 'Comprensión y producción escrita y oral en contextos académicos.' },
     ],

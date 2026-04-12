@@ -6,7 +6,7 @@ import { SocialLinks } from './SocialLinks';
 export const AuthorHero = () => {
   return (
     <section className="psi-author-card animate-fade-in">
-      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8">
+      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-8">
         
         {/* Profile Picture */}
         <div className="relative group">
@@ -34,8 +34,8 @@ export const AuthorHero = () => {
           <h1 className="psi-title-main text-3xl md:text-4xl mb-1">
             Blanca De Uña Martín
           </h1>
-          <p className="text-[#634AE6] font-bold text-sm mb-4 tracking-wide uppercase">
-            Psicóloga, Fullstack Developer & Creativa
+          <p className="text-slate-900 font-bold text-xs mb-4 tracking-wide uppercase">
+            Psicóloga Clínica · Autora de PsiQFly
           </p>
 
           {/* Quick Intro */}

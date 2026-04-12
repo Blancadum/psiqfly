@@ -3,6 +3,7 @@ import { AuthorBio } from '@/components/Layout/Author/AutorBio';
 import { Interests } from '@/components/Layout/Author/Interests';
 import { EducationItem } from '@/components/Layout/Author/Education';
 import { TechStack } from '@/components/Layout/Author/TechStack';
+import { LearningNotepad } from '@/components/Layout/Author/LearningNotepad';
 import { CredentialsCarousel } from '@/components/ui/CredentialsCarousel';
 import { ContactForm } from '@/components/Layout/ContactForm';
 import { NewsletterSection } from '@/components/Layout/NewsletterSection';
@@ -16,7 +17,7 @@ export const metadata = {
 
 export default function AutoraPage() {
   return (
-    <div className="max-w-4xl mx-auto px-6 pt-20 pb-16 space-y-16">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-12 sm:pb-16 space-y-8 sm:space-y-12 md:space-y-16">
       <AuthorHero />
       <AuthorBio />
       <Interests />
@@ -24,6 +25,7 @@ export default function AutoraPage() {
         <h2 className="psi-section-title mb-6">Mi <span className="psi-gradient-text">stack tech</span></h2>
         <TechStack />
       </section>
+      <LearningNotepad />
       <section>
         <h2 className="psi-section-title mb-6">Formación <span className="psi-gradient-text">IT</span></h2>
         <div className="space-y-3">
