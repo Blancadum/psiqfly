@@ -14,6 +14,7 @@ export const SKILLS_DATA = [
     category: 'Frontend',
     items: [
       { name: 'React',      icon: `${DEV}/react/react-original.svg` },
+      { name: 'Next.js',    icon: `${DEV}/nextjs/nextjs-original.svg` },
       { name: 'Tailwind',   icon: `${DEV}/tailwindcss/tailwindcss-original.svg` },
       { name: 'Bootstrap',  icon: `${DEV}/bootstrap/bootstrap-original.svg` },
       { name: 'Vite',       icon: `${DEV}/vitejs/vitejs-original.svg` },
@@ -33,6 +34,8 @@ export const SKILLS_DATA = [
       { name: 'Git',        icon: `${DEV}/git/git-original.svg` },
       { name: 'GitHub',     icon: `${DEV}/github/github-original.svg` },
       { name: 'VS Code',    icon: `${DEV}/vscode/vscode-original.svg` },
+      { name: 'IntelliJ',   icon: `${DEV}/intellij/intellij-original.svg` },
+      { name: 'Vercel',     icon: `${DEV}/vercel/vercel-original.svg` },
       { name: 'Figma',      icon: `${DEV}/figma/figma-original.svg` },
     ],
   },
