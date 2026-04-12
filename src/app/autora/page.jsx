@@ -20,14 +20,20 @@ export default function AutoraPage() {
       <AuthorBio />
       <Interests />
       <section>
-        <h2 className="psi-section-title mb-6">Formación <span className="psi-gradient-text">académica</span></h2>
-        <div className="space-y-3">
-          {EDUCATION_DATA.map((item, i) => <EducationItem key={i} item={item} />)}
-        </div>
+        <h2 className="psi-section-title mb-6">Mi <span className="psi-gradient-text">stack tech</span></h2>
+        <TechStack />
       </section>
       <section>
         <h2 className="psi-section-title mb-6">Formación <span className="psi-gradient-text">IT</span></h2>
-        <TechStack />
+        <div className="space-y-3">
+          {EDUCATION_DATA.filter(item => item.category === 'it').map((item, i) => <EducationItem key={i} item={item} />)}
+        </div>
+      </section>
+      <section>
+        <h2 className="psi-section-title mb-6">Otra <span className="psi-gradient-text">formación</span></h2>
+        <div className="space-y-3">
+          {EDUCATION_DATA.filter(item => item.category !== 'it').map((item, i) => <EducationItem key={i} item={item} />)}
+        </div>
       </section>
       <CredentialsCarousel />
       <section id="formulario" className="pt-4">

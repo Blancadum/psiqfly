@@ -57,6 +57,7 @@ export const EDUCATION_DATA = [
   {
     year: '2023',
     title: 'Full Stack Developer Bootcamp',
+    category: 'it',
     institution: 'Ironhack',
     image: ironhackImg,
     pdf: ironhackImg,
@@ -70,6 +71,7 @@ export const EDUCATION_DATA = [
   {
     year: '2024',
     title: 'IA Aplicada a la Empresa',
+    category: 'it',
     institution: 'Certificación oficial',
     image: iaEmpresaImg,
     skills: [
