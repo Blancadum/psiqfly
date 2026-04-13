@@ -53,13 +53,13 @@ export const AuthorHero = () => {
             >
               ✉️ Escríbeme
             </a>
-            <button
-              disabled
-              title="CV disponible próximamente"
-              className="psi-btn-secondary text-sm px-6 py-2.5 opacity-60 cursor-not-allowed flex items-center gap-2"
+            <a
+              href="/CV_BlancaDeUna_WebDev.pdf"
+              download="CV_Blanca_DeUna_Martin.pdf"
+              className="psi-btn-secondary"
             >
-              📄 Descargar CV <span className="text-[10px] font-normal">(Próximamente)</span>
-            </button>
+              📄 Descargar CV
+            </a>
           </div>
         </div>
       </div>
