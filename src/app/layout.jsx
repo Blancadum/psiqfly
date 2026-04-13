@@ -2,8 +2,7 @@ import { Quicksand, Montserrat } from "next/font/google";
 import PropTypes from "prop-types";
 import Script from 'next/script';
 import "./globals.css";
-import { SessionProvider } from 'next-auth/react';
-import { AuthProvider } from '@/hooks/Auth/useAuth.jsx';
+import { Providers } from './Providers';
 import { Navbar } from '@/components/Layout/Navbar/Navbar';
 import { Footer } from '@/components/Layout/Footer';
 import { PanamericanaFloat } from '@/components/ads/PanamericanaFloat';
@@ -49,15 +48,13 @@ export default function RootLayout({ children }) {
         </Script>
       </head>
       <body className="min-h-full flex flex-col bg-[#f7f7f8] dark:bg-slate-900 transition-colors">
-        <SessionProvider>
-          <AuthProvider>
+        <Providers>
             <Navbar />
             <main className="flex-1">{children}</main>
             <Footer />
             <PanamericanaFloat />
             <CookieBanner />
-          </AuthProvider>
-        </SessionProvider>
+        </Providers>
       </body>
     </html>
   );
