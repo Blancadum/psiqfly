@@ -48,7 +48,7 @@ export const AuthorHero = () => {
           {/* Action Buttons */}
           <div className="flex flex-wrap justify-center sm:justify-start gap-3">
             <a
-              href="#formulario"
+              href="mailto:info.psiqfly@gmail.com"
               className="psi-btn-primary text-sm px-8 py-2.5 shadow-md hover:shadow-indigo-500/20"
             >
               ✉️ Escríbeme
@@ -56,7 +56,7 @@ export const AuthorHero = () => {
             <a
               href="/CV_BlancaDeUna_WebDev.pdf"
               download="CV_Blanca_DeUna_Martin.pdf"
-              className="psi-btn-secondary"
+              className="psi-btn-primary"
             >
               📄 Descargar CV
             </a>
