@@ -1,0 +1,72 @@
+- adicciones
+  - adicciones.md
+  - no-quimicas
+    - ludopatia.md
+    - otras.md
+    - videojuegos.md
+    - no-quimicas.md
+  - quimicas
+    - alcoholismo.md
+    - alucinógenos.md
+    - ansioliticos.md
+    - cannabis.md
+    - Inhalantes.md
+    - opiaceos.md
+    - otras-sustancias.md
+    - tabaquismo.md
+    - quimicas.md
+- alimentarios
+  - conducta-ingesta.md
+  - ingesta
+    - ingesta.md
+    - subtipos
+      - arfid.md
+      - pica.md
+  - TCA
+    - conducta-alimentaria.md
+    - subtipos
+      - anorexia.md
+      - bulimia.md
+    - TCANE.md
+- ansiedad
+  - ansiedad.md
+  - subtipos
+    - agorafobia.md
+    - fobia-especifica.md
+    - generalizada.md
+    - panico.md
+    - social.md
+- bipolar
+  - bipolar.md
+  - tipo-1.md
+  - tipo-2.md
+- depresivos
+  - depresivos.md
+  - distimia.md
+  - mayor.md
+  - tdd.md
+  - tdp.md
+- disociativos
+  - tid.md
+- estres-trauma
+  - tept.md
+- neurocognitivos
+  - alzheimer.md
+- neurodesarrollo
+  - neurodesarrollo.md
+  - tdah.md
+  - tea.md
+- obsesivo-compulsivo
+  - toc.md
+- personalidad
+  - esquizotipico.md
+  - evitativo.md
+  - narcisista.md
+  - personalidad.md
+  - tlp.md
+  - trastornos-personalidad.md
+- psicotico
+  - esquizofrenia.md
+  - psicotico.md
+- somaticos
+  - tss.md

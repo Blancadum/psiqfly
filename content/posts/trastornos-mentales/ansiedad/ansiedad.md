@@ -1,4 +1,5 @@
 ---
+isLanding: true
 title: "Trastornos de Ansiedad: Guía Clínica y Clasificación DSM-5-TR"
 slug: "ansiedad"
 categorySlug: "trastornos-mentales"
@@ -35,37 +36,42 @@ cardGrids:
         emoji: "💥"
         description: "Ataques inesperados de terror intenso y miedo persistente a su repetición (300.01 / F41.0)."
         slug: "panico"
-        categorySlug: "trastornos-mentales/ansiedad"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "ansiedad"
       - title: "Ansiedad Generalizada"
         emoji: "🌀"
         description: "Preocupación excesiva e incontrolable sobre múltiples áreas durante más de 6 meses (300.02 / F41.1)."
         slug: "generalizada"
-        categorySlug: "trastornos-mentales/ansiedad"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "ansiedad"
       - title: "Fobia Específica"
         emoji: "🕷️"
         description: "Miedo intenso y circunscrito a objetos o situaciones concretas: animales, alturas, sangre (300.29 / F40.2)."
         slug: "fobia-especifica"
-        categorySlug: "trastornos-mentales/ansiedad"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "ansiedad"
       - title: "Agorafobia"
         emoji: "🚪"
         description: "Miedo a situaciones donde escapar sería difícil o la ayuda no llegaría a tiempo (300.22 / F40.00)."
         slug: "agorafobia"
-        categorySlug: "trastornos-mentales/ansiedad"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "ansiedad"
       - title: "Ansiedad Social"
         emoji: "👥"
         description: "Miedo intenso a la evaluación negativa en situaciones sociales o de actuación (300.23 / F40.1)."
-        slug: ""
-        categorySlug: "trastornos-mentales/ansiedad"
+        slug: "social"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "ansiedad"
       - title: "Ansiedad por Separación"
         emoji: "👶"
         description: "Temor excesivo ante la separación de las figuras de apego, no limitado a la infancia (309.21 / F93.0)."
         slug: ""
-        categorySlug: "trastornos-mentales/ansiedad"
+        categorySlug: "trastornos-mentales"
       - title: "Mutismo Selectivo"
         emoji: "🤫"
         description: "Incapacidad persistente para hablar en contextos sociales específicos pese a hacerlo en otros (312.23 / F94.0)."
         slug: ""
-        categorySlug: "trastornos-mentales/ansiedad"
+        categorySlug: "trastornos-mentales"
 
 references:
   - "American Psychiatric Association (2022). *Diagnostic and Statistical Manual of Mental Disorders (5th ed., text rev.)*."
@@ -138,19 +144,43 @@ La clasificación de los **trastornos de ansiedad** es el lenguaje que nos permi
 
 <!-- faqs -->
 
-### ¿Por qué el TOC ya no es un trastorno de ansiedad en el DSM-5?
+### ¿Cuál es la diferencia entre miedo y ansiedad según DSM-5?
 
-Aunque el TOC genera altos niveles de ansiedad, el DSM-5 lo situó en una categoría propia porque sus mecanismos neurobiológicos y su sintomatología basada en **obsesiones y compulsiones** son lo suficientemente distintos de las fobias o el TAG.
+Miedo: respuesta emocional a amenaza inminente (lucha/huida). Ansiedad: anticipación de peligro futuro (vigilancia/tensión).
 
-### ¿Cuál es la diferencia entre el código DSM y el CIE-10?
+### ¿Todos los trastornos de ansiedad tienen ataques de pánico?
 
-El código **DSM-5-TR** (ej. 300.02) es el estándar de la APA para investigación y clínica privada. El código **CIE-10** (ej. F41.1) es la clasificación de la OMS utilizada oficialmente en la sanidad pública para la codificación diagnóstica.
+No. Solo el Trastorno de Pánico define el ataque como síntoma central. Otros trastornos pueden tener ansiedad sin ataques discretos.
 
-### ¿Cómo distingue el DSM el miedo de la ansiedad?
+### ¿Cómo es la evitación en los trastornos de ansiedad?
 
-El **miedo** es la respuesta emocional a una amenaza inminente y real (asociado a la supervivencia inmediata). La **ansiedad** es la anticipación de una amenaza futura (asociada a la preocupación y la tensión muscular persistente).
+Es el mantenedor clave. Evitar refuerza el miedo (no pruebas que es seguro). Sin exposición, el trastorno persiste y típicamente empeora.
 
-### ¿Cuándo se considera que la ansiedad es un trastorno?
+### ¿Hay diferencias en la edad de onset?
 
-Se considera trastorno cuando la respuesta es **desproporcionada** al riesgo real, persiste en el tiempo (habitualmente 6 meses o más) y causa un deterioro notable en el funcionamiento social, laboral o personal.
+Fobia específica: infancia (4-8 años). TAG: adolescencia/adultez joven. Agorafobia: típicamente 20s-30s. Esto afecta cómo se presenta.
+
+### ¿El estrés causa ansiedad patológica?
+
+El estrés es precipitante, pero requiere predisposición. No todos bajo estrés desarrollan trastornos de ansiedad; algunos sí.
+
+### ¿Cómo diferencio ansiedad normal de trastorno?
+
+Grado de interferencia funcional. La ansiedad normal responde a situaciones específicas. Un trastorno causa deterioro significativo a pesar de intentos por controlarlo.
+
+### ¿Son los trastornos de ansiedad tratables?
+
+Muy tratables. CBT con exposición tiene alta eficacia (60-80%). ISRS también efectivos. Combinación de ambos es optimal.
+
+### ¿Cómo es la comorbilidad?
+
+Muy común: depresión, otros trastornos de ansiedad, TEPT. Los trastornos de ansiedad raramente vienen solos.
+
+### ¿Cuál es el pronóstico sin tratamiento?
+
+Generalmente crónico. Sin intervención, los trastornos tienden a mantenerse o empeorar. Con tratamiento, mejora es significativa.
+
+### ¿Hay factores protectores contra la ansiedad?
+
+Soporte social, coping adaptativo, autoeficacia, acceso a tratamiento, temperamento resiliente. Identifica estos en evaluación.
 <!-- /faqs -->

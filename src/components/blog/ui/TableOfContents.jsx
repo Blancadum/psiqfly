@@ -33,11 +33,11 @@ export const TableOfContents = ({ sections }) => {
   // MÓVIL: índice inline al principio del artículo
   if (isMobile) {
     return (
-      <div className="mx-4 mb-4 rounded-2xl border border-indigo-100 bg-indigo-50/60 overflow-hidden">
+      <div className="psi-toc-mobile">
         <button
           type="button"
           onClick={() => setOpen(o => !o)}
-          className="w-full flex items-center justify-between px-4 py-3 text-sm font-bold text-indigo-700"
+          className="psi-toc-mobile-trigger"
           aria-expanded={open}
         >
           <span className="flex items-center gap-2">
@@ -47,9 +47,9 @@ export const TableOfContents = ({ sections }) => {
         </button>
 
         {open && (
-          <ul className="px-4 pb-3 space-y-1 border-t border-indigo-100">
-            {sections.map(({ id, label }) => (
-              <li key={id}>
+          <ul className="psi-toc-mobile-list">
+            {sections.map(({ id, label, level = 2 }) => (
+              <li key={id} style={{ paddingLeft: `${(level - 2) * 12}px` }}>
                 <button
                   type="button"
                   className="psi-toc-link w-full text-left text-sm"
@@ -87,8 +87,8 @@ export const TableOfContents = ({ sections }) => {
         <div className="psi-toc-panel animate-fade-in">
           <p className="psi-toc-heading">Contenidos</p>
           <ul className="psi-toc-list">
-            {sections.map(({ id, label }) => (
-              <li key={id}>
+            {sections.map(({ id, label, level = 2 }) => (
+              <li key={id} style={{ paddingLeft: `${(level - 2) * 12}px` }}>
                 <button
                   type="button"
                   className="psi-toc-link"

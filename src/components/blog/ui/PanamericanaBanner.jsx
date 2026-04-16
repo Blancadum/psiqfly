@@ -9,38 +9,18 @@ export const PanamericanaBanner = ({ books }) => {
   if (!books?.length) return null;
 
   return (
-    <aside className="my-10 rounded-2xl border border-indigo-100 dark:border-slate-700 bg-indigo-50/40 dark:bg-slate-800/40 px-6 py-5">
-      <p className="text-[10px] font-black uppercase tracking-widest text-indigo-400 mb-3">
-        Lecturas recomendadas · Editorial Médica Panamericana
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4">
+    <aside className="psi-pana-banner">
+      <p className="psi-pana-label">Lecturas recomendadas · Editorial Médica Panamericana</p>
+      <div className="psi-pana-books">
         {books.map((book, i) => (
-          <a
-            key={i}
-            href={book.url}
-            target="_blank"
-            rel="noopener noreferrer sponsored"
-            className="flex items-center gap-3 flex-1 group"
-          >
+          <a key={i} href={book.url} target="_blank" rel="noopener noreferrer sponsored" className="psi-pana-book group">
             {book.cover && (
-              <Image
-                src={book.cover}
-                alt={book.title}
-                width={48}
-                height={64}
-                className="w-12 h-16 object-cover rounded-md shadow-sm flex-shrink-0 group-hover:shadow-md transition-shadow"
-              />
+              <Image src={book.cover} alt={book.title} width={48} height={64} className="psi-pana-cover" />
             )}
             <div className="min-w-0">
-              <p className="text-sm font-semibold text-slate-800 dark:text-slate-200 leading-snug group-hover:text-indigo-600 transition-colors line-clamp-2">
-                {book.title}
-              </p>
-              {book.author && (
-                <p className="text-xs text-slate-400 mt-0.5">{book.author}</p>
-              )}
-              <span className="text-xs text-indigo-500 font-medium mt-1 inline-block">
-                Ver en Panamericana →
-              </span>
+              <p className="psi-pana-title">{book.title}</p>
+              {book.author && <p className="psi-pana-author">{book.author}</p>}
+              <span className="psi-pana-cta">Ver en Panamericana →</span>
             </div>
           </a>
         ))}

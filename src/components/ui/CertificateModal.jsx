@@ -18,7 +18,7 @@ export const CertificateModal = ({ src, title, onClose }) => {
 
   return createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in"
+      className="psi-modal-overlay"
       onClick={onClose}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -29,23 +29,20 @@ export const CertificateModal = ({ src, title, onClose }) => {
       tabIndex={0}
     >
       <div
-        className="relative w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl overflow-hidden"
+        className="psi-modal-content"
         style={{ maxWidth: isPdf ? '860px' : '768px' }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-5 py-3 border-b border-slate-100 dark:border-slate-700">
-          <p className="text-sm font-semibold text-slate-700 dark:text-slate-200">{title}</p>
-          <button
-            onClick={onClose}
-            className="w-8 h-8 flex items-center justify-center rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all"
-          >
+        <div className="psi-modal-header">
+          <p className="psi-modal-title">{title}</p>
+          <button onClick={onClose} className="psi-modal-close-btn">
             ✕
           </button>
         </div>
 
         {/* Contenido */}
-        <div className="p-4">
+        <div className="psi-modal-body">
           {isPdf ? (
             <iframe
               src={srcStr}

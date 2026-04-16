@@ -114,25 +114,44 @@ El código es válido para libros físicos, eBooks y plataforma digital.
 ---
 
 <!-- faqs -->
-## Preguntas frecuentes
+
+### ¿Qué descuento ofrece Editorial Médica Panamericana?
+
+El código PSIQFLY otorga 10% de descuento en compras en su tienda online de psicología clínica, psicopatología y formación profesional.
+
+### ¿Cuáles son los libros recomendados de Editorial Panamericana?
+
+Manuales de diagnóstico DSM-5-TR, libros de psicopatología, textos de terapia cognitivo-conductual, recursos sobre trastornos mentales según criterios actuales.
+
+### ¿Cómo aplico el descuento?
+
+Entra en medicapanamericana.com/es/?ref=psiqfly, selecciona los libros y aplica el código PSIQFLY al checkout para obtener el 10% de descuento.
 
 ### ¿El descuento aplica a todos los libros?
 
-Sí, el 10% aplica en todo el catálogo de libros de Editorial Médica Panamericana —formato físico y digital— salvo promociones incompatibles activas. Comprueba las condiciones en el momento de la compra.
+La mayoría de títulos participan, pero es recomendable verificar en cada uno. Algunos libros o ediciones especiales pueden estar excluidos.
 
-### ¿El 5% de formación aplica a los cursos de preparación de oposiciones?
+### ¿Hay envío gratis?
 
-Sí. El 5% aplica en la oferta formativa online de Panamericana, incluyendo materiales de preparación de oposiciones sanitarias. Usa el código PSIQFLY al finalizar la compra.
+Depende del monto y la región. Es recomendable revisar las políticas de envío al momento de comprar.
 
-### ¿Puedo combinar el código con otras ofertas?
+### ¿Qué tipo de libros recomienda para psicólogos noveles?
 
-En general los códigos de afiliado no son acumulables con descuentos ya aplicados. Si tienes dudas, consulta con el servicio de atención al cliente de Panamericana.
+Manual diagnóstico (DSM-5-TR), textos de evaluación clínica, guías de diagnóstico diferencial, libros sobre sesgos diagnósticos.
 
-### ¿Tiene fecha de caducidad el código PSIQFLY?
+### ¿Vale la pena la suscripción a plataformas de Editorial Panamericana?
 
-La colaboración es indefinida mientras esté activa. Si el código dejara de funcionar, actualizaremos esta entrada.
+Si accedes frecuentemente a contenido, sí. Ofrecen ebooks, recursos complementarios, actualizaciones. Recomendado para profesionales activos.
 
-### ¿Es publicidad?
+### ¿Cómo PsiQFly se relaciona con Editorial Panamericana?
 
-Sí. Participamos en el programa de afiliados de Editorial Médica Panamericana: si compras a través de nuestros enlaces recibimos una pequeña comisión sin coste adicional para ti. Solo recomendamos lo que consideramos útil para la comunidad.
+Colaboración educativa: PsiQFly recomienda libros de Panamericana para profundizar en temas. El descuento es beneficio para usuarios de PsiQFly.
+
+### ¿Hay alternativas a Editorial Panamericana?
+
+Sí: Síntesis, Paidós, Routledge. Pero Panamericana tiene fuerte catálogo en psicopatología y clínica en español.
+
+### ¿El descuento también aplica en librerías físicas?
+
+El código PSIQFLY es específico para la tienda online. Las librerías físicas pueden no aceptarlo. Verifica antes de comprar.
 <!-- /faqs -->

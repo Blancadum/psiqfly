@@ -134,3 +134,46 @@ Cuanto más estresado o sobrecargado está el clínico novel (procesamiento Tipo
 
 La **Reflexión Deliberada**. Obligarse a justificar por qué se descartan los diagnósticos diferenciales en lugar de solo por qué se acepta el principal.
 <!-- faq>
+
+<!-- faqs -->
+
+### ¿Qué es el cierre prematuro exactamente?
+
+Es cuando asumimos una hipótesis diagnóstica como correcta antes de haber explorado alternativas. Ocurre cuando la necesidad de resolver la incertidumbre nos hace cerrar el caso demasiado rápido.
+
+### ¿Cómo reconozco que estoy cometiendo este sesgo?
+
+Si encuentras que seleccionas solo información que confirma tu primer diagnóstico e ignoras datos contradictorios, probablemente estés en cierre prematuro. Revisa si has considerado tres diagnósticos diferenciales.
+
+### ¿Cuál es la relación entre cierre prematuro y la tolerancia a la ambigüedad?
+
+Profesionales con baja tolerancia a la incertidumbre tienden a cerrar casos antes de tiempo. Aprender a tolerar la ambigüedad es fundamental para mantener hipótesis abiertas más tiempo.
+
+### ¿Cómo se vincula con la omisión de comorbilidades?
+
+El cierre prematuro hace que nos perdamos diagnósticos secundarios. Por ejemplo, cuando vemos depresión pero no exploramos la ansiedad subyacente.
+
+### ¿En qué momentos del proceso clínico es más probable?
+
+Es especialmente peligroso en las primeras entrevistas, cuando tenemos menos información. También ocurre bajo estrés o cansancio.
+
+### ¿Qué preguntas debo hacerme para evitarlo?
+
+¿Qué evidencia contradice mi hipótesis? ¿Qué tres alternativas podría considerar? ¿He explorado todas las áreas relevantes? ¿Qué me falta saber?
+
+### ¿Cómo se diferencia del anclaje?
+
+El anclaje es fijarse en el primer dato. El cierre prematuro es cerrar el diagnóstico sin suficiente exploración. Están relacionados pero son mecanismos distintos.
+
+### ¿Hay diferencias entre cierre prematuro en depresión vs. ansiedad?
+
+En depresión se ve cuando interpretamos tristeza como depresión clínica. En ansiedad, cuando asumimos ansiedad generalizada sin considerar fobias específicas.
+
+### ¿Cómo influye la presión del tiempo en este sesgo?
+
+La prisa amplifica el cierre prematuro. Si tienes poco tiempo, la tendencia a cerrar rápido aumenta. Por eso la supervisión y la reflexión post-sesión son críticas.
+
+### ¿Qué rol juega el diagnóstico previo del paciente?
+
+Si el paciente llega con un diagnóstico anterior, tendemos a confirmarlo sin verificarlo. Siempre revalúa, no asumas diagnósticos previos.
+<!-- /faqs -->

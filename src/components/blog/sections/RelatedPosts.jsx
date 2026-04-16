@@ -1,36 +1,44 @@
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 
 export const RelatedPosts = ({ posts }) => {
   if (!posts?.length) return null;
 
   return (
-    <section className="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800">
-      <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-4">
-        También te puede interesar
-      </h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <section className="psi-related-posts">
+      <h3 className="psi-related-posts-label">También te puede interesar</h3>
+      <div className="psi-related-posts-grid">
         {posts.map(post => (
           <Link
             key={post.slug}
-            href={`/blog/${post.categorySlug}/${post.slug}`}
-            className="group block bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 rounded-xl p-5 hover:shadow-md transition-shadow"
+            href={`/blog/${post.categorySlug}${post.subcategorySlug ? '/' + post.subcategorySlug : ''}/${post.slug}`}
+            className="psi-related-post-card group"
           >
-            <div className="flex items-center gap-2 mb-2">
+            <div className="psi-related-post-header">
               <span className="text-2xl">{post.emoji}</span>
-              <span className="text-xs text-indigo-500 font-semibold uppercase tracking-wide">
-                {post.category}
-              </span>
+              <span className="psi-related-post-category">{post.category}</span>
             </div>
-            <p className="text-sm font-bold text-slate-800 dark:text-slate-100 mb-1 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-              {post.title}
-            </p>
-            <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">
-              {post.excerpt}
-            </p>
-            <p className="text-xs text-slate-400 dark:text-slate-500 mt-3">{post.readTime}</p>
+            <p className="psi-related-post-title">{post.title}</p>
+            <p className="psi-related-post-excerpt">{post.excerpt}</p>
+            <p className="psi-related-post-readtime">{post.readTime}</p>
           </Link>
         ))}
       </div>
     </section>
   );
+};
+
+RelatedPosts.propTypes = {
+  posts: PropTypes.arrayOf(
+    PropTypes.shape({
+      slug: PropTypes.string.isRequired,
+      categorySlug: PropTypes.string.isRequired,
+      subcategorySlug: PropTypes.string,
+      emoji: PropTypes.string,
+      category: PropTypes.string,
+      title: PropTypes.string,
+      excerpt: PropTypes.string,
+      readTime: PropTypes.string,
+    })
+  ),
 };

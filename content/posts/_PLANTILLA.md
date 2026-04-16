@@ -1,9 +1,9 @@
 ---
-title: "Título del artículo"
-slug: "slug-del-articulo"
-categorySlug: "formacion-clinica"
-category: "Formación clínica"
-breadcrumb: "Título corto para el breadcrumb"
+title: "Título del artículo" # Trastorno mental
+slug: "slug"  # Palabra clave, procurar que sea una palabra, teninendo en cuenta que previamente está la subcategoría, por ejemplo, trastorno-ansiedad/por-separacion // que la slug sea por-separacion. O si previamente hay "fobia", que la slug de este post sea /a-espacios-abiertos esto es solo un ejemplo
+categorySlug: "trastornos-mentales"
+category: "Trastornos Mentales"
+breadcrumb: "Título corto para el breadcrumb" #procurar que sea una palabra
 emoji: "🎓"
 excerpt: "Descripción breve del artículo que aparece como subtítulo y en los meta SEO. Máximo 160 caracteres."
 readTime: "7 min"
@@ -81,4 +81,6 @@ Respuesta a la segunda pregunta.
 ### ¿Tercera pregunta frecuente?
 
 Respuesta.
+
+<!-- Se añaden hasta 10 preguntas frecuentes atacando la palabra clave coincidente con el slug -->
 <!-- /faqs -->

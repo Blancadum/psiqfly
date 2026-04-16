@@ -56,6 +56,21 @@ export function getPostBySlug(slug) {
   }
 }
 
+export function getAllPostsMetadata() {
+  const slugs = getAllPostSlugs();
+  return slugs
+    .map(slug => {
+      try {
+        const result = getPostBySlug(slug);
+        if (!result) return null;
+        return { slug, ...result.frontmatter };
+      } catch {
+        return null;
+      }
+    })
+    .filter(Boolean);
+}
+
 export function getAllPostSlugs() {
   const slugs = [];
   function walk(dir) {

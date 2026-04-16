@@ -19,12 +19,9 @@ export const Interests = () => (
       Áreas de <span className="psi-gradient-text">Interés</span>
     </h2>
 
-    <div className="flex flex-wrap gap-2">
+    <div className="psi-interests-grid">
       {INTERESTS.map(({ label, emoji }) => (
-        <span
-          key={label}
-          className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 text-sm font-semibold text-slate-700 shadow-sm hover:border-indigo-300 hover:text-indigo-700 transition-colors"
-        >
+        <span key={label} className="psi-interest-tag">
           <span className="text-base leading-none">{emoji}</span>
           {label}
         </span>

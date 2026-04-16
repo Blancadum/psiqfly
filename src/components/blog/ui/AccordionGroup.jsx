@@ -1,25 +1,28 @@
 'use client';
 import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 const BODY_COMPONENTS = {
-  p: ({ children }) => (
-    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-3 last:mb-0">{children}</p>
-  ),
-  strong: ({ children }) => (
-    <strong className="font-semibold text-slate-700 dark:text-slate-300">{children}</strong>
-  ),
-  ul: ({ children }) => (
-    <ul className="list-disc pl-5 space-y-1 text-slate-600 dark:text-slate-400 mb-3">{children}</ul>
-  ),
-  li: ({ children }) => <li className="text-sm leading-relaxed">{children}</li>,
+  p:      ({ children }) => <p className="psi-accordion-md-p">{children}</p>,
+  strong: ({ children }) => <strong className="psi-accordion-md-strong">{children}</strong>,
+  ul:     ({ children }) => <ul className="psi-accordion-md-ul">{children}</ul>,
+  ol:     ({ children }) => <ol className="list-decimal pl-5 space-y-1.5 text-slate-600 dark:text-slate-400 mb-3">{children}</ol>,
+  li:     ({ children }) => <li className="text-sm leading-relaxed">{children}</li>,
+  h4:     ({ children }) => <h4 className="text-sm font-bold text-slate-800 dark:text-slate-200 mt-4 mb-1">{children}</h4>,
+  table:  ({ children }) => <div className="psi-table-wrapper"><table className="psi-table">{children}</table></div>,
+  thead:  ({ children }) => <thead className="psi-table-thead">{children}</thead>,
+  tbody:  ({ children }) => <tbody>{children}</tbody>,
+  tr:     ({ children }) => <tr className="psi-table-tr">{children}</tr>,
+  th:     ({ children }) => <th className="psi-table-th">{children}</th>,
+  td:     ({ children }) => <td className="psi-table-td">{children}</td>,
 };
 
 export const AccordionGroup = ({ items }) => {
   const [open, setOpen] = useState(null);
 
   return (
-    <div className="my-6 space-y-2">
+    <div className="psi-accordion-group">
       {items.map((item, i) => {
         const match = item.title.match(/^(\d+)\.\s+(.+)$/);
         const num = match?.[1];
@@ -27,31 +30,26 @@ export const AccordionGroup = ({ items }) => {
         const isOpen = open === i;
 
         return (
-          <div
-            key={i}
-            className="rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden"
-          >
+          <div key={i} className="psi-accordion-item">
             <button
               onClick={() => setOpen(isOpen ? null : i)}
-              className="w-full flex items-center gap-3 px-5 py-4 text-left hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
+              className="psi-accordion-btn"
               aria-expanded={isOpen}
             >
-              {num && (
-                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-[#634AE6] to-[#E245B6] flex items-center justify-center">
+              {num ? (
+                <span className="psi-circle-num--small">
                   <span className="text-white text-[11px] font-black leading-none">{num}</span>
                 </span>
+              ) : (
+                <span className="w-2.5 h-2.5 rounded-full bg-violet-500 dark:bg-violet-400 flex-shrink-0" />
               )}
-              <span className="flex-1 text-sm font-bold text-slate-800 dark:text-slate-200">{label}</span>
-              <span
-                className={`text-slate-400 text-xs transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
-              >
-                ↓
-              </span>
+              <span className="psi-accordion-label">{label}</span>
+              <span className={`psi-accordion-chevron ${isOpen ? 'rotate-180' : ''}`}>↓</span>
             </button>
 
             {isOpen && (
-              <div className="px-5 pb-5 pt-2 border-t border-slate-100 dark:border-slate-700 animate-fade-in">
-                <ReactMarkdown components={BODY_COMPONENTS}>{item.body}</ReactMarkdown>
+              <div className="psi-accordion-panel">
+                <ReactMarkdown components={BODY_COMPONENTS} remarkPlugins={[remarkGfm]}>{item.body}</ReactMarkdown>
               </div>
             )}
           </div>

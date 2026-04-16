@@ -28,7 +28,7 @@ export const ContactForm = () => {
   // Vista de éxito (Estado: Sent)
   if (sent) {
     return (
-      <div className="text-center py-10 animate-fade-in bg-indigo-50/30 rounded-3xl border border-indigo-100">
+      <div className="psi-form-success">
         <div className="text-5xl mb-4">💌</div>
         <h2 className="psi-title-main text-xl mb-2">¡Mensaje recibido!</h2>
         <p className="psi-excerpt mb-6">
@@ -47,7 +47,7 @@ export const ContactForm = () => {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       {/* Grupo de Nombre y Email */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="psi-form-grid">
         <FormField label="Nombre" id="name">
           <input
             id="name"
@@ -117,7 +117,7 @@ export const ContactForm = () => {
       <button
         type="submit"
         disabled={loading}
-        className="psi-btn-primary w-full py-4 text-base flex justify-center items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="psi-btn-submit"
       >
         {loading ? (
           <>

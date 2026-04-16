@@ -81,19 +81,43 @@ El autocuidado no se improvisa. Se construye, como cualquier otra competencia cl
 
 <!-- faqs -->
 
-### ¿Qué es el síndrome del impostor en psicología?
+### ¿El autocuidado es realmente importante en la formación?
 
-Es la sensación persistente de incompetencia a pesar de tener las capacidades y logros necesarios. En psicólogos noveles, suele ser una señal de que se es consciente de la complejidad del trabajo y de las propias áreas de mejora.
+Sí. Estudios muestran que clínicos con buen autocuidado toman decisiones más precisas. Tu estado emocional afecta directamente tu razonamiento clínico.
 
-### ¿Cómo diferenciar la fatiga por compasión de la falta de vocación?
+### ¿Cómo diferencio síndrome del impostor de incompetencia real?
 
-La fatiga por compasión es un estado de agotamiento temporal por saturación emocional; no significa que no sirvas para la profesión, sino que necesitas mejores estrategias de regulación y descanso.
+El síndrome del impostor te hace dudad incluso cuando tienes evidencia de competencia. La incompetencia real implica no poder hacer la tarea aunque lo intentes.
 
-### ¿Es normal sentirse afectado por los problemas de los pacientes?
+### ¿La fatiga por compasión es lo mismo que burnout?
 
-Sí, es completamente normal y, hasta cierto punto, necesario para la empatía. El objetivo no es no sentir nada, sino aprender a diferenciar las emociones del paciente de las propias para que no interfieran en tu vida personal.
+No. La fatiga por compasión es más específica: cambios en tu capacidad de empatizar tras exposición al trauma. El burnout es más amplio (agotamiento laboral general).
 
-### ¿Cuál es la función de la supervisión en el autocuidado?
+### ¿Cómo prevengo la carga vicaria?
 
-La supervisión actúa como un contenedor. Permite "descargar" el impacto emocional del caso, obtener una perspectiva externa y validar las dificultades del proceso, evitando que el clínico cargue con la responsabilidad de forma aislada.
+No se previene evitando implicarte, sino aprendiendo a diferenciar: estar presente con el paciente sin absorber su trauma como propio.
+
+### ¿Qué significa 'tolerancia a la ambigüedad' en autocuidado?
+
+Aceptar que no siempre sabrás qué hacer, que habrá casos ambiguos, y que eso es normal. No es debilidad, es realismo profesional.
+
+### ¿Cada cuánto debería hacer terapia propia?
+
+No hay un estándar. Algunos clínicos van regularmente (mensual), otros según necesidad. Lo importante es que sea accesible y prioritario.
+
+### ¿Cómo hablo con mi supervisor sobre mi bienestar?
+
+Con honestidad. Un buen supervisor crea espacio para esto. Si siente que solo revisa técnica, pídele explícitamente que abra este tema.
+
+### ¿Qué hacer si siento síndrome del impostor después de años de experiencia?
+
+Es frecuente incluso en clínicos experimentados. Significa que sigues siendo consciente de los límites de tu conocimiento. No es patológico, es señal de humildad profesional.
+
+### ¿Hay diferencia entre autocuidado y 'desconectar' del trabajo?
+
+Sí. Autocuidado es activo (rituales, terapia, supervisión). Desconectar es pasivo (no pensar en casos). Necesitas ambos.
+
+### ¿Cómo sé si necesito ayuda profesional?
+
+Si sientes síntomas persistentes (insomnio, anhedonia, ansiedad) más allá de la fatiga normal. Si no puedes regular tus emociones. Si tienes ideación autolítica.
 <!-- /faqs -->

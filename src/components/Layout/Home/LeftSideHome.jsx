@@ -2,7 +2,7 @@ import React from "react";
 
 export const LeftSideHome = () => {
   return (
-    <div className="lg:col-span-7">
+    <div className="psi-home-left">
       <div className="space-y-6">
 
         {/* Novedad */}

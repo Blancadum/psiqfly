@@ -1,4 +1,5 @@
 ---
+isLanding: true
 title: "Trastornos de la personalidad: Guía para un razonamiento clínico profundo"
 slug: "trastornos-de-la-personalidad"
 breadcrumb: "de personalidad"
@@ -37,17 +38,19 @@ cardGrids:
         emoji: "🔮"
         description: "Paranoide, Esquizoide y Esquizotípico. Patrón de comportamiento extraño o excéntrico, con desconfianza marcada o distanciamiento social."
         slug: ""
-        categorySlug: "trastornos-mentales/personalidad"
+        categorySlug: "trastornos-mentales"
       - title: "Grupo B (Dramáticos/Emocionales)"
         emoji: "🌊"
         description: "Antisocial, Límite (TLP), Histriónico y Narcisista. Patrón dramático, emocional e impredecible."
         slug: "tlp"
-        categorySlug: "trastornos-mentales/personalidad"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "personalidad"
       - title: "Grupo C (Ansiosos/Temerosos)"
         emoji: "🛡️"
         description: "Evitativo, Dependiente y Obsesivo-Compulsivo. Patrón ansioso o temeroso que limita la autonomía."
-        slug: "trastorno-evitativo-personalidad"
-        categorySlug: "trastornos-mentales/personalidad"
+        slug: "evitativo"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "personalidad"
 
   # Grid de cards para enlazar cada TP específico
   - afterH2: "Tipos de trastornos de la personalidad y su abordaje"
@@ -56,32 +59,35 @@ cardGrids:
         emoji: "🌊"
         description: "Inestabilidad afectiva y relacional. Clave: Entrenamiento en regulación emocional y límites claros."
         slug: "tlp"
-        categorySlug: "trastornos-personalidad"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "personalidad"
       - title: "Trastorno Narcisista"
         emoji: "💎"
         description: "Grandiosidad y vulnerabilidad. Clave: Trabajar la empatía y la fragilidad del yo."
         slug: ""
-        categorySlug: "trastornos-personalidad"
+        categorySlug: "trastornos-mentales"
       - title: "Trastorno Evitativo"
         emoji: "🛡️"
         description: "Miedo al rechazo e inhibición. Clave: Exposición gradual y reestructuración del autoconcepto."
         slug: "evitativo"
-        categorySlug: "trastornos-personalidad"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "personalidad"
       - title: "Trastorno Histriónico"
         emoji: "🎭"
         description: "Búsqueda de atención y teatralidad. Clave: Fomentar la comunicación auténtica y profunda."
         slug: ""
-        categorySlug: "trastornos-personalidad"
+        categorySlug: "trastornos-mentales"
       - title: "Trastorno Paranoide"
         emoji: "👁️"
         description: "Suspicacia y desconfianza. Clave: Construir una alianza basada en la transparencia absoluta."
-        slug: "paranoide"
-        categorySlug: "trastornos-personalidad"
+        slug: ""
+        categorySlug: "trastornos-mentales"
       - title: "Trastorno Obsesivo (TPOC)"
         emoji: "📏"
         description: "Perfeccionismo y control. Clave: Flexibilización cognitiva y aceptación del error."
         slug: "toc"
-        categorySlug: "formacion-clinica"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "obsesivo-compulsivo"
 
 references:
   - "American Psychiatric Association. (2013). *Diagnostic and statistical manual of mental disorders* (5th ed.). [doi](https://doi.org/10.1176/appi.books.9780890425596)"
@@ -145,23 +151,43 @@ La maestría no llega con el diagnóstico perfecto, sino con la capacidad de sos
 
 <!-- faqs -->
 
-### ¿Cómo diferenciar un trastorno de personalidad de un trastorno bipolar?
+### ¿La simulación clínica es obligatoria en la formación?
 
-El **diagnóstico diferencial** se basa en la estabilidad del síntoma. Mientras que en el trastorno bipolar los cambios de humor son episódicos (fases de manía o depresión), en los **trastornos de personalidad** como el TLP, la inestabilidad es un patrón constante y persistente, muy vinculado a disparadores interpersonales.
+No es obligatoria pero es recomendada. Cada vez más programas la integran porque la evidencia muestra que mejora el razonamiento diagnóstico y la identificación de sesgos.
 
-### ¿Se pueden diagnosticar trastornos de la personalidad en adolescentes?
+### ¿Cuánto tiempo necesito en simulación para ver resultados?
 
-Sí, el DSM-5 permite el diagnóstico si los rasgos son **omnipresentes y persistentes** durante al menos un año. Sin embargo, se debe ser cauteloso debido a que la personalidad está en pleno desarrollo; el diagnóstico temprano debe enfocarse en la **intervención preventiva** y no solo en la etiqueta.
+La investigación sugiere que con 10-15 casos simulados ya se ven mejoras en precisión diagnóstica. Pero la curva de aprendizaje continúa con más exposición.
 
-### ¿Qué es el "cierre prematuro" en el diagnóstico de personalidad?
+### ¿Cómo es diferente la simulación de leer casos en un libro?
 
-El **cierre prematuro** es un sesgo donde el clínico acepta una hipótesis diagnóstica demasiado pronto sin considerar otras opciones. En personalidad, esto suele ocurrir al confundir síntomas de **trauma complejo** con un trastorno de la personalidad, lo que puede llevar a planes de tratamiento erróneos.
+En simulación recibdes feedback inmediato sobre tus decisiones. En un libro, solo lees. El feedback inmediato es lo que convierte la simulación en aprendizaje real.
 
-### ¿Cuál es la terapia más efectiva para el Trastorno Límite de la Personalidad?
+### ¿Puedo usar simulación si ya tengo experiencia con pacientes?
 
-La **Terapia Dialéctico Conductual (DBT)** es el estándar de oro con más evidencia científica. No obstante, la **Terapia de Esquemas** y la **Terapia Basada en la Mentalización (MBT)** también han demostrado una alta eficacia para mejorar la regulación emocional y la estabilidad del yo.
+Sí. De hecho, clínicos con experiencia se benefician porque ya comprenden la complejidad y pueden apreciar mejor los matices de los casos diseñados.
 
-### ¿Qué papel juega la simulación clínica en la formación de psicólogos?
+### ¿La simulación reemplaza la supervisión tradicional?
 
-La **simulación clínica** permite entrenar la gestión de situaciones de alta tensión (como crisis suicidas o rupturas de alianza) en un entorno seguro. Ayuda a que el profesional desarrolle **competencias relacionales** y gane confianza antes de enfrentarse a la complejidad de la práctica clínica real.
+No. Son complementarias. La supervisión es esencial para el vínculo y la ética. La simulación entrena específicamente el razonamiento diagnóstico.
+
+### ¿Qué tipo de feedback es más efectivo en simulación?
+
+El feedback que explica *por qué* una decisión fue correcta o incorrecta, vinculándolo a criterios diagnósticos. No solo un 'correcto' o 'incorrecto'.
+
+### ¿Cómo mejora la simulación mi identificación de sesgos?
+
+Al enfrentar múltiples casos diseñados para activar sesgos específicos (anclaje, cierre prematuro, etc.), aprendes a reconocerlos en tiempo real.
+
+### ¿Necesito tecnología especial para hacer simulación?
+
+No necesariamente. Role-playing bien estructurado entre compañeros es simulación. Plataformas digitales añaden escalabilidad y tracking pero no son obligatorias.
+
+### ¿Cómo sé si mi simulación es 'realista'?
+
+Si te genera los mismos dilemas que enfrentarías con un paciente real: ambigüedad en los datos, múltiples hipótesis plausibles, presión de tiempo.
+
+### ¿La evidencia de medicina se aplica a psicología?
+
+Sí. Los principios de aprendizaje experiencial son universales, pero la especificidad del contenido (diagnósticos psicológicos) hace que cada campo deba desarrollar sus propios casos.
 <!-- /faqs -->

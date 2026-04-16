@@ -1,6 +1,6 @@
 'use client';
 // Componente base de una pregunta FAQ con acordeón (abre/cierra al clicar).
-// Recibe q (pregunta) y a (respuesta). Usado por FAQAccordion, FaqPsiqfly y FaqSectionTM.
+// Recibe q (pregunta) y a (respuesta). Usado por FAQAccordion y componentes cliente.
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
@@ -22,9 +22,9 @@ export const FaqItem = ({ q, a }) => {
         <div className="psi-faq-content">
           {typeof a === 'string'
             ? <ReactMarkdown components={{
-                p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
-                strong: ({ children }) => <strong className="font-semibold text-slate-800 dark:text-slate-200">{children}</strong>,
-                a: ({ href, children }) => <a href={href} className="text-indigo-600 hover:underline" target="_blank" rel="noopener noreferrer">{children}</a>,
+                p:      ({ children }) => <p className="psi-faq-md-p">{children}</p>,
+                strong: ({ children }) => <strong className="psi-faq-md-strong">{children}</strong>,
+                a:      ({ href, children }) => <a href={href} className="psi-faq-md-link" target="_blank" rel="noopener noreferrer">{children}</a>,
               }}>{a}</ReactMarkdown>
             : a}
         </div>

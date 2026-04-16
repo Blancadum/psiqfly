@@ -63,36 +63,42 @@ El razonamiento clínico es una herramienta poderosa pero imperfecta. Reconocer 
 <!-- faqs -->
 
 ### ¿Qué es el sesgo de anclaje en psicología clínica?
+
 Es la tendencia a dar un peso excesivo a la primera información recibida sobre un paciente (como un diagnóstico previo), lo que condiciona y distorsiona toda la evaluación posterior.
 
 ### ¿Cómo se puede mitigar este sesgo en la consulta diaria?
+
 La estrategia más eficaz es la **generación obligatoria de diagnósticos diferenciales** y, siempre que sea posible, realizar la primera toma de contacto antes de leer informes de otros profesionales para evitar prejuicios.
 
 ### ¿Por qué los psicólogos noveles son más propensos al anclaje?
+
 Debido a la falta de experiencia, encontrar un dato que encaje con un modelo conocido aporta seguridad. Esto puede llevar a detener la búsqueda de información prematuramente una vez que se cree haber encontrado la "respuesta" correcta.
 
 ### ¿Qué es el sesgo de anclaje en psicología clínica?
+
 Es la tendencia a dar un peso excesivo a la primera información recibida sobre un paciente (como un diagnóstico previo o el motivo de consulta inicial), lo que condiciona y distorsiona toda la evaluación posterior.
 
 ### ¿Cómo se puede mitigar este sesgo en la consulta diaria?
+
 La estrategia más eficaz es la **generación obligatoria de diagnósticos diferenciales** y, siempre que sea posible, realizar la primera toma de contacto antes de leer informes de otros profesionales para evitar prejuicios.
 
 ### ¿Por qué los psicólogos noveles son más propensos al anclaje?
+
 Debido a la falta de experiencia, encontrar un dato que encaje con un modelo conocido aporta seguridad. Esto puede llevar a detener la búsqueda de información prematuramente una vez que se cree haber encontrado la "respuesta" correcta. 
 
 ### ¿En qué momento de la sesión es más crítico el sesgo de anclaje?
+
 Es especialmente peligroso en los **primeros 5 a 10 minutos** de la entrevista inicial. El cerebro del clínico, buscando reducir la incertidumbre, tiende a "comprar" la primera hipótesis que encaje con los síntomas narrados, cerrando la puerta a explorar otras dimensiones del paciente que aparecerán más tarde.
 
 ### ¿Qué relación existe entre el anclaje y el informe de derivación?
+
 El informe de derivación es el "ancla" más común y potente. Si un colega o psiquiatra etiqueta al paciente de "límite" o "ansioso", el novel tiende a buscar confirmación de esos rasgos en lugar de realizar una evaluación independiente, lo que puede perpetuar diagnósticos erróneos.
 
 ### ¿Cómo afecta el anclaje a la elección de pruebas psicométricas?
+
 Si el clínico está anclado en una hipótesis (por ejemplo, depresión), seleccionará tests específicos para ese cuadro, ignorando otros instrumentos que podrían revelar problemas subyacentes (como trauma o rasgos de personalidad) que no encajan con el ancla inicial.
 
 ### ¿Puede un síntoma físico actuar como ancla?
+
 Sí. A menudo, un síntoma somático muy llamativo o una queja médica actúa como ancla, haciendo que el psicólogo asuma que el problema es puramente fisiológico o reactivo a una enfermedad, obviando la exploración de variables psicopatológicas independientes.
-
-### ¿Es la supervisión una herramienta eficaz contra el anclaje?
-Es la herramienta fundamental. Un supervisor externo, al no estar expuesto al "ancla" del paciente en tiempo real, puede identificar cuándo el novel está forzando los datos para que encajen con su primera impresión y señalar los "puntos ciegos" de la evaluación.
-
 <!-- /faqs -->

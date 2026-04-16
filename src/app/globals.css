@@ -151,6 +151,72 @@ body {
     right: 0;
   }
 
+  /* HERO HOME */
+  .psi-hero-home {
+    @apply max-w-7xl mx-auto px-6 md:px-12 py-4 md:py-8;
+  }
+  .psi-hero-home-grid {
+    @apply grid grid-cols-1 lg:grid-cols-12 gap-12 items-start lg:items-center;
+  }
+
+  /* NAVBAR — mega menu */
+  .psi-nav-mega-panel {
+    @apply absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[640px] bg-white border border-slate-100 shadow-xl rounded-xl p-5 grid grid-cols-2 gap-4 z-50;
+  }
+  .psi-nav-mega-cat-link {
+    @apply flex items-center gap-2 text-xs font-black uppercase tracking-widest text-indigo-500 hover:text-indigo-700 mb-2;
+  }
+  .psi-nav-mega-post-link {
+    @apply block text-sm text-slate-600 hover:text-indigo-700 hover:pl-1 transition-all py-0.5;
+  }
+  .psi-nav-mega-footer {
+    @apply col-span-2 pt-3 border-t border-slate-100 flex justify-between items-center;
+  }
+  .psi-nav-mega-footer-label {
+    @apply text-xs text-slate-400;
+  }
+  .psi-nav-mega-footer-link {
+    @apply text-xs font-bold text-indigo-600 hover:text-indigo-800;
+  }
+  .psi-nav-search-link {
+    @apply text-[#4c1d95] hover:text-[#634AE6] transition-colors ml-1;
+  }
+
+  /* NAVBAR — hamburger */
+  .psi-nav-hamburger {
+    @apply sm:hidden flex flex-col gap-1.5 p-2 rounded-md text-[#4c1d95] hover:bg-indigo-50 transition-colors;
+  }
+  .psi-nav-hamburger-line {
+    @apply block w-5 h-0.5 bg-current transition-all duration-300;
+  }
+
+  /* NAVBAR — mobile dropdown */
+  .psi-nav-mobile-dropdown {
+    @apply sm:hidden border-t border-indigo-100 bg-white/95 backdrop-blur px-4 py-4 flex flex-col gap-1;
+  }
+  .psi-nav-mobile-link {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-semibold text-slate-700 hover:bg-indigo-50 hover:text-indigo-700 transition-colors;
+  }
+  .psi-nav-mobile-blog-btn {
+    @apply w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-semibold text-slate-700 hover:bg-indigo-50 hover:text-indigo-700 transition-colors;
+  }
+  .psi-nav-mobile-submenu {
+    @apply mt-1 ml-4 flex flex-col gap-3 pb-2;
+  }
+  .psi-nav-mobile-cat-link {
+    @apply flex items-center gap-1.5 text-[11px] font-black uppercase tracking-widest text-indigo-500 mb-1;
+  }
+  .psi-nav-mobile-post-link {
+    @apply block text-sm text-slate-600 hover:text-indigo-700 py-0.5;
+  }
+  .psi-nav-mobile-promo-badge {
+    @apply ml-auto text-[10px] font-black px-1.5 py-0.5 rounded bg-amber-100 text-amber-600;
+  }
+  .psi-nav-mobile-newsletter {
+    @apply flex items-center justify-center px-4 py-2.5 text-sm font-black rounded-lg text-white;
+    background: linear-gradient(135deg, #634AE6, #E245B6, #634AE6);
+  }
+
   /* Footer links */
   .psi-footer-link {
     @apply text-indigo-700 hover:text-[#634AE6] transition-colors font-semibold text-sm;
@@ -499,6 +565,14 @@ body {
     @apply bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300;
   }
 
+  .psi-pill-filter {
+    @apply px-4 py-1.5 rounded-full text-sm font-bold transition-all bg-indigo-50 text-indigo-600 hover:bg-indigo-100;
+  }
+
+  .psi-pill-filter--active {
+    @apply bg-indigo-600 text-white shadow-md scale-105;
+  }
+
   /* --- PAGE BACKGROUNDS --- */
   .psi-page-bg {
     @apply min-h-screen bg-gradient-to-br from-indigo-50/50 via-white to-purple-50/50;
@@ -651,6 +725,70 @@ body {
   @apply bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl px-6 py-2;
 }
 
+/* PANAMERICANA BANNER */
+.psi-pana-banner {
+  @apply my-10 rounded-2xl border border-indigo-100 dark:border-slate-700 bg-indigo-50/40 dark:bg-slate-800/40 px-6 py-5;
+}
+.psi-pana-label {
+  @apply text-[10px] font-black uppercase tracking-widest text-indigo-400 mb-3;
+}
+.psi-pana-books {
+  @apply flex flex-col sm:flex-row gap-4;
+}
+.psi-pana-book {
+  @apply flex items-center gap-3 flex-1;
+}
+.psi-pana-cover {
+  @apply w-12 h-16 object-cover rounded-md shadow-sm flex-shrink-0 group-hover:shadow-md transition-shadow;
+}
+.psi-pana-title {
+  @apply text-sm font-semibold text-slate-800 dark:text-slate-200 leading-snug group-hover:text-indigo-600 transition-colors line-clamp-2;
+}
+.psi-pana-author {
+  @apply text-xs text-slate-400 mt-0.5;
+}
+.psi-pana-cta {
+  @apply text-xs text-indigo-500 font-medium mt-1 inline-block;
+}
+
+/* BLOGHUB */
+.psi-hub-search {
+  @apply relative max-w-xl mx-auto;
+}
+.psi-hub-alpha-btn {
+  @apply h-8 rounded-lg text-sm font-black transition-all bg-slate-100 text-slate-500 hover:bg-indigo-50 hover:text-indigo-600;
+}
+.psi-hub-alpha-btn--active {
+  @apply bg-indigo-600 text-white shadow;
+}
+.psi-hub-tag-toggle {
+  @apply inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition-colors;
+}
+.psi-hub-tag-badge {
+  @apply ml-1 px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-bold;
+}
+.psi-hub-tag-btn {
+  @apply px-3 py-1 rounded-full text-xs font-semibold transition-all bg-slate-100 text-slate-600 hover:bg-indigo-50 hover:text-indigo-600;
+}
+.psi-hub-tag-btn--active {
+  @apply bg-indigo-600 text-white shadow;
+}
+.psi-hub-post-card {
+  @apply flex flex-col p-5 rounded-xl border border-slate-100 bg-white hover:border-indigo-200 hover:shadow-md transition-all;
+}
+.psi-hub-post-title {
+  @apply text-sm font-semibold text-slate-800 leading-snug group-hover:text-indigo-700 transition-colors;
+}
+.psi-hub-post-excerpt {
+  @apply text-sm text-slate-400 mt-1.5 line-clamp-2 flex-1;
+}
+.psi-hub-post-readtime {
+  @apply text-[11px] text-slate-400 ml-auto;
+}
+.psi-hub-empty {
+  @apply text-center text-slate-400 py-12;
+}
+
 .psi-faq-section {
   @apply pt-5 pb-6 border-t border-slate-200 dark:border-slate-700 mt-10;
 }
@@ -752,9 +890,75 @@ body {
   @apply grid grid-cols-1 md:grid-cols-2 gap-8 mt-12;
 }
 
-/* CTA Final - El cuadro de la imagen */
+/* --- Añadir en la sección de CTA LOGIN --- */
+
+.psi-cta-login-content {
+  @apply text-left flex-1;
+}
+
+.psi-cta-login-title {
+  @apply psi-title-main text-2xl md:text-3xl mb-2 text-indigo-900 dark:text-white;
+}
+
+.psi-cta-login-highlight {
+  @apply text-indigo-600 font-bold;
+}
+
+/* --- Añadir en tu sección de BOTONES --- */
+
+/* Modificador para botones más grandes (ideal para CTAs) */
+.psi-btn-primary--large {
+  @apply text-base px-10 py-3.5 shadow-xl hover:shadow-indigo-200;
+}
+
+/* CTA Final */
 .psi-cta-box {
   @apply bg-white border border-indigo-100 rounded-[3rem] p-12 shadow-sm text-center max-w-4xl mx-auto my-16;
+}
+.psi-cta-final {
+  @apply px-8;
+}
+.psi-cta-final-title {
+  @apply text-xl font-bold text-slate-900 mb-2;
+}
+.psi-cta-final-desc {
+  @apply text-slate-500 mb-6 text-sm;
+}
+
+/* HOWTO */
+.psi-howto {
+  @apply max-w-4xl mx-auto px-8 py-16;
+}
+.psi-step-title {
+  @apply font-bold text-slate-900 text-lg mb-1;
+}
+.psi-step-desc {
+  @apply text-slate-600 text-base leading-relaxed;
+}
+
+/* FAQ MARKDOWN */
+.psi-faq-md-p {
+  @apply mb-2 last:mb-0;
+}
+.psi-faq-md-strong {
+  @apply font-semibold text-slate-800 dark:text-slate-200;
+}
+.psi-faq-md-link {
+  @apply text-indigo-600 hover:underline;
+}
+
+/* SOCIAL LOGIN */
+.psi-social-divider {
+  @apply relative flex items-center gap-3;
+}
+.psi-social-divider-line {
+  @apply flex-1 h-px bg-slate-100;
+}
+.psi-social-divider-text {
+  @apply text-xs text-slate-400 font-medium;
+}
+.psi-social-login-btn {
+  @apply w-full flex items-center justify-center gap-3 px-4 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 transition-colors text-sm font-semibold text-slate-700 shadow-sm;
 }
 
 /* --- SECCIÓN ORIGEN --- */
@@ -805,6 +1009,59 @@ body {
 /* --- PDF READER --- */
 .psi-pdf-reader        { height: 680px; }
 .psi-pdf-reader--expanded { height: 90vh; }
+
+/* --- RECURSOS --- */
+.psi-recursos {
+  @apply max-w-6xl mx-auto px-8 py-12 space-y-10;
+}
+.psi-recursos-header {
+  @apply text-center;
+}
+.psi-recursos-title {
+  @apply text-3xl font-extrabold text-slate-900 dark:text-white;
+}
+.psi-recursos-subtitle {
+  @apply text-slate-500 dark:text-slate-400 mt-2 text-base;
+}
+.psi-recursos-isep-card {
+  @apply flex items-center gap-5 bg-white dark:bg-slate-800 border border-indigo-100 dark:border-slate-700 rounded-2xl shadow-sm p-6 hover:border-[#634AE6] transition-all duration-200;
+}
+.psi-recursos-isep-label {
+  @apply text-xs font-bold text-indigo-600 uppercase tracking-wide mb-1;
+}
+.psi-recursos-isep-title {
+  @apply font-extrabold text-slate-900 dark:text-white text-sm leading-snug mb-1;
+}
+.psi-recursos-isep-arrow {
+  @apply text-[#634AE6] font-bold text-sm flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity;
+}
+.psi-recursos-media-card {
+  @apply bg-white dark:bg-slate-800 border border-indigo-100 dark:border-slate-700 rounded-3xl shadow-sm overflow-hidden;
+}
+.psi-recursos-media-header {
+  @apply px-5 py-4 border-b border-slate-100 dark:border-slate-700 flex items-center gap-3;
+}
+.psi-recursos-media-title {
+  @apply font-bold text-slate-900 dark:text-white text-sm;
+}
+.psi-recursos-media-meta {
+  @apply text-xs text-slate-400;
+}
+.psi-recursos-yt-link {
+  @apply ml-auto text-xs text-[#634AE6] hover:underline font-medium;
+}
+.psi-recursos-pdf-toolbar {
+  @apply px-6 py-4 border-b border-slate-100 dark:border-slate-700 flex items-center justify-between gap-4;
+}
+.psi-recursos-empty {
+  @apply flex flex-col items-center justify-center py-16 px-8 text-center bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-slate-700 dark:to-slate-800;
+}
+.psi-recursos-empty-title {
+  @apply font-semibold text-slate-700 dark:text-slate-300 mb-1;
+}
+.psi-recursos-empty-desc {
+  @apply text-sm text-slate-400;
+}
 
 /* --- FOOTER --- */
 .psi-footer-body {
@@ -1016,6 +1273,83 @@ body {
 }
 
 /* --- CREDENTIALS CAROUSEL --- */
+/* CERTIFICATE MODAL */
+.psi-modal-overlay {
+  @apply fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in;
+}
+.psi-modal-content {
+  @apply relative w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl overflow-hidden;
+}
+.psi-modal-header {
+  @apply flex items-center justify-between px-5 py-3 border-b border-slate-100 dark:border-slate-700;
+}
+.psi-modal-title {
+  @apply text-sm font-semibold text-slate-700 dark:text-slate-200;
+}
+.psi-modal-close-btn {
+  @apply w-8 h-8 flex items-center justify-center rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all;
+}
+.psi-modal-body {
+  @apply p-4;
+}
+
+/* CREDENTIALS CAROUSEL — extras */
+.psi-credentials-header-intro {
+  @apply text-center;
+}
+.psi-credentials-header-label {
+  @apply text-base font-black text-indigo-500 uppercase tracking-widest mb-1;
+}
+.psi-credentials-subtitle {
+  @apply text-base text-slate-500 mt-2 italic;
+}
+.psi-credentials-arrow {
+  @apply flex-shrink-0 w-10 h-10 flex items-center justify-center bg-white border border-slate-200 shadow hover:bg-indigo-50 hover:border-indigo-300 transition-colors rounded;
+}
+.psi-credentials-dot {
+  @apply h-2 w-2 rounded-full transition-all duration-300 bg-indigo-200;
+}
+.psi-credentials-dot--active {
+  @apply w-6 bg-indigo-500;
+}
+.psi-credentials-counter {
+  @apply ml-3 text-xs text-slate-400 font-mono;
+}
+.psi-credentials-card-title {
+  @apply text-xl font-extrabold text-slate-800 leading-tight mb-2;
+}
+.psi-credentials-card-institution {
+  @apply flex items-center justify-center gap-1.5 text-sm font-semibold text-indigo-600 mt-1;
+}
+.psi-credentials-card-note {
+  @apply bg-indigo-50 text-indigo-600 px-3 py-1 rounded text-[10px] font-bold;
+}
+.psi-credentials-card-year {
+  @apply font-black text-indigo-500 text-base;
+}
+
+/* LIGHTBOX */
+.psi-lightbox-overlay {
+  @apply fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 cursor-zoom-out;
+}
+.psi-lightbox-close {
+  @apply absolute top-2 right-2 bg-black/60 text-white rounded px-3 py-1 text-sm hover:bg-black/80 transition;
+}
+
+/* IMAGE SLIDER */
+.psi-slider-arrow {
+  @apply absolute top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white border border-slate-200 rounded w-7 h-7 flex items-center justify-center text-sm shadow transition;
+}
+.psi-slider-dot {
+  @apply block w-1.5 h-1.5 rounded-full transition-all bg-slate-300;
+}
+.psi-slider-dot--active {
+  @apply w-3 bg-indigo-500;
+}
+.psi-slider-hint {
+  @apply absolute bottom-2 right-2 bg-black/40 text-white text-[10px] px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity;
+}
+
 .psi-credentials-section {
   @apply max-w-3xl mx-auto px-6 py-12;
 }
@@ -1220,6 +1554,46 @@ body {
   @apply text-slate-500 dark:text-slate-400 text-base max-w-xl leading-relaxed;
 }
 
+/* NOTE BOX */
+.psi-note-box {
+  @apply my-8 rounded-2xl bg-amber-50 dark:bg-amber-900/10 border border-amber-100 dark:border-amber-800/30 px-6 py-5 flex gap-4;
+}
+.psi-note-box-emoji {
+  @apply text-2xl flex-shrink-0 mt-0.5;
+}
+.psi-note-box-text {
+  @apply text-sm text-amber-900 dark:text-amber-200 leading-relaxed;
+}
+
+/* INLINE CARD GRID */
+.psi-inline-card-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-6;
+}
+.psi-inline-card {
+  @apply flex flex-col bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-700 rounded-xl p-5 transition-colors duration-200 hover:border-indigo-200 dark:hover:border-indigo-800;
+}
+.psi-inline-card-title {
+  @apply text-base font-bold text-slate-800 dark:text-slate-100 mb-2;
+}
+.psi-inline-card-desc {
+  @apply text-sm text-slate-600 dark:text-slate-400 leading-relaxed flex-1;
+}
+.psi-inline-card-link {
+  @apply mt-4 inline-flex items-center gap-1 text-xs text-slate-400 dark:text-slate-500 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-colors duration-200;
+}
+.psi-inline-card-soon {
+  @apply mt-4 inline-flex items-center text-xs text-slate-300 dark:text-slate-600 select-none;
+}
+.psi-inline-card-emoji {
+  @apply text-2xl mb-2;
+}
+.psi-inline-card-link-text {
+  @apply group-hover:translate-x-0.5 transition-transform duration-200;
+}
+.psi-inline-card-link-arrow {
+  @apply opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all duration-200;
+}
+
 .psi-book-cluster {
   @apply my-8 p-6 rounded-3xl border border-indigo-100/50 dark:border-slate-700;
   @apply bg-gradient-to-br from-slate-50 to-indigo-50/30 dark:from-slate-800/50 dark:to-slate-800/30;
@@ -1296,6 +1670,37 @@ body {
 }
 .psi-breadcrumb a {
   @apply hover:text-[#634AE6] transition-colors;
+}
+
+/* POST NAVIGATION */
+.psi-post-nav {
+  @apply flex items-center gap-3 text-[10px] uppercase tracking-[0.15em] text-slate-400 dark:text-slate-500 font-bold mb-10;
+}
+.psi-post-nav-link {
+  @apply hover:text-indigo-600 transition-colors flex items-center gap-1.5;
+}
+.psi-post-nav-link-arrow {
+  @apply text-xs group-hover:-translate-x-1 transition-transform;
+}
+.psi-post-nav-sep {
+  @apply text-slate-300 dark:text-slate-600;
+}
+.psi-post-nav-current {
+  @apply text-slate-500 dark:text-slate-400 truncate max-w-[150px] md:max-w-[300px] font-medium normal-case tracking-normal;
+}
+
+/* CTA LOGIN/REGISTER */
+.psi-cta-login {
+  @apply w-full max-w-7xl mx-auto px-6 my-20;
+}
+.psi-cta-login-card {
+  @apply rounded-2xl shadow-sm border flex flex-col md:flex-row items-center justify-between gap-10 p-10 md:p-12 border-indigo-100/50 bg-white/50 backdrop-blur-sm;
+}
+.psi-cta-login-actions {
+  @apply flex items-center gap-6 shrink-0;
+}
+.psi-cta-login-contact {
+  @apply hidden lg:flex items-center gap-2 text-sm font-bold text-slate-400 hover:text-indigo-600 transition-colors;
 }
 
 /* BADGES y PILLS DE ESTADO */
@@ -1391,6 +1796,42 @@ body {
 }
 .psi-article-h2 {
   @apply text-xl font-extrabold text-slate-900 dark:text-white mb-4;
+}
+.psi-article-h3 {
+  @apply text-base font-bold text-slate-800 dark:text-slate-200 mt-6 mb-2 scroll-mt-20;
+}
+.psi-article-h3-numbered {
+  @apply flex items-start gap-3 mt-8 mb-3 scroll-mt-20;
+}
+.psi-article-h3-num-badge {
+  @apply flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-[#634AE6] to-[#E245B6] flex items-center justify-center mt-0.5;
+}
+.psi-article-h3-label {
+  @apply text-base font-bold text-slate-800 dark:text-slate-200 leading-snug;
+}
+.psi-article-h4 {
+  @apply text-sm font-bold text-slate-800 dark:text-slate-200 mt-5 mb-1.5 scroll-mt-20;
+}
+.psi-article-strong {
+  @apply font-semibold text-slate-800 dark:text-slate-200;
+}
+.psi-article-ul {
+  @apply list-disc pl-6 space-y-1 text-slate-600 dark:text-slate-400 mb-4;
+}
+.psi-article-ol {
+  @apply list-decimal pl-6 space-y-1 text-slate-600 dark:text-slate-400 mb-4;
+}
+.psi-article-li {
+  @apply text-base leading-relaxed;
+}
+.psi-article-blockquote {
+  @apply border-l-4 border-indigo-300 dark:border-indigo-600 pl-5 pt-3 pb-1 my-6 text-slate-600 dark:text-slate-400 italic bg-indigo-50/40 dark:bg-indigo-900/10 rounded-r-lg [&>p]:mb-2 [&>p:last-child]:mb-0;
+}
+.psi-article-a {
+  @apply text-indigo-600 hover:underline;
+}
+.psi-article-hr {
+  @apply border-slate-200 dark:border-slate-700 my-8;
 }
 
 /* CÓDIGO/MONOSPAGE badge (DSM CARD) */
@@ -1617,4 +2058,750 @@ body {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+/* --- POST HEADER --- */
+.psi-post-header {
+  @apply max-w-4xl mx-auto px-6 pt-8 pb-5;
+}
+.psi-post-header-meta {
+  @apply flex items-center gap-3 mb-2;
+}
+.psi-post-category-badge {
+  @apply px-3 py-1 rounded-full bg-[#f3ebff] text-[#9333ea] text-xs font-bold tracking-wide hover:bg-[#ede0ff] transition-colors;
+}
+.psi-post-sponsored-badge {
+  @apply px-2.5 py-1 rounded-full border border-amber-300 bg-amber-50 text-amber-700 text-[10px] font-black uppercase tracking-widest;
+}
+.psi-post-title-wrap {
+  @apply relative;
+}
+.psi-post-emoji {
+  @apply absolute -left-10 top-1 text-3xl hidden lg:block opacity-80 group-hover:scale-110 transition-transform;
+}
+.psi-post-title {
+  @apply text-[1.55rem] md:text-[2rem] font-black text-[#1e293b] leading-[1.15] tracking-[-0.03em];
+}
+.psi-post-excerpt {
+  @apply mt-4 text-base text-slate-500 leading-relaxed font-medium max-w-3xl;
+}
+
+/* --- POST REFERENCES --- */
+.psi-post-references {
+  @apply mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 space-y-8;
+}
+.psi-post-section-label {
+  @apply text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-3;
+}
+.psi-ref-item {
+  @apply flex gap-3 text-base text-slate-700 dark:text-slate-300 leading-relaxed;
+}
+.psi-ref-num {
+  @apply flex-shrink-0 text-slate-300 dark:text-slate-600 font-mono text-xs pt-0.5;
+}
+.psi-ref-link {
+  @apply text-indigo-500 hover:underline break-all;
+}
+
+/* --- RELATED POSTS --- */
+.psi-related-posts {
+  @apply mt-12 pt-8 border-t border-slate-100 dark:border-slate-800;
+}
+.psi-related-posts-label {
+  @apply text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-4;
+}
+.psi-related-posts-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+.psi-related-post-card {
+  @apply block bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 rounded-xl p-5 hover:shadow-md transition-shadow;
+}
+.psi-related-post-header {
+  @apply flex items-center gap-2 mb-2;
+}
+.psi-related-post-category {
+  @apply text-xs text-indigo-500 font-semibold uppercase tracking-wide;
+}
+.psi-related-post-title {
+  @apply text-sm font-bold text-slate-800 dark:text-slate-100 mb-1 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors;
+}
+.psi-related-post-excerpt {
+  @apply text-xs text-slate-500 dark:text-slate-400 line-clamp-2;
+}
+.psi-related-post-readtime {
+  @apply text-xs text-slate-400 dark:text-slate-500 mt-3;
+}
+
+/* --- INTERESTS --- */
+.psi-interests-grid {
+  @apply flex flex-wrap gap-2;
+}
+.psi-interest-tag {
+  @apply flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 text-sm font-semibold text-slate-700 shadow-sm hover:border-indigo-300 hover:text-indigo-700 transition-colors;
+}
+
+/* --- TECHSTACK --- */
+.psi-techstack {
+  @apply flex flex-wrap gap-4;
+}
+.psi-techstack-card {
+  @apply rounded-2xl border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm p-4 flex flex-col gap-3 flex-shrink-0;
+}
+.psi-techstack-skill {
+  @apply flex items-center gap-2.5;
+}
+.psi-techstack-skill-name {
+  @apply text-sm text-slate-700 dark:text-slate-300 font-medium leading-tight;
+}
+
+/* ─── NAV DROPDOWN ──────────────────────────────────────────────── */
+.psi-nav-dropdown {
+  @apply relative w-full;
+}
+.psi-nav-dropdown-btn {
+  @apply flex items-center justify-between w-full px-4 py-2.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:border-violet-300 dark:hover:border-violet-600 transition-all shadow-sm;
+}
+.psi-nav-dropdown-chevron {
+  @apply text-slate-400 transition-transform duration-200;
+}
+.psi-nav-dropdown-chevron.rotate-180 {
+  transform: rotate(180deg);
+}
+.psi-nav-dropdown-panel {
+  @apply mt-1.5 rounded-xl border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-lg overflow-hidden divide-y divide-slate-50 dark:divide-slate-700/50;
+}
+.psi-nav-dropdown-item {
+  @apply flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-violet-50 dark:hover:bg-violet-900/20 hover:text-violet-700 dark:hover:text-violet-300 transition-colors;
+}
+.psi-nav-dropdown-emoji {
+  @apply text-base flex-shrink-0;
+}
+.psi-nav-dropdown-label {
+  @apply flex-1 font-medium;
+}
+.psi-nav-dropdown-arrow {
+  @apply text-slate-300 dark:text-slate-600 text-xs group-hover:text-violet-400;
+}
+
+/* --- PANAMERICANA BANNER INLINE --- */
+.psi-pana-inline-banner {
+  @apply flex items-center justify-between gap-4 w-full rounded-2xl border border-indigo-100 px-5 py-4 hover:shadow-md transition-all my-6;
+  background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 40%, #fdf4ff 100%);
+}
+.psi-pana-inline-content {
+  @apply flex items-center gap-3 min-w-0;
+}
+.psi-pana-inline-label {
+  @apply text-[11px] font-black uppercase tracking-widest mb-1;
+  color: #634AE6;
+}
+.psi-pana-inline-text {
+  @apply text-sm font-bold text-slate-800 leading-snug;
+}
+.psi-pana-inline-code {
+  @apply font-black;
+  color: #E245B6;
+}
+.psi-pana-inline-arrow {
+  @apply shrink-0 text-xs font-black group-hover:translate-x-0.5 transition-transform whitespace-nowrap;
+  color: #634AE6;
+}
+
+/* --- ASSESSMENT SCALES --- */
+.psi-scales-section { @apply mt-10; }
+.psi-scales-subtitle { @apply text-sm text-slate-500 dark:text-slate-400 mb-6 -mt-2; }
+.psi-scales-grid { @apply grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8; }
+.psi-scale-card { @apply rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4 flex flex-col gap-3; }
+.psi-scale-header { @apply flex flex-col gap-1; }
+.psi-scale-name { @apply text-base font-black text-slate-800 dark:text-slate-100 mr-2; }
+.psi-scale-fullname { @apply text-xs text-slate-400 dark:text-slate-500 leading-snug; }
+.psi-scale-badge-primary { @apply inline-block text-[10px] font-bold uppercase tracking-wide bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300 px-2 py-0.5 rounded-full; }
+.psi-scale-access { @apply text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full whitespace-nowrap flex-shrink-0; }
+.psi-scale-purpose { @apply text-sm text-slate-600 dark:text-slate-400 leading-relaxed; }
+.psi-scale-meta { @apply flex flex-wrap gap-3 pt-2 border-t border-slate-100 dark:border-slate-800; }
+.psi-scale-meta-item { @apply flex flex-col gap-0.5; }
+.psi-scale-meta-item--wide { @apply flex-1 min-w-full; }
+.psi-scale-meta-label { @apply text-[10px] font-bold uppercase tracking-wide text-slate-400 dark:text-slate-500; }
+.psi-scale-meta-value { @apply text-xs font-semibold text-slate-700 dark:text-slate-300; }
+
+/* --- TABLA COMPARATIVA DIFERENCIAL --- */
+.psi-table-wrapper { @apply overflow-x-auto my-6 rounded-xl border border-slate-200 dark:border-slate-700; }
+.psi-table { @apply w-full text-sm border-collapse; }
+.psi-table-thead { @apply bg-gradient-to-r from-violet-50 to-indigo-50 dark:from-violet-950/30 dark:to-indigo-950/30; }
+.psi-table-th { @apply px-4 py-3 text-left text-xs font-bold text-violet-700 dark:text-violet-300 uppercase tracking-wide border-b border-slate-200 dark:border-slate-700 whitespace-nowrap; }
+.psi-table-tr { @apply border-b border-slate-100 dark:border-slate-800 last:border-0 even:bg-slate-50/60 dark:even:bg-slate-800/20; }
+.psi-table-td { @apply px-4 py-3 text-sm text-slate-700 dark:text-slate-300 leading-snug align-top; }
+
+/* --- DSM ACCORDION --- */
+.psi-dsm-accordion { @apply my-4 space-y-1.5; }
+.psi-dsm-accordion-item { @apply border-2; }
+.psi-dsm-accordion-btn { @apply w-full flex items-center gap-2.5 px-3 py-2 text-left hover:opacity-90 transition-opacity cursor-pointer; }
+.psi-dsm-accordion-badge { @apply text-white font-bold text-xs w-6 h-6 flex items-center justify-center flex-shrink-0; }
+.psi-dsm-accordion-dot { @apply w-1.5 h-1.5 bg-slate-400 dark:bg-slate-500 flex-shrink-0; }
+.psi-dsm-accordion-label { @apply flex-1 text-sm font-semibold text-slate-900 dark:text-slate-100 leading-snug; }
+.psi-dsm-accordion-chevron { @apply text-slate-400 dark:text-slate-500 text-[10px] transition-transform duration-200 flex-shrink-0; }
+.psi-dsm-accordion-panel { @apply px-3.5 py-3 border-t-2; }
+
+/* --- ACCORDION GROUP --- */
+.psi-accordion-group { @apply my-4 space-y-1.5; }
+.psi-accordion-item { @apply border-2 border-violet-200 dark:border-violet-800 overflow-hidden; }
+.psi-accordion-btn { @apply w-full flex items-center gap-3 px-4 py-2.5 text-left bg-violet-50 dark:bg-violet-950/30 hover:bg-violet-100 dark:hover:bg-violet-900/40 transition-colors cursor-pointer; }
+.psi-accordion-label { @apply flex-1 text-sm font-semibold text-slate-800 dark:text-slate-200; }
+.psi-accordion-chevron { @apply text-violet-400 dark:text-violet-500 text-xs transition-transform duration-200; }
+.psi-accordion-panel { @apply px-4 pb-4 pt-3 border-t-2 border-violet-200 dark:border-violet-800 bg-white dark:bg-slate-900 animate-fade-in; }
+.psi-accordion-md-p { @apply text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-3 last:mb-0; }
+.psi-accordion-md-strong { @apply font-semibold text-slate-700 dark:text-slate-300; }
+.psi-accordion-md-ul { @apply list-disc pl-5 space-y-1 text-slate-600 dark:text-slate-400 mb-3; }
+
+/* --- TOC MOBILE --- */
+.psi-toc-mobile { @apply mx-4 mb-4 rounded-2xl border border-indigo-100 bg-indigo-50/60 overflow-hidden; }
+.psi-toc-mobile-trigger { @apply w-full flex items-center justify-between px-4 py-3 text-sm font-bold text-indigo-700; }
+.psi-toc-mobile-list { @apply px-4 pb-3 space-y-1 border-t border-indigo-100; }
+
+/* --- FAQ ACCORDION CLIENT --- */
+.psi-faq-section-wrapper { @apply mt-16 mb-12; }
+.psi-faq-section-h2 { @apply text-2xl font-bold mb-6 text-slate-800 dark:text-white border-b pb-2; }
+
+/* --- BLOG LAYOUT --- */
+.psi-blog-container { @apply max-w-4xl mx-auto px-4 sm:px-6 pt-10 pb-20 antialiased; }
+
+/* --- HOME SIDES --- */
+.psi-home-left { @apply lg:col-span-7; }
+.psi-home-right { @apply lg:col-span-5 flex justify-center lg:justify-end; }
+
+/* --- CONTACT FORM --- */
+.psi-form-success { @apply text-center py-10 animate-fade-in bg-indigo-50/30 rounded-3xl border border-indigo-100; }
+.psi-form-grid { @apply grid grid-cols-1 md:grid-cols-2 gap-4; }
+.psi-form-note { @apply text-xs text-slate-500; }
+.psi-btn-submit { @apply psi-btn-primary w-full py-4 text-base flex justify-center items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed; }
+
+/* --- NEWSLETTER --- */
+.psi-newsletter-sent { @apply rounded-2xl border border-slate-200 bg-white px-8 py-10 text-center shadow-sm; }
+.psi-newsletter-sent-title { @apply text-xl font-extrabold text-slate-800 mb-1; }
+.psi-newsletter-sent-desc { @apply text-slate-500 text-sm max-w-sm mx-auto; }
+.psi-newsletter-card { @apply rounded-2xl bg-white shadow-xl ring-2 ring-[#2d1b6b] overflow-hidden; }
+.psi-newsletter-left {
+  @apply md:w-2/5 px-7 py-8 flex flex-col justify-center border-b md:border-b-0 md:border-r border-white/20;
+  background: linear-gradient(135deg, #3b2199, #634AE6, #a78bfa, #c4b5fd);
+}
+.psi-newsletter-label { @apply text-base font-black uppercase tracking-widest text-white mb-3; }
+.psi-newsletter-title { @apply text-2xl font-black text-white leading-snug mb-4; }
+.psi-newsletter-list { @apply space-y-2.5; }
+.psi-newsletter-list-item { @apply flex items-start gap-2 text-sm font-semibold text-white/90; }
+.psi-newsletter-disclaimer { @apply text-sm font-bold text-white/80 mt-5; }
+.psi-newsletter-right { @apply flex-1 px-7 py-8 flex flex-col justify-center; }
+.psi-newsletter-subtitle { @apply text-base font-black text-slate-800 mb-4; }
+.psi-newsletter-fields { @apply flex flex-col sm:flex-row gap-3; }
+.psi-newsletter-input {
+  @apply flex-1 px-4 py-2.5 rounded-lg border border-slate-200 text-slate-800 placeholder-slate-400 text-sm;
+  @apply focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent;
+}
+.psi-newsletter-submit {
+  @apply w-full py-3 rounded-lg text-sm font-black transition-all duration-300 hover:opacity-90 hover:shadow-md disabled:opacity-40 disabled:cursor-not-allowed;
+  background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 35%, #f5f3ff 70%, #ffffff 100%);
+  color: #634AE6;
+}
+
+/* --- FEATURES GRID --- */
+.psi-features-section { @apply max-w-7xl mx-auto px-8 py-20; }
+.psi-features-header { @apply text-center mb-16; }
+.psi-features-grid { @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8; }
+
+/* --- COOKIE BANNER --- */
+.psi-cookie-wrapper { @apply fixed bottom-0 left-0 right-0 z-50 flex justify-center px-4 pb-4 pointer-events-none; }
+.psi-cookie-card { @apply pointer-events-auto w-full max-w-2xl bg-white border border-slate-200 shadow-xl rounded-xl px-5 py-4 flex flex-col sm:flex-row items-start sm:items-center gap-4; }
+.psi-cookie-text-title { @apply text-sm font-semibold text-slate-800 mb-0.5; }
+.psi-cookie-text-body { @apply text-xs text-slate-500 leading-relaxed; }
+.psi-cookie-actions { @apply flex items-center gap-2 flex-shrink-0; }
+.psi-cookie-reject { @apply px-4 py-2 text-xs font-semibold text-slate-600 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors; }
+.psi-cookie-accept {
+  @apply px-4 py-2 text-xs font-black text-white rounded-lg transition-colors hover:opacity-90;
+  background: linear-gradient(135deg, #634AE6, #E245B6);
+}
+
+/* --- FOOTER FLIP CARD --- */
+.psi-footer-flip-link { @apply block w-48; perspective: 600px; }
+.psi-footer-flip-card { @apply relative w-full transition-transform duration-500; transform-style: preserve-3d; aspect-ratio: 220/80; }
+.psi-footer-flip-link:hover .psi-footer-flip-card { transform: rotateY(180deg); }
+.psi-footer-flip-front, .psi-footer-flip-back { @apply absolute inset-0; backface-visibility: hidden; }
+.psi-footer-flip-back { @apply bg-white flex items-center justify-center p-2; transform: rotateY(180deg); }
+.psi-footer-nav { @apply flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-semibold; }
+
+/* --- PANAMERICANA FLOAT --- */
+.psi-float-wrapper {
+  @apply fixed bottom-5 right-5 sm:top-28 sm:bottom-auto z-50 flex flex-col items-end gap-1;
+}
+.psi-float-confirm {
+  @apply mb-1 bg-white rounded-xl shadow-lg border border-slate-100 px-3 py-2.5 text-xs w-44;
+}
+.psi-float-confirm-text {
+  @apply font-semibold text-slate-700 mb-2;
+}
+.psi-float-confirm-actions {
+  @apply flex gap-2;
+}
+.psi-float-confirm-yes {
+  @apply flex-1 bg-indigo-600 text-white rounded-lg py-1 font-bold hover:bg-indigo-700 transition-colors;
+}
+.psi-float-confirm-no {
+  @apply flex-1 bg-slate-100 text-slate-600 rounded-lg py-1 font-bold hover:bg-slate-200 transition-colors;
+}
+.psi-float-dismiss-btn {
+  @apply self-end w-5 h-5 rounded-full bg-slate-600/70 hover:bg-slate-800 text-white text-[10px] font-bold flex items-center justify-center transition-colors;
+}
+.psi-float-banner-link {
+  @apply block w-32 shadow-2xl;
+  perspective: 600px;
+}
+.psi-float-banner-card {
+  @apply relative w-full transition-transform duration-500;
+  transform-style: preserve-3d;
+  aspect-ratio: 1/1;
+}
+.psi-float-banner-link:hover .psi-float-banner-card {
+  transform: rotateY(180deg);
+}
+.psi-float-banner-front,
+.psi-float-banner-back {
+  @apply absolute inset-0;
+  backface-visibility: hidden;
+}
+.psi-float-banner-back {
+  @apply bg-white flex items-center justify-center p-2;
+  transform: rotateY(180deg);
+}
+
+/* --- DSM CRITERIA COMPACT --- */
+.psi-dsm-compact-container {
+  @apply my-2 rounded border-2 border-indigo-500 bg-indigo-50 dark:bg-indigo-950/60 overflow-hidden;
+}
+
+.psi-dsm-compact-list {
+  @apply divide-y divide-indigo-200 dark:divide-indigo-800;
+}
+
+.psi-dsm-compact-item {
+  @apply bg-white dark:bg-slate-900/50;
+}
+
+.psi-dsm-compact-trigger {
+  @apply w-full text-left px-2.5 py-1 flex items-center gap-1.5 hover:bg-indigo-100/40 dark:hover:bg-indigo-900/50 transition-colors cursor-pointer text-xs;
+}
+
+.psi-dsm-compact-letter {
+  @apply inline-flex items-center justify-center w-5 h-5 rounded bg-gradient-to-br from-indigo-600 to-purple-600 text-white font-bold text-xs flex-shrink-0;
+}
+
+.psi-dsm-compact-title {
+  @apply flex-1 font-semibold text-xs text-slate-800 dark:text-slate-100 line-clamp-1;
+}
+
+.psi-dsm-compact-toggle {
+  @apply text-indigo-600 dark:text-indigo-400 flex-shrink-0 text-xs font-bold transition-transform duration-300;
+}
+
+.psi-dsm-compact-content {
+  @apply px-2.5 py-1.5 bg-indigo-50 dark:bg-indigo-950/40 space-y-0.5 text-xs border-t border-indigo-200 dark:border-indigo-800;
+}
+
+.psi-dsm-compact-description {
+  @apply text-slate-700 dark:text-slate-300 text-xs;
+}
+
+.psi-dsm-compact-items {
+  @apply space-y-0 list-disc list-inside text-slate-700 dark:text-slate-300 pl-1;
+}
+
+.psi-dsm-compact-items li {
+  @apply text-xs leading-none;
+}
+
+.psi-dsm-compact-note {
+  @apply bg-yellow-50/50 dark:bg-yellow-950/30 border-l border-yellow-500 dark:border-yellow-700 px-1.5 py-0.5 rounded text-xs text-yellow-800 dark:text-yellow-200;
+}
+
+/* --- DSM CRITERIA EXACT (DSM FORMAT) --- */
+.psi-dsm-exact-container {
+  @apply my-4 space-y-0 border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-950;
+}
+
+.psi-dsm-exact-item {
+  @apply border-b border-slate-300 dark:border-slate-600 last:border-b-0;
+}
+
+.psi-dsm-exact-trigger {
+  @apply w-full text-left px-4 py-2.5 flex items-center gap-2 hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors cursor-pointer text-sm font-medium text-slate-900 dark:text-slate-100;
+}
+
+.psi-dsm-exact-letter {
+  @apply font-bold text-slate-900 dark:text-slate-100 w-6 flex-shrink-0;
+}
+
+.psi-dsm-exact-title {
+  @apply flex-1 text-sm font-medium text-slate-900 dark:text-slate-100;
+}
+
+.psi-dsm-exact-toggle {
+  @apply text-slate-600 dark:text-slate-400 flex-shrink-0 text-xs transition-transform duration-200;
+}
+
+.psi-dsm-exact-toggle.expanded {
+  transform: rotate(90deg);
+}
+
+.psi-dsm-exact-content {
+  @apply px-4 py-2.5 bg-slate-50 dark:bg-slate-900/50 border-t border-slate-300 dark:border-slate-600 space-y-2 text-sm;
+}
+
+.psi-dsm-exact-description {
+  @apply text-slate-700 dark:text-slate-300 text-sm leading-relaxed;
+}
+
+.psi-dsm-exact-items {
+  @apply space-y-1 pl-6 text-slate-700 dark:text-slate-300;
+}
+
+.psi-dsm-exact-items li {
+  @apply text-sm leading-relaxed list-decimal;
+}
+
+.psi-dsm-exact-items-bullets {
+  @apply space-y-1 pl-6 text-slate-700 dark:text-slate-300 list-disc;
+}
+
+.psi-dsm-exact-items-bullets li {
+  @apply text-sm leading-relaxed;
+}
+
+.psi-dsm-exact-note {
+  @apply bg-slate-100 dark:bg-slate-800 border-l-2 border-slate-400 dark:border-slate-600 px-2.5 py-1.5 text-xs text-slate-700 dark:text-slate-300;
+}
+
+/* --- DSM CRITERIA ACCORDION (DEPRECATED - KEEP FOR COMPATIBILITY) --- */
+.psi-dsm-criteria-container {
+  @apply my-8 rounded-2xl border border-indigo-200 dark:border-indigo-900 bg-gradient-to-br from-indigo-50/50 to-purple-50/50 dark:from-indigo-950/20 dark:to-purple-950/20 p-6 space-y-3;
+}
+
+.psi-dsm-criteria-wrapper {
+  @apply space-y-3;
+}
+
+.psi-dsm-criteria-item {
+  @apply border border-indigo-300/50 dark:border-indigo-700/30 rounded-xl bg-white dark:bg-slate-800 overflow-hidden hover:border-indigo-400 dark:hover:border-indigo-600 transition-colors;
+}
+
+.psi-dsm-criteria-trigger {
+  @apply w-full text-left px-5 py-4 flex items-center justify-between gap-4 hover:bg-indigo-50 dark:hover:bg-indigo-950/30 transition-colors;
+}
+
+.psi-dsm-criteria-header {
+  @apply flex items-center gap-4 flex-1;
+}
+
+.psi-dsm-criteria-letter {
+  @apply inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-600 to-purple-600 text-white font-bold text-sm flex-shrink-0;
+}
+
+.psi-dsm-criteria-title {
+  @apply font-semibold text-base text-slate-800 dark:text-slate-100;
+}
+
+.psi-dsm-criteria-icon {
+  @apply text-indigo-600 dark:text-indigo-400 flex-shrink-0 text-lg;
+}
+
+.psi-dsm-criteria-content {
+  @apply px-5 py-4 border-t border-indigo-200 dark:border-indigo-900/50 bg-indigo-50/40 dark:bg-indigo-950/20 space-y-3;
+}
+
+.psi-dsm-criteria-description {
+  @apply text-slate-700 dark:text-slate-300 text-base leading-relaxed;
+}
+
+.psi-dsm-criteria-list {
+  @apply space-y-2 pl-5;
+}
+
+.psi-dsm-criteria-list-item {
+  @apply list-disc text-slate-700 dark:text-slate-300 text-base leading-relaxed;
+}
+
+.psi-dsm-criteria-note {
+  @apply bg-yellow-50 dark:bg-yellow-950/30 border-l-4 border-yellow-400 dark:border-yellow-600 px-4 py-3 rounded text-sm text-yellow-800 dark:text-yellow-200;
+}
+
+.psi-dsm-criteria-note-label {
+  @apply font-semibold;
+}
+
+/* --- NEUROBIOLOGY BOX --- */
+.psi-neurobiology-container {
+  @apply my-8 grid grid-cols-1 md:grid-cols-3 gap-5;
+}
+
+.psi-neurobiology-card {
+  @apply rounded-xl border-2 border-purple-300 dark:border-purple-800 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 p-6 space-y-3 hover:border-purple-400 dark:hover:border-purple-700 transition-all hover:shadow-lg dark:hover:shadow-xl;
+}
+
+.psi-neurobiology-header {
+  @apply flex items-start gap-3;
+}
+
+.psi-neurobiology-icon {
+  @apply text-3xl flex-shrink-0;
+}
+
+.psi-neurobiology-title {
+  @apply text-lg font-bold text-purple-900 dark:text-purple-100 leading-snug;
+}
+
+.psi-neurobiology-content {
+  @apply text-sm text-slate-700 dark:text-slate-300 leading-relaxed;
+}
+
+.psi-neurobiology-highlight {
+  @apply bg-purple-200/60 dark:bg-purple-900/40 border-l-4 border-purple-600 dark:border-purple-400 pl-3 py-2 text-sm font-semibold text-purple-900 dark:text-purple-200 italic;
+}
+
+/* --- BRAIN VISUALIZATION --- */
+.psi-brain-visualization-wrapper {
+  @apply my-8;
+}
+
+.psi-brain-container {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-6 rounded-2xl border-2 border-purple-300 dark:border-purple-800 bg-gradient-to-br from-purple-50/50 to-pink-50/50 dark:from-purple-950/20 dark:to-pink-950/20 p-6;
+}
+
+.psi-brain-svg {
+  @apply w-full h-auto max-w-sm mx-auto;
+  color: #64748b;
+}
+
+.dark .psi-brain-svg {
+  color: #cbd5e1;
+}
+
+.psi-brain-outline {
+  opacity: 0.5;
+}
+
+.psi-brain-area {
+  @apply transition-all duration-200;
+}
+
+.psi-brain-area circle {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.dark .psi-brain-area circle {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.psi-brain-label {
+  pointer-events: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.psi-brain-info-panel {
+  @apply flex flex-col justify-center rounded-xl bg-white dark:bg-slate-800 p-6 shadow-md;
+  min-height: 250px;
+}
+
+.psi-brain-info-content {
+  @apply space-y-4;
+}
+
+.psi-brain-info-empty {
+  @apply flex items-center justify-center h-full;
+}
+
+.psi-brain-info-header {
+  @apply border-l-4 pl-4 py-2;
+}
+
+.psi-brain-info-title {
+  @apply text-lg font-bold text-slate-800 dark:text-slate-100;
+}
+
+.psi-brain-info-affection {
+  @apply text-sm font-semibold text-slate-600 dark:text-slate-400 mt-1;
+}
+
+.psi-brain-info-description {
+  @apply text-sm text-slate-700 dark:text-slate-300 leading-relaxed;
+}
+
+.psi-brain-info-symptoms {
+  @apply bg-slate-100 dark:bg-slate-700/30 rounded-lg p-4 text-slate-800 dark:text-slate-200;
+}
+
+/* --- DSM CRITERIA VISUAL (STUDY FORMAT) --- */
+.psi-dsm-visual-container {
+  @apply space-y-5 my-8;
+}
+
+.psi-dsm-visual-card {
+  @apply rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow space-y-4;
+}
+
+.psi-dsm-visual-header {
+  @apply flex items-center gap-5;
+}
+
+.psi-dsm-visual-letter {
+  @apply inline-flex items-center justify-center w-16 h-16 rounded-xl font-black text-2xl text-white flex-shrink-0 shadow-md;
+}
+
+.psi-dsm-visual-title {
+  @apply text-xl font-bold leading-snug;
+}
+
+.psi-dsm-visual-description {
+  @apply text-base leading-relaxed font-medium;
+}
+
+.psi-dsm-visual-list {
+  @apply space-y-3 pl-2;
+}
+
+.psi-dsm-visual-list-item {
+  @apply text-base leading-relaxed list-none flex items-start gap-3;
+}
+
+.psi-dsm-visual-bullet {
+  @apply font-bold text-lg flex-shrink-0 block;
+}
+
+.psi-dsm-visual-note {
+  @apply text-sm bg-white/50 dark:bg-white/5 rounded-lg p-4 border-l-4 leading-relaxed italic;
+}
+
+/* Contenedor general del campo (útil por si luego quieres darles un margen por defecto a todos) */
+.psi-field-group {
+  @apply w-full;
+}
+
+/* Cabecera del campo cuando tiene una acción (como un link de "olvidé mi contraseña") */
+.psi-field-header {
+  @apply flex items-center justify-between mb-1.5;
+}
+
+/* Para evitar que el margen inferior de la etiqueta desajuste el flex de la cabecera */
+.psi-field-header .psi-field-label {
+  @apply mb-0;
+}
+
+/* Mensaje de error de validación bajo el input */
+.psi-field-error-text {
+  @apply text-xs font-medium text-red-500 dark:text-red-400 mt-1;
+}
+
+/* Contenedor específico para páginas de un solo bloque central (como Contacto o Textos Legales) */
+.psi-contact-wrapper {
+  @apply max-w-2xl mx-auto px-6 pt-24 pb-16;
+}
+
+/* --- Contenedor para vistas centradas a pantalla completa (Errores, Loading, Próximamente) --- */
+.psi-layout-fullscreen {
+  @apply min-h-screen flex items-center justify-center;
+}
+
+/* Contenedor que recorta lo que sale fuera del carrusel */
+.psi-credentials-viewport {
+  @apply overflow-hidden flex-1;
+}
+
+/* La pista móvil que usa la variable --offset de React para desplazarse */
+.psi-credentials-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(calc(var(--offset) * -100%));
+}
+
+/* Modificamos el estado de inactividad de las tarjetas */
+.psi-credentials-card {
+  @apply bg-white border border-slate-200 rounded-xl p-5 transition-all duration-300 opacity-40 scale-95;
+}
+
+/* Tarjeta activa en el centro del carrusel */
+.psi-credentials-card--active {
+  @apply shadow-md opacity-100 scale-100 border-indigo-300;
+}
+
+/* ============================================
+    MARKDOWN RENDERER (PostContentMD)
+============================================ */
+
+.psi-md-h2 {
+  @apply text-xl font-extrabold text-slate-900 dark:text-white mt-10 mb-4 scroll-mt-20;
+}
+
+/* Variante de H3 para listas enumeradas personalizadas */
+.psi-md-h3-wrapper {
+  @apply flex items-start gap-3 mt-8 mb-3 scroll-mt-20;
+}
+
+.psi-md-h3-badge {
+  @apply flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-[#634AE6] to-[#E245B6] flex items-center justify-center mt-0.5;
+}
+
+.psi-md-h3-badge-text {
+  @apply text-white text-[11px] font-black leading-none;
+}
+
+.psi-md-h3-title {
+  @apply text-base font-bold text-slate-800 dark:text-slate-200 leading-snug;
+}
+
+/* H3 normal */
+.psi-md-h3 {
+  @apply text-base font-bold text-slate-800 dark:text-slate-200 mt-6 mb-2 scroll-mt-20;
+}
+
+.psi-md-h4 {
+  @apply text-sm font-bold text-slate-800 dark:text-slate-200 mt-5 mb-1.5 scroll-mt-20;
+}
+
+.psi-md-p {
+  @apply text-slate-600 dark:text-slate-400 leading-relaxed text-base mb-4;
+}
+
+.psi-md-strong {
+  @apply font-semibold text-slate-800 dark:text-slate-200;
+}
+
+.psi-md-em {
+  @apply italic;
+}
+
+.psi-md-ul {
+  @apply list-disc pl-6 space-y-1 text-slate-600 dark:text-slate-400 mb-4;
+}
+
+.psi-md-ol {
+  @apply list-decimal pl-6 space-y-1 text-slate-600 dark:text-slate-400 mb-4;
+}
+
+.psi-md-li {
+  @apply text-base leading-relaxed;
+}
+
+.psi-md-blockquote {
+  @apply border-l-4 border-indigo-300 dark:border-indigo-600 pl-5 pt-3 pb-1 my-6 text-slate-600 dark:text-slate-400 italic bg-indigo-50/40 dark:bg-indigo-900/10 rounded-r-lg;
+}
+
+/* Corrige el margen del último párrafo dentro de un blockquote */
+.psi-md-blockquote > p {
+  @apply mb-2;
+}
+.psi-md-blockquote > p:last-child {
+  @apply mb-0;
+}
+
+.psi-md-a {
+  @apply text-indigo-600 hover:underline;
+}
+
+.psi-md-hr {
+  @apply border-slate-200 dark:border-slate-700 my-8;
 }

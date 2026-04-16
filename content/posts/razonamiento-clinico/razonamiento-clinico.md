@@ -97,20 +97,43 @@ Si algo te ha resonado en este artículo, es porque ya tienes parte del trabajo 
 
 <!-- faqs -->
 
-### ¿En qué se diferencia el razonamiento clínico de un novato y de un experto?
+### ¿Qué es el cierre prematuro exactamente?
 
-El experto reconoce patrones de forma automática (pensamiento de sistema 1) y activa el razonamiento analítico solo cuando algo no encaja. El novato trabaja casi siempre en modo analítico lento, lo que consume más recursos cognitivos y le hace más vulnerable a errores bajo presión. La diferencia no es de inteligencia, sino de experiencia acumulada con feedback de calidad.
+Es cuando asumimos una hipótesis diagnóstica como correcta antes de haber explorado alternativas. Ocurre cuando la necesidad de resolver la incertidumbre nos hace cerrar el caso demasiado rápido.
 
-### ¿Cuánto tiempo tarda en desarrollarse un buen razonamiento clínico?
+### ¿Cómo reconozco que estoy cometiendo este sesgo?
 
-No hay un número fijo, pero la investigación apunta a que se necesitan varios cientos de horas de práctica con feedback de calidad. Lo determinante no es el tiempo, sino la **práctica deliberada**: exponer al clínico a casos variados, con retroalimentación específica sobre cada decisión tomada.
+Si encuentras que seleccionas solo información que confirma tu primer diagnóstico e ignoras datos contradictorios, probablemente estés en cierre prematuro. Revisa si has considerado tres diagnósticos diferenciales.
 
-### ¿El sesgo de confirmación es inevitable en el diagnóstico?
+### ¿Cuál es la relación entre cierre prematuro y la tolerancia a la ambigüedad?
 
-En cierta medida sí, porque el cerebro humano funciona generando hipótesis y buscando evidencia que las sostenga. Pero puede mitigarse con hábitos concretos: generar siempre diagnósticos alternativos, buscar activamente la información que podría refutar la hipótesis principal y usar instrumentos estandarizados como contraste externo.
+Profesionales con baja tolerancia a la incertidumbre tienden a cerrar casos antes de tiempo. Aprender a tolerar la ambigüedad es fundamental para mantener hipótesis abiertas más tiempo.
 
-### ¿La simulación clínica puede sustituir a las prácticas reales?
+### ¿Cómo se vincula con la omisión de comorbilidades?
 
-No, y no debería intentarlo. La simulación es complementaria: permite entrenar habilidades específicas en un entorno seguro antes de aplicarlas con pacientes reales. Igual que un simulador de vuelo no reemplaza volar, pero hace que el piloto llegue con mucha más preparación.
+El cierre prematuro hace que nos perdamos diagnósticos secundarios. Por ejemplo, cuando vemos depresión pero no exploramos la ansiedad subyacente.
 
+### ¿En qué momentos del proceso clínico es más probable?
+
+Es especialmente peligroso en las primeras entrevistas, cuando tenemos menos información. También ocurre bajo estrés o cansancio.
+
+### ¿Qué preguntas debo hacerme para evitarlo?
+
+¿Qué evidencia contradice mi hipótesis? ¿Qué tres alternativas podría considerar? ¿He explorado todas las áreas relevantes? ¿Qué me falta saber?
+
+### ¿Cómo se diferencia del anclaje?
+
+El anclaje es fijarse en el primer dato. El cierre prematuro es cerrar el diagnóstico sin suficiente exploración. Están relacionados pero son mecanismos distintos.
+
+### ¿Hay diferencias entre cierre prematuro en depresión vs. ansiedad?
+
+En depresión se ve cuando interpretamos tristeza como depresión clínica. En ansiedad, cuando asumimos ansiedad generalizada sin considerar fobias específicas.
+
+### ¿Cómo influye la presión del tiempo en este sesgo?
+
+La prisa amplifica el cierre prematuro. Si tienes poco tiempo, la tendencia a cerrar rápido aumenta. Por eso la supervisión y la reflexión post-sesión son críticas.
+
+### ¿Qué rol juega el diagnóstico previo del paciente?
+
+Si el paciente llega con un diagnóstico anterior, tendemos a confirmarlo sin verificarlo. Siempre revalúa, no asumas diagnósticos previos.
 <!-- /faqs -->

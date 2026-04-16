@@ -1,22 +1,21 @@
 import { notFound } from 'next/navigation';
-import { posts } from '@/Data/Contents/posts';
-import { getPostBySlug } from '@/lib/posts';
+import { getPostBySlug, getAllPostsMetadata } from '@/lib/posts';
 import { BlogLayout } from '@/components/blog/layout/BlogLayout';
 import { PostHeader } from '@/components/blog/sections/PostHeader';
 import { PostAuthorBox } from '@/components/blog/sections/PostAuthorBox';
-import { PostContent } from '@/components/blog/sections/PostContent';
 import { PostContentMD } from '@/components/blog/sections/PostContentMD';
 import { PostReferences } from '@/components/blog/sections/PostReferences';
 import { RelatedPosts } from '@/components/blog/sections/RelatedPosts';
 import { CitationBox } from '@/components/blog/sections/CitationBox';
 import { TableOfContents } from '@/components/blog/ui/TableOfContents';
+import { NavDropdown } from '@/components/blog/ui/NavDropdown';
 import { NewsletterSection } from '@/components/Layout/NewsletterSection';
 
 const slugify = (text) =>
   text.toLowerCase().normalize('NFD').replaceAll(/[\u0300-\u036f]/g, '').replaceAll(/[^a-z0-9]+/g, '-').replaceAll(/(^-|-$)/g, '');
 
 function getRelatedPosts(currentSlug, categorySlug, tags = []) {
-  return posts
+  return getAllPostsMetadata()
     .filter(p => p.slug !== currentSlug)
     .map(p => ({
       ...p,
@@ -71,12 +70,35 @@ export default async function CategoryLandingPage({ params }) {
   const post = { ...frontmatter };
   const relatedPosts = getRelatedPosts(category, frontmatter.categorySlug, frontmatter.tags);
 
+  // Subcategorías para el dropdown
+  const allPosts = getAllPostsMetadata();
+  const subcategoryMap = new Map();
+  for (const p of allPosts) {
+    if (p.categorySlug === category && p.subcategorySlug && !subcategoryMap.has(p.subcategorySlug)) {
+      // Buscar el landing de la subcategoría para obtener emoji
+      const landing = getPostBySlug(p.subcategorySlug);
+      subcategoryMap.set(p.subcategorySlug, {
+        href: `/blog/${category}/${p.subcategorySlug}`,
+        emoji: landing?.frontmatter?.emoji ?? '📌',
+        label: p.subcategory
+          ? p.subcategory.charAt(0).toUpperCase() + p.subcategory.slice(1)
+          : p.subcategorySlug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+      });
+    }
+  }
+  const subcategoryItems = Array.from(subcategoryMap.values());
+
   return (
     <>
       {tocSections.length > 0 && <TableOfContents sections={tocSections} />}
       <BlogLayout>
         <PostHeader post={post} />
         <PostAuthorBox post={post} />
+        {subcategoryItems.length > 0 && (
+          <div className="max-w-4xl mx-auto px-6 mb-8">
+            <NavDropdown label="Ver subcategorías" items={subcategoryItems} />
+          </div>
+        )}
         <PostContentMD frontmatter={frontmatter} body={body} faqs={faqs} />
         <PostReferences
           references={frontmatter.references}

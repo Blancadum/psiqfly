@@ -13,13 +13,13 @@ export const FeaturesGrid = ({
   title = 'Diseñado para',
   titleHighlight = 'profesionales en formación',
 }) => (
-  <section className="max-w-7xl mx-auto px-8 py-20">
-    <header className="text-center mb-16">
+  <section className="psi-features-section">
+    <header className="psi-features-header">
       <h2 className="psi-title-section">
         {title} <span className="psi-gradient-text">{titleHighlight}</span>
       </h2>
     </header>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div className="psi-features-grid">
       {items.map((f) => (
         <FeatureCard key={f.title} icon={f.icon} title={f.title} text={f.text} />
       ))}

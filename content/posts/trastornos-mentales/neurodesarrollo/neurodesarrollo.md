@@ -1,4 +1,5 @@
 ---
+isLanding: true
 title: "Trastornos del Neurodesarrollo: Una mirada clínica más allá de la etiqueta"
 slug: "trastornos-del-neurodesarrollo"
 categorySlug: "trastornos-mentales"
@@ -35,17 +36,17 @@ cardGrids:
         emoji: "⚡"
         description: "Déficit de atención, impulsividad e hiperactividad. Más que falta de foco, es una dificultad en la autorregulación."
         slug: ""
-        categorySlug: "formacion-clinica"
+        categorySlug: "trastornos-mentales"
       - title: "Espectro Autista (TEA)"
         emoji: "🧩"
         description: "Desafíos en la comunicación social y presencia de patrones de conducta restringidos y repetitivos."
         slug: ""
-        categorySlug: "formacion-clinica"
+        categorySlug: "trastornos-mentales"
       - title: "Dificultades del Aprendizaje"
         emoji: "📚"
         description: "Dislexia, discalculia y otros retos que afectan específicamente la adquisición de habilidades académicas."
         slug: ""
-        categorySlug: "formacion-clinica"
+        categorySlug: "trastornos-mentales"
 
 references:
   - "Thapar, A., & Pine, D. S. (2021). *Rutter's Child and Adolescent Psychiatry*. Wiley-Blackwell."
@@ -104,3 +105,46 @@ La **plasticidad cerebral** es la capacidad del cerebro para reorganizarse. En e
 
 ### ¿Cómo afecta la discapacidad intelectual al diagnóstico de otros trastornos?
 La **discapacidad intelectual** puede enmascarar otros trastornos como el TEA o el TDAH. Es crucial evaluar si las dificultades de conducta o comunicación son proporcionales a la edad mental del paciente o si existe un trastorno adicional que requiera una intervención específica más allá del apoyo cognitivo.
+
+<!-- faqs -->
+
+### ¿Qué une a los trastornos del neurodesarrollo?
+
+Todas son dificultades en el desarrollo del sistema nervioso central que afectan funciones intelectuales, comunicación, comportamiento o motricidad. Comienzan en la infancia, aunque pueden no detectarse hasta después.
+
+### ¿Cuál es la diferencia entre trastorno del neurodesarrollo y trastorno mental?
+
+Neurodesarrollo: problemas intrínsecos del desarrollo cerebral desde el inicio. Trastorno mental: puede desarrollarse tras trauma o estrés. Los neurodesarrollos son permanentes; la intervención mejora funcionamiento, no 'cura'.
+
+### ¿El retraso intelectual es lo mismo que autismo?
+
+No. Retraso intelectual afecta capacidad cognitiva general. Autismo afecta comunicación social e intereses restrictivos (con intelecto normal o variable). Pueden co-ocurrir pero son distintos.
+
+### ¿A qué edad se detectan típicamente estos trastornos?
+
+Algunos en infancia temprana (TEA a los 18 meses). Otros en edad escolar (TDAH, dificultades de aprendizaje). Algunos en adolescencia/adultez (trastornos del desarrollo del lenguaje leve).
+
+### ¿Hay comorbilidad frecuente entre neurodesarrollos?
+
+Sí. Un niño con TDAH tiene mayor riesgo de dificultades de aprendizaje. TEA y retraso intelectual frecuentemente coexisten. La evaluación debe ser comprehensiva.
+
+### ¿Cómo influyen los trastornos del neurodesarrollo en la salud mental?
+
+Alto riesgo de depresión, ansiedad, baja autoestima por fracaso académico repetido y exclusión social. El manejo del neurodesarrollo incluye prevención de problemas psicológicos.
+
+### ¿Son los trastornos del neurodesarrollo más comunes en ciertos grupos?
+
+Algunos: autismo más en hombres (4:1). Dislexia más en varones. Retraso intelectual igual en ambos géneros. Sesgo diagnóstico es importante: algunos grupos se subdiagnostican.
+
+### ¿Puede cambiar el diagnóstico del neurodesarrollo con el tiempo?
+
+El trastorno subyacente permanece, pero la presentación y severidad percibida cambian con edad, intervención y ambiente. Un niño con TEA puede mejorar socialmente con intervención pero seguirá siendo autista.
+
+### ¿Cuál es el rol de la familia en los trastornos del neurodesarrollo?
+
+Crucial. La genética es importante (no 'culpa' de los padres). El ambiente familiar, escolar y social influye el pronóstico. Intervención familiar temprana mejora resultados.
+
+### ¿Hay esperanza para niños diagnosticados con trastornos del neurodesarrollo?
+
+Absolutamente. Intervención temprana es transformadora. Muchos alcanzan funcionamiento independiente. El enfoque moderno es en fortalezas y compensación, no solo en deficits.
+<!-- /faqs -->

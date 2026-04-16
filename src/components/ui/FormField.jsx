@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
 
 export const FormField = ({ label, id, error, action, children }) => (
-  <div>
+  <div className="psi-field-group">
     {(label || action) && (
-      <div className={action ? 'flex justify-between mb-1.5' : ''}>
+      <div className={action ? 'psi-field-header' : ''}>
         {label && <label htmlFor={id} className="psi-field-label">{label}</label>}
         {action}
       </div>
     )}
     {children}
-    {error && <p className="text-xs text-red-500 mt-0.5">{error}</p>}
+    {error && <p className="psi-field-error-text">{error}</p>}
   </div>
 );
 
@@ -23,8 +23,13 @@ FormField.propTypes = {
 
 export const FormCheck = ({ checked, onChange, required, children }) => (
   <label className="psi-form-check">
-    <input type="checkbox" className="psi-form-check-input"
-      required={required} checked={checked} onChange={onChange} />
+    <input 
+      type="checkbox" 
+      className="psi-form-check-input"
+      required={required} 
+      checked={checked} 
+      onChange={onChange} 
+    />
     <span className="psi-form-check-text">{children}</span>
   </label>
 );

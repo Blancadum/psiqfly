@@ -81,14 +81,14 @@ export const Navbar = () => {
             {/* Mega menu panel */}
             {megaOpen && (
               <div
-                className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[640px] bg-white border border-slate-100 shadow-xl rounded-xl p-5 grid grid-cols-2 gap-4 z-50"
+                className="psi-nav-mega-panel"
                 onMouseEnter={openMega} onMouseLeave={closeMega}
               >
                 {MEGA_MENU.map(col => (
                   <div key={col.slug}>
                     <Link
                       href={`/blog/${col.slug}`}
-                      className="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-indigo-500 hover:text-indigo-700 mb-2"
+                      className="psi-nav-mega-cat-link"
                       onClick={() => setMegaOpen(false)}
                     >
                       <span>{col.emoji}</span> {col.label}
@@ -98,7 +98,7 @@ export const Navbar = () => {
                         <li key={p.slug}>
                           <Link
                             href={`/blog/${col.slug}/${p.slug}`}
-                            className="block text-sm text-slate-600 hover:text-indigo-700 hover:pl-1 transition-all py-0.5"
+                            className="psi-nav-mega-post-link"
                             onClick={() => setMegaOpen(false)}
                           >
                             › {p.title}
@@ -108,11 +108,11 @@ export const Navbar = () => {
                     </ul>
                   </div>
                 ))}
-                <div className="col-span-2 pt-3 border-t border-slate-100 flex justify-between items-center">
-                  <span className="text-xs text-slate-400">Explora todos los contenidos</span>
+                <div className="psi-nav-mega-footer">
+                  <span className="psi-nav-mega-footer-label">Explora todos los contenidos</span>
                   <Link
                     href="/blog"
-                    className="text-xs font-bold text-indigo-600 hover:text-indigo-800"
+                    className="psi-nav-mega-footer-link"
                     onClick={() => setMegaOpen(false)}
                   >
                     Ver todo el blog →
@@ -128,7 +128,7 @@ export const Navbar = () => {
           <Link
             href="/blog"
             aria-label="Buscar"
-            className="text-[#4c1d95] hover:text-[#634AE6] transition-colors ml-1"
+            className="psi-nav-search-link"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
               <circle cx="11" cy="11" r="7" />
@@ -147,25 +147,25 @@ export const Navbar = () => {
 
         {/* Hamburger (mobile) */}
         <button
-          className="sm:hidden flex flex-col gap-1.5 p-2 rounded-md text-[#4c1d95] hover:bg-indigo-50 transition-colors"
+          className="psi-nav-hamburger"
           onClick={() => setMobileOpen(o => !o)}
           aria-label="Abrir menú"
         >
-          <span className={`block w-5 h-0.5 bg-current transition-all duration-300 ${mobileOpen ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`block w-5 h-0.5 bg-current transition-all duration-300 ${mobileOpen ? 'opacity-0' : ''}`} />
-          <span className={`block w-5 h-0.5 bg-current transition-all duration-300 ${mobileOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          <span className={`psi-nav-hamburger-line ${mobileOpen ? 'rotate-45 translate-y-2' : ''}`} />
+          <span className={`psi-nav-hamburger-line ${mobileOpen ? 'opacity-0' : ''}`} />
+          <span className={`psi-nav-hamburger-line ${mobileOpen ? '-rotate-45 -translate-y-2' : ''}`} />
         </button>
 
       </div>
 
       {/* Mobile dropdown */}
       {mobileOpen && (
-        <div className="sm:hidden border-t border-indigo-100 bg-white/95 backdrop-blur px-4 py-4 flex flex-col gap-1">
+        <div className="psi-nav-mobile-dropdown">
 
           {/* Blog con submenú móvil */}
           <div>
             <button
-              className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-semibold text-slate-700 hover:bg-indigo-50 hover:text-indigo-700 transition-colors"
+              className="psi-nav-mobile-blog-btn"
               onClick={() => setMobileBlogOpen(o => !o)}
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -178,12 +178,12 @@ export const Navbar = () => {
             </button>
 
             {mobileBlogOpen && (
-              <div className="mt-1 ml-4 flex flex-col gap-3 pb-2">
+              <div className="psi-nav-mobile-submenu">
                 {MEGA_MENU.map(col => (
                   <div key={col.slug}>
                     <Link
                       href={`/blog/${col.slug}`}
-                      className="flex items-center gap-1.5 text-[11px] font-black uppercase tracking-widest text-indigo-500 mb-1"
+                      className="psi-nav-mobile-cat-link"
                       onClick={() => { setMobileOpen(false); setMobileBlogOpen(false); }}
                     >
                       <span>{col.emoji}</span> {col.label}
@@ -193,7 +193,7 @@ export const Navbar = () => {
                         <li key={p.slug}>
                           <Link
                             href={`/blog/${col.slug}/${p.slug}`}
-                            className="block text-sm text-slate-600 hover:text-indigo-700 py-0.5"
+                            className="psi-nav-mobile-post-link"
                             onClick={() => { setMobileOpen(false); setMobileBlogOpen(false); }}
                           >
                             › {p.title}
@@ -205,7 +205,7 @@ export const Navbar = () => {
                 ))}
                 <Link
                   href="/blog"
-                  className="text-xs font-bold text-indigo-600 pt-1 border-t border-slate-100"
+                  className="psi-nav-mega-footer-link pt-1 border-t border-slate-100"
                   onClick={() => { setMobileOpen(false); setMobileBlogOpen(false); }}
                 >
                   Ver todo el blog →
@@ -216,7 +216,7 @@ export const Navbar = () => {
 
           <Link
             href="/blog"
-            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-semibold text-slate-700 hover:bg-indigo-50 hover:text-indigo-700 transition-colors"
+            className="psi-nav-mobile-link"
             onClick={() => setMobileOpen(false)}
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
@@ -233,14 +233,13 @@ export const Navbar = () => {
           >
             <span className="text-base leading-none">📚</span>
             Promo
-            <span className="ml-auto text-[10px] font-black px-1.5 py-0.5 rounded bg-amber-100 text-amber-600">-10%</span>
+            <span className="psi-nav-mobile-promo-badge">-10%</span>
           </Link>
 
           <div className="pt-2 mt-1 border-t border-slate-100">
             <Link
               href="/#newsletter"
-              className="flex items-center justify-center px-4 py-2.5 text-sm font-black rounded-lg text-white"
-              style={{ background: 'linear-gradient(135deg, #634AE6, #E245B6, #634AE6)' }}
+              className="psi-nav-mobile-newsletter"
               onClick={() => setMobileOpen(false)}
             >
               Newsletter

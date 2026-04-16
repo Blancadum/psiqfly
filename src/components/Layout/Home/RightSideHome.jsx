@@ -12,7 +12,7 @@ export const RightSideHome = () => {
 
   return (
     
-    <div className="lg:col-span-5 flex justify-center lg:justify-end">
+    <div className="psi-home-right">
 
       <div className="psi-action-card">
         <h2 className="psi-action-card-title">Empieza en minutos</h2>

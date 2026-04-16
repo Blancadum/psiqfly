@@ -19,22 +19,19 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer sponsored"
               aria-label="10% de descuento en Editorial Médica Panamericana"
-              className="block w-48 [perspective:600px] group"
+              className="psi-footer-flip-link"
             >
-              <div className="relative w-full [transform-style:preserve-3d] transition-transform duration-500 group-hover:[transform:rotateY(180deg)]"
-                style={{ aspectRatio: '220/80' }}>
-                {/* Anverso */}
-                <div className="absolute inset-0 [backface-visibility:hidden]">
+              <div className="psi-footer-flip-card">
+                <div className="psi-footer-flip-front">
                   <Image src={bannerFooter} alt="10% descuento Panamericana" fill className="object-contain" />
                 </div>
-                {/* Reverso */}
-                <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white flex items-center justify-center p-2">
+                <div className="psi-footer-flip-back">
                   <Image src={logoPanel} alt="Editorial Médica Panamericana" fill className="object-contain p-1" />
                 </div>
               </div>
             </Link>
 
-            <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-semibold">
+            <nav className="psi-footer-nav">
               {/* CAMBIO CLAVE: Cambiar 'to' por 'href' */}
               <Link href="/legal"      className="psi-footer-link">Aviso legal</Link>
               <Link href="/privacidad" className="psi-footer-link">Privacidad</Link>

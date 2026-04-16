@@ -117,24 +117,43 @@ Reconocer la propia susceptibilidad al sesgo cognitivo no debilita al psicólogo
 
 <!-- faqs -->
 
-### ¿Por qué los psicólogos sin experiencia tienen más sesgos cognitivos que los expertos?
+### ¿Qué es el cierre prematuro exactamente?
 
-No es que tengan más sesgos: los mismos mecanismos cerebrales afectan a todos. La diferencia es que el experto ha **automatizado rutinas de revisión** que actúan como cortafuegos. El psicólogo sin experiencia aún no las ha desarrollado, por lo que el **Sistema 1** tiene más margen para dictar decisiones diagnósticas sin supervisión del Sistema 2.
+Es cuando asumimos una hipótesis diagnóstica como correcta antes de haber explorado alternativas. Ocurre cuando la necesidad de resolver la incertidumbre nos hace cerrar el caso demasiado rápido.
 
-### ¿Qué sesgo cognitivo es más peligroso para un psicólogo que empieza?
+### ¿Cómo reconozco que estoy cometiendo este sesgo?
 
-El **cierre prematuro** es el más citado en la literatura porque detiene activamente la búsqueda de información. Una vez que el profesional "decide" un diagnóstico, deja de recoger datos que podrían revelar comorbilidades, diagnósticos diferenciales o factores de riesgo críticos como la ideación suicida.
+Si encuentras que seleccionas solo información que confirma tu primer diagnóstico e ignoras datos contradictorios, probablemente estés en cierre prematuro. Revisa si has considerado tres diagnósticos diferenciales.
 
-### ¿Se pueden eliminar los sesgos cognitivos con más formación teórica?
+### ¿Cuál es la relación entre cierre prematuro y la tolerancia a la ambigüedad?
 
-No directamente. Conocer la definición de un sesgo no es suficiente para evitarlo en sesión. El **debiasing efectivo** requiere práctica deliberada con casos reales o simulados, supervisión que exponga el razonamiento propio y herramientas que interrumpan el flujo automático en el momento de la decisión.
+Profesionales con baja tolerancia a la incertidumbre tienden a cerrar casos antes de tiempo. Aprender a tolerar la ambigüedad es fundamental para mantener hipótesis abiertas más tiempo.
 
-### ¿Cuánto tiempo tarda un psicólogo sin experiencia en superar estos sesgos?
+### ¿Cómo se vincula con la omisión de comorbilidades?
 
-No hay un umbral claro, pero la investigación sobre expertise clínico sugiere que se necesitan entre **500 y 1.000 horas de práctica supervisada** para empezar a automatizar rutinas de revisión diagnóstica. La calidad de la supervisión importa más que la cantidad de horas.
+El cierre prematuro hace que nos perdamos diagnósticos secundarios. Por ejemplo, cuando vemos depresión pero no exploramos la ansiedad subyacente.
 
-### ¿Cómo puedo saber si estoy cayendo en un sesgo cognitivo durante una sesión?
+### ¿En qué momentos del proceso clínico es más probable?
 
-Las señales más frecuentes son: sensación de certeza diagnóstica muy temprana, incomodidad ante datos que no "encajan", tendencia a reformular lo que dice el paciente para que confirme tu hipótesis, y dificultad para generar hipótesis alternativas. **Reconocer estas señales en tiempo real** es la primera habilidad del debiasing.
+Es especialmente peligroso en las primeras entrevistas, cuando tenemos menos información. También ocurre bajo estrés o cansancio.
 
+### ¿Qué preguntas debo hacerme para evitarlo?
+
+¿Qué evidencia contradice mi hipótesis? ¿Qué tres alternativas podría considerar? ¿He explorado todas las áreas relevantes? ¿Qué me falta saber?
+
+### ¿Cómo se diferencia del anclaje?
+
+El anclaje es fijarse en el primer dato. El cierre prematuro es cerrar el diagnóstico sin suficiente exploración. Están relacionados pero son mecanismos distintos.
+
+### ¿Hay diferencias entre cierre prematuro en depresión vs. ansiedad?
+
+En depresión se ve cuando interpretamos tristeza como depresión clínica. En ansiedad, cuando asumimos ansiedad generalizada sin considerar fobias específicas.
+
+### ¿Cómo influye la presión del tiempo en este sesgo?
+
+La prisa amplifica el cierre prematuro. Si tienes poco tiempo, la tendencia a cerrar rápido aumenta. Por eso la supervisión y la reflexión post-sesión son críticas.
+
+### ¿Qué rol juega el diagnóstico previo del paciente?
+
+Si el paciente llega con un diagnóstico anterior, tendemos a confirmarlo sin verificarlo. Siempre revalúa, no asumas diagnósticos previos.
 <!-- /faqs -->

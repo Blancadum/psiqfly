@@ -1,4 +1,5 @@
 ---
+isLanding: true
 title: "Guía de Trastornos Mentales según el DSM-5-TR: Clasificación y Realidad Clínica"
 slug: "trastornos-mentales"
 categorySlug: "trastornos-mentales"
@@ -29,68 +30,80 @@ cardGrids:
       - title: "Neurodesarrollo"
         emoji: "⚡"
         description: "Condiciones de inicio temprano: TEA, TDAH y dificultades del aprendizaje."
-        slug: ""
-        categorySlug: "formacion"
+        slug: "trastornos-del-neurodesarrollo"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "neurodesarrollo"
       - title: "Espectro Psicótico"
         emoji: "🔮"
         description: "Alteraciones en la percepción de la realidad y pensamiento desorganizado."
-        slug: ""
-        categorySlug: "formacion"
+        slug: "esquizofrenia"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "psicotico"
       - title: "Bipolaridad"
         emoji: "〰️"
         description: "El espectro entre la manía y la depresión: episodios de manía e hipomanía."
-        slug: ""
-        categorySlug: "formacion"
+        slug: "tipo-1"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "bipolar"
       - title: "Depresión"
         emoji: "🌧️"
         description: "Abordaje clínico del Episodio Mayor, la Distimia y el Trastorno Disfórico."
-        slug: "episodio-depresivo-mayor"
-        categorySlug: "formacion"
+        slug: "mayor"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "depresivos"
       - title: "Ansiedad"
         emoji: "😰"
         description: "Fobias, Pánico y TAG. El espectro de la hiperactivación del miedo."
         slug: "ansiedad"
-        categorySlug: "trastornos-mentales-dsm5"
+        categorySlug: "trastornos-mentales"
       - title: "TOC y Relacionados"
         emoji: "🔁"
         description: "Obsesiones, compulsiones y trastornos de la imagen corporal."
-        slug: ""
-        categorySlug: "formacion"
+        slug: "toc"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "obsesivo-compulsivo"
       - title: "Trauma y Estrés"
         emoji: "🧩"
         description: "Respuestas a estresores extremos: TEPT y trastornos de adaptación."
-        slug: ""
-        categorySlug: "formacion"
+        slug: "tept"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "estres-trauma"
       - title: "Disociativos"
         emoji: "🌀"
         description: "Alteraciones en la identidad, memoria y conciencia del self."
-        slug: ""
-        categorySlug: "formacion"
+        slug: "tid"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "disociativos"
       - title: "Somáticos"
         emoji: "🏥"
         description: "Cuando el malestar psicológico se procesa a través del cuerpo."
-        slug: ""
-        categorySlug: "formacion"
+        slug: "tss"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "somaticos"
       - title: "Conducta Alimentaria"
-        emoji: "🍽️"
+        emoji: "🍽"
         description: "Anorexia, Bulimia y Atracón. Complejidad en la relación con la ingesta."
-        slug: ""
-        categorySlug: "formacion"
+        slug: "anorexia"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "alimentaria"
       - title: "Personalidad"
         emoji: "🌊"
         description: "Patrones persistentes de relación: Grupos A, B (TLP) y C."
-        slug: "trastorno-limite-personalidad"
-        categorySlug: "formacion"
+        slug: "trastornos-de-la-personalidad"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "personalidad"
       - title: "Adicciones"
         emoji: "💊"
         description: "Uso de sustancias y adicciones conductuales como la ludopatía."
-        slug: ""
-        categorySlug: "formacion"
+        slug: "tua"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "adicciones"
       - title: "Neurocognitivos"
         emoji: "🧠"
         description: "Deterioro adquirido: desde el Delirium hasta las demencias."
-        slug: ""
-        categorySlug: "formacion"
+        slug: "alzheimer"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "neurocognitivos"
 references:
   - "American Psychiatric Association (2022). *Diagnostic and Statistical Manual of Mental Disorders (5th ed., text rev.)*. [doi](https://doi.org/10.1176/appi.books.9780890425763)"
   - "Kessler, R. C., et al. (2005). *Lifetime prevalence and age-of-onset distributions of DSM-IV disorders*. Archives of General Psychiatry."
@@ -173,28 +186,43 @@ Como psicólogos, nuestra meta es integrar este rigor con una **empatía radical
 
 <!-- faqs -->
 
-### ¿Es lo mismo un trastorno mental que un problema emocional?
-No. Un **problema emocional** es una respuesta normal, adaptativa y temporal al estrés (tristeza por pérdida). Un **trastorno mental** implica una alteración clínicamente significativa en la cognición o conducta que genera un **deterioro funcional** importante y no es simplemente la respuesta esperable a un acontecimiento vital.
+### ¿La simulación clínica es obligatoria en la formación?
 
-### ¿Cuánto tarda en aparecer un trastorno mental?
-No hay una respuesta única. Algunos son agudos (como el Estrés Agudo), mientras que otros se desarrollan de forma progresiva durante años. Se sabe que el **50% de los trastornos** comienzan antes de los 14 años, y el 75% antes de los 24.
+No es obligatoria pero es recomendada. Cada vez más programas la integran porque la evidencia muestra que mejora el razonamiento diagnóstico y la identificación de sesgos.
 
-### ¿A qué edad se pueden diagnosticar los trastornos mentales?
-A cualquier edad, incluyendo la infancia temprana. El DSM-5-TR incluye diagnósticos aplicables desde los primeros años de vida (como el TEA o el TDAH). El criterio fundamental es que los síntomas sean inconsistentes con el **nivel de desarrollo esperado** para la edad.
+### ¿Cuánto tiempo necesito en simulación para ver resultados?
 
-### ¿Los trastornos mentales son hereditarios?
-La genética es un factor relevante pero no determinante. La heredabilidad es alta en la esquizofrenia (80%) y menor en la depresión (37-40%). Los trastornos son **poligénicos** y su aparición depende de la interacción entre vulnerabilidad y ambiente (diátesis-estrés).
+La investigación sugiere que con 10-15 casos simulados ya se ven mejoras en precisión diagnóstica. Pero la curva de aprendizaje continúa con más exposición.
 
-### ¿Un trastorno mental tiene cura?
-La clínica prefiere los conceptos de **remisión y recuperación**. Cuadros como las fobias o el pánico tienen tasas de éxito muy altas con terapia. Otros trastornos crónicos son manejables con el tratamiento adecuado, permitiendo una vida estable y plena.
+### ¿Cómo es diferente la simulación de leer casos en un libro?
 
-### ¿Cómo se diagnostica un trastorno mental en España?
-Mediante **evaluación clínica** (entrevistas e instrumentos validados). Las pruebas médicas se usan solo para descartar causas orgánicas. Oficialmente se usa la **CIE-11** (OMS) para codificación, mientras que el **DSM-5-TR** es la referencia principal en investigación y formación especializada.
+En simulación recibdes feedback inmediato sobre tus decisiones. En un libro, solo lees. El feedback inmediato es lo que convierte la simulación en aprendizaje real.
 
-### ¿Cuál es la diferencia entre el DSM-5-TR y la CIE-11?
-El **DSM-5-TR** es publicado por la APA y es el estándar en investigación y formación. La **CIE-11** es el sistema de la OMS y es la clasificación oficial para la codificación diagnóstica en el sistema sanitario español. Ambos sistemas tienden a la armonización técnica.
+### ¿Puedo usar simulación si ya tengo experiencia con pacientes?
 
-### ¿Tener un trastorno mental significa "estar loco"?
-No. Es un término estigmatizante sin valor clínico. **1 de cada 8 personas** en el mundo vive con un trastorno mental. El estigma es peligroso porque retrasa la búsqueda de ayuda una media de **11 años**, lo que puede agravar considerablemente el pronóstico.
+Sí. De hecho, clínicos con experiencia se benefician porque ya comprenden la complejidad y pueden apreciar mejor los matices de los casos diseñados.
 
+### ¿La simulación reemplaza la supervisión tradicional?
+
+No. Son complementarias. La supervisión es esencial para el vínculo y la ética. La simulación entrena específicamente el razonamiento diagnóstico.
+
+### ¿Qué tipo de feedback es más efectivo en simulación?
+
+El feedback que explica *por qué* una decisión fue correcta o incorrecta, vinculándolo a criterios diagnósticos. No solo un 'correcto' o 'incorrecto'.
+
+### ¿Cómo mejora la simulación mi identificación de sesgos?
+
+Al enfrentar múltiples casos diseñados para activar sesgos específicos (anclaje, cierre prematuro, etc.), aprendes a reconocerlos en tiempo real.
+
+### ¿Necesito tecnología especial para hacer simulación?
+
+No necesariamente. Role-playing bien estructurado entre compañeros es simulación. Plataformas digitales añaden escalabilidad y tracking pero no son obligatorias.
+
+### ¿Cómo sé si mi simulación es 'realista'?
+
+Si te genera los mismos dilemas que enfrentarías con un paciente real: ambigüedad en los datos, múltiples hipótesis plausibles, presión de tiempo.
+
+### ¿La evidencia de medicina se aplica a psicología?
+
+Sí. Los principios de aprendizaje experiencial son universales, pero la especificidad del contenido (diagnósticos psicológicos) hace que cada campo deba desarrollar sus propios casos.
 <!-- /faqs -->

@@ -1,4 +1,5 @@
 ---
+isLanding: true
 title: "Trastorno Bipolar: Evaluación Clínica y Espectro (Tipo I y II)"
 slug: "bipolar"
 categorySlug: "trastornos-mentales"
@@ -37,29 +38,33 @@ cardGrids:
         emoji: "〰️"
         description: "Definido por al menos un episodio maníaco completo, a menudo con hospitalización. Los episodios depresivos son frecuentes pero no requeridos para el diagnóstico. (296.xx / F31)"
         slug: "tipo-1"
-        categorySlug: "trastornos-mentales/bipolar"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "bipolar"
       - title: "Trastorno Bipolar II"
         emoji: "📉"
         description: "Requiere al menos un episodio hipomaníaco y un episodio depresivo mayor, sin episodios de manía completa. Frecuentemente infradiagnosticado por la predominancia depresiva. (296.89 / F31.81)"
         slug: "tipo-2"
-        categorySlug: "trastornos-mentales/bipolar"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "bipolar"
       - title: "Ciclotimia"
         emoji: "🔄"
         description: "Fluctuaciones crónicas de hipomanía subumbral y depresión subumbral durante al menos 2 años. No alcanza criterios de episodio mayor pero genera desgaste funcional significativo. (301.13 / F34.0)"
         slug: ""
-        categorySlug: "trastornos-mentales/bipolar"
+        categorySlug: "trastornos-mentales"
   - afterH2: "Diagnóstico Diferencial: El espectro de la inestabilidad"
     cards:
       - title: "Bipolar Tipo II"
         emoji: "📈"
         description: "En el Tipo II debe existir al menos un episodio Depresivo Mayor completo; en la ciclotimia no."
         slug: "tipo-2"
-        categorySlug: "bipolares"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "bipolar"
       - title: "Trastorno Límite (TLP)"
         emoji: "🌊"
         description: "En el TLP la inestabilidad es reactiva a eventos sociales; en la ciclotimia es un ciclo interno persistente."
         slug: "tlp"
         categorySlug: "trastornos-mentales"
+        subcategorySlug: "personalidad"
 
 references:
   - "American Psychiatric Association (2022). *Diagnostic and Statistical Manual of Mental Disorders (5th ed., text rev.)*."
@@ -107,24 +112,43 @@ Debido a que los síntomas son leves, PsiQFly activa una **alerta de cronicidad*
 
 <!-- faqs -->
 
-### ¿Cuál es la diferencia entre Ciclotimia y Bipolaridad Tipo II?
+### ¿Cuál es la diferencia entre Tipo I y Tipo II?
 
-La diferencia es la **intensidad**. En el Bipolar Tipo II debe existir al menos un episodio Depresivo Mayor completo (gravedad extrema). En la Ciclotimia, los periodos bajos son molestos pero no alcanzan el umbral clínico de la depresión mayor.
+Tipo I requiere mínimo un episodio maníaco. Tipo II requiere hipomanía (menos severa, sin hospitalización típica) más episodios depresivos.
 
-### ¿Se puede diagnosticar ciclotimia en menos de dos años?
+### ¿Qué es exactamente un episodio maníaco?
 
-Según el DSM-5-TR, no. El criterio de temporalidad es estricto: **2 años para adultos** y 1 año para menores. Si el patrón lleva menos tiempo, se cataloga como "Otro trastorno bipolar especificado".
+Período mínimo 7 días de ánimo elevado/expansivo O irritabilidad, acompañado de síntomas como grandiosidad, disminución de sueño, aceleración, distractibilidad.
 
-### ¿Es la Ciclotimia un rasgo de personalidad?
+### ¿Cómo reconozco hipomanía en Bipolar II?
 
-Hoy se clasifica como un **Trastorno del Estado de Ánimo**, aunque suele estar muy integrado en la identidad del paciente, quien a menudo se define como alguien "extremadamente temperamental".
+Similar a manía pero mínimo 4 días (no 7), menos severa, SIN necesidad de hospitalización o psicosis. El funcionamiento puede estar parcialmente afectado.
 
-### ¿Qué tratamiento se recomienda?
+### ¿El estrés causa los episodios bipolares?
 
-Responde bien a dosis bajas de estabilizadores del ánimo y, sobre todo, a la **Terapia Cognitivo-Conductual** enfocada en la higiene de ritmos circadianos y detección de pródromos.
+El estrés es un factor precipitante común, pero no causa el trastorno en sí. El estrés revela una predisposición genética/biológica subyacente.
 
-### ¿Puede la Ciclotimia convertirse en Bipolaridad I o II?
+### ¿Puedo tener Bipolar sin depresión?
 
-Sí. Aproximadamente un tercio de los pacientes progresa hacia episodios mayores, por lo que el monitoreo longitudinal es fundamental.
+Técnicamente el diagnóstico requiere evidencia de episodios depresivos pasados. Pero algunos bipolares se presentan principalmente con manía/hipomanía.
 
+### ¿Cómo distinguo Bipolar I de TDDEA?
+
+TDDEA: irritabilidad constante, accesos de cólera breves. Bipolar I: episodios distintos de manía/depresión con remisión, síntomas grandiosos o de expansividad claros.
+
+### ¿Cuál es el rol del abuso de sustancias?
+
+Muy importante: puede disparar episodios, complicar el cuadro clínico, afectar la medicación. La evaluación debe incluir siempre historia de drogas/alcohol.
+
+### ¿El Bipolar es tratable?
+
+Sí. Los estabilizadores del ánimo (litio, anticonvulsivos) son efectivos. Pero requiere manejo farmacológico de por vida en la mayoría de casos.
+
+### ¿Cómo es el funcionamiento entre episodios?
+
+En Tipo I, puede haber recuperación completa entre episodios. En Tipo II y en casos graves, puede haber disfunción residual (apatía, problemas cognitivos).
+
+### ¿A qué edad típicamente aparece?
+
+Promedio entre 18-25 años, pero puede presentarse en adolescencia o incluso infancia. El diagnóstico en menores es controversial y requiere cuidado.
 <!-- /faqs -->

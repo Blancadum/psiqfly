@@ -1,3 +1,4 @@
+// src/app/layout.jsx
 import { Quicksand, Montserrat } from "next/font/google";
 import PropTypes from "prop-types";
 import Script from 'next/script';
@@ -28,12 +29,16 @@ const montserrat = Montserrat({
 export const metadata = {
   title: "PsiQFly® | Blog de Psicología Clínica",
   description: "Formación y recursos para psicólogos noveles sobre razonamiento clínico y sesgos cognitivos.",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es" suppressHydrationWarning className={`${quicksand.variable} ${montserrat.variable} h-full antialiased`}>
       <head>
+        {/* Google Analytics */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           strategy="afterInteractive"

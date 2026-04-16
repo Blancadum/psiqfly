@@ -1,4 +1,5 @@
 ---
+isLanding: true
 title: "Trastornos Depresivos"
 slug: "depresivos"
 categorySlug: "trastornos-mentales"
@@ -33,22 +34,26 @@ cardGrids:
         emoji: "🌧️"
         description: "El cuadro clínico clásico. Episodios de al menos 2 semanas con anhedonia, cambios cognitivos y alteraciones neurovegetativas (296.xx / F32-33)."
         slug: "mayor"
-        categorySlug: "trastornos-mentales/depresivos"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "depresivos"
       - title: "Distimia"
         emoji: "🌫️"
         description: "Depresión crónica de menor intensidad. Ánimo deprimido la mayor parte del día durante al menos 2 años (300.4 / F34.1)."
         slug: "distimia"
-        categorySlug: "trastornos-mentales/depresivos"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "depresivos"
       - title: "Trastorno Disfórico Premenstrual"
         emoji: "🔄"
         description: "Síntomas afectivos e irritabilidad en la fase lútea que remiten tras el inicio de la menstruación (625.4 / N94.3)."
         slug: "tdp"
-        categorySlug: "trastornos-mentales/depresivos"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "depresivos"
       - title: "Desregulación Disruptiva del Ánimo"
         emoji: "⚡"
         description: "Accesos de cólera graves y persistentes en menores de 18 años. Evita el sobrediagnóstico de Bipolaridad en la infancia (296.99 / F34.8)."
         slug: "tdd"
-        categorySlug: "trastornos-mentales/depresivos"
+        categorySlug: "trastornos-mentales"
+        subcategorySlug: "depresivos"
 ---
 
 Los trastornos depresivos representan una de las principales causas de discapacidad a nivel mundial. En el **DSM-5-TR**, se separan de los **trastornos bipolares** para enfatizar la naturaleza persistente o episódica del afecto negativo sin presencia de manía o hipomanía.
@@ -109,20 +114,43 @@ Los trastornos depresivos exigen del clínico tanto rigor técnico como sensibil
 
 <!-- faqs -->
 
-### ¿Es necesaria la tristeza para diagnosticar depresión?
+### ¿Cuál es la diferencia clave entre TDDEA y trastorno bipolar pediátrico?
 
-No necesariamente. Especialmente en niños y hombres, la depresión suele manifestarse como **irritabilidad** o ira constante. La **anhedonia** (incapacidad para sentir placer) es un criterio nuclear tan potente como la tristeza.
+El TDDEA no tiene episodios maníacos o hipomaníacos. Los accesos de cólera del TDDEA duran minutos a pocas horas; los episodios bipolares duran días o semanas.
 
-### ¿Cuál es la diferencia entre duelo y Depresión Mayor?
+### ¿A qué edad se diagnostica generalmente el TDDEA?
 
-En el duelo, el afecto predominante es el sentimiento de vacío y pérdida que viene en "olas" relacionadas con el recuerdo del fallecido. En el TDM, el ánimo es deprimido de forma persistente y suele incluir una autocrítica feroz y sentimientos de inutilidad extrema.
+Típicamente entre 6 y 18 años. Requiere que los síntomas hayan comenzado antes de los 10 años según el DSM-5-TR.
 
-### ¿Qué significa el especificador "con características psicóticas"?
+### ¿Cómo diferencio irritabilidad normal de TDDEA?
 
-Se da en depresiones muy graves donde aparecen delirios (normalmente de culpa, ruina o enfermedad) o alucinaciones. En estos casos, el riesgo de suicidio es máximo y la intervención farmacológica es urgente e imprescindible.
+En TDDEA, los accesos de cólera son desproporcionados al evento precipitante, frecuentes (3+ veces por semana) y el niño está irritable la mayoría del tiempo entre episodios.
 
-### ¿La depresión se cura o es para siempre?
+### ¿Cuáles son los criterios de inclusión en el DSM-5-TR?
 
-La mayoría de los episodios de TDM remiten con tratamiento adecuado, pero el riesgo de recurrencia es alto. La prevención de recaídas pasa por la identificación temprana de pródromos, como cambios sutiles en el patrón de sueño o el aumento de la autocrítica.
+Tres componentes: accesos de cólera graves, irritabilidad persistente, y inicio antes de los 10 años. Deben estar presentes durante al menos 12 meses.
 
+### ¿Por qué se diagnostica más TDDEA ahora que antes?
+
+Cambió en el DSM-5 (antes se sobrediagnosticaba bipolaridad pediátrica). Ahora hay mayor claridad, pero también mayor sensibilidad diagnóstica.
+
+### ¿Puede un niño tener tanto TDDEA como trastorno bipolar?
+
+No simultáneamente. Si emerge un episodio maniaco, el diagnóstico se revisa. El TDDEA es el diagnóstico apropiado si no hay episodios de duración requerida.
+
+### ¿Cuál es el pronóstico del TDDEA?
+
+Variable. Algunos niños mejoran con intervención. Otros tienen trayectoria más crónica. El apoyo familiar y el tratamiento temprano mejoran resultados.
+
+### ¿Cómo influye el contexto ambiental en el TDDEA?
+
+Es crucial. Estresores, traumas previos, dinámicas familiares influyen. La evaluación debe incluir siempre el contexto completo.
+
+### ¿Qué tratamientos son efectivos?
+
+Psicoterapia familiar, terapia cognitivo-conductual, y en algunos casos medicación (nunca como única intervención). El abordaje debe ser multimodal.
+
+### ¿Hay comorbilidades frecuentes?
+
+Sí: TDAH, ansiedad, trastornos del apego. Es importante identificarlas porque afectan el tratamiento y pronóstico.
 <!-- /faqs -->
