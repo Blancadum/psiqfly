@@ -6,6 +6,10 @@ import { FeaturesGrid } from '@/components/Layout/FeaturesGrid';
 export const metadata = {
   title: 'Sobre PsiQFly | PsiQFly',
   description: 'Recurso didáctico para el entrenamiento del razonamiento clínico y debiasing.',
+  // La verificación va dentro de estas mismas llaves
+  verification: {
+    google: 'ND4r3AZd9F97vIFhBXGnPAVUs8zWxcnLcLu2Zf6buxE',
+  },
 };
 
 export default function AboutPage() {
