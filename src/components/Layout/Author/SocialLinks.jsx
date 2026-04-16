@@ -45,7 +45,7 @@ export const SocialLinks = () => (
     <SocialIcon href="https://www.youtube.com/@BlancaTF" title="YouTube" bgColor="#FF0000">
       <YoutubeIcon />
     </SocialIcon>
-    <SocialIcon href="mailto:contacto@psiqfly.com" title="Email" bgColor="#634AE6">
+    <SocialIcon href="mailto:blancadum@gmail.com" title="Email" bgColor="#634AE6">
       <Mail size={16} color="white" />
     </SocialIcon>
   </div>
